@@ -1,0 +1,7 @@
+{
+  "name": "media-informatika-sman11pinrang",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Media pembelajaran Informatika SMAN 11 Pinrang - akses terlindungi password",
+  "engines": { "node": "20.x" }
+}

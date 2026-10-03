@@ -1,82 +1,99 @@
-# Slide & Simulasi Informatika — SMA Negeri 11 Pinrang
+# Media Pembelajaran Informatika — Versi Vercel (terlindungi password)
 
-Media pembelajaran berbasis web berisi **slide pertemuan** dan **simulasi interaktif** untuk
-Informatika Kelas X (Fase E), XI, dan XII (Fase F). Setiap pertemuan memiliki minimal satu
-salindia simulasi (ditandai 🧪) yang dapat langsung dicoba murid di tengah presentasi.
+SMA Negeri 11 Pinrang · Mutmainnah Syam, S.Pd., M.Pd.
 
-Penyusun: **Mutmainnah Syam, S.Pd., M.Pd.** — NIP 19930321 202421 2 034 · T.P. 2026/2027
-Acuan: Capaian Pembelajaran BSKAP 046/H/KR/2025 · pendekatan Pembelajaran Mendalam.
+Proyek ini menyajikan aplikasi slide dan simulasi **hanya setelah password benar**.
+Berkas `index.html` dan seluruh berkas slide disimpan di folder `private/` yang **tidak
+pernah disajikan sebagai berkas statis**, sehingga tidak punya alamat URL sendiri dan
+tidak bisa diunduh langsung oleh siapa pun.
 
-## Isi
+## Isi proyek
 
-| Berkas | Keterangan |
+```
+├── api/
+│   ├── index.js      ← pintu utama: halaman password atau aplikasi
+│   ├── login.js      ← memeriksa password, memasang cookie sesi
+│   ├── logout.js     ← keluar
+│   └── file.js       ← menyalurkan berkas slide (hanya setelah login)
+├── lib/
+│   └── auth.js       ← sesi bertanda tangan + halaman password
+├── private/          ← TIDAK PERNAH TERBUKA KE PUBLIK
+│   ├── index.html    ← aplikasi slide & simulasi
+│   └── files/        ← berkas .pptx
+├── vercel.json
+└── package.json
+```
+
+## Langkah pemasangan
+
+**1. Unggah ke GitHub (repositori boleh Private).**
+Buat repositori baru, unggah seluruh isi folder ini apa adanya — pertahankan struktur
+foldernya. Jangan letakkan `index.html` di akar repositori.
+
+**2. Hubungkan ke Vercel.**
+Buka vercel.com → **Add New → Project** → pilih repositori tadi → **Deploy**.
+Tidak perlu mengubah pengaturan build apa pun.
+
+**3. Isi dua Environment Variables.**
+Di dasbor Vercel: **Settings → Environment Variables**, tambahkan untuk
+*Production, Preview, dan Development*:
+
+| Name | Value |
 |---|---|
-| `index.html` | Aplikasi: 20 pertemuan, 17 simulasi interaktif, kuis formatif di setiap dek |
-| `Slide Informatika Kelas X - SMAN 11 Pinrang.pptx` | 143 slide siap tayang / siap diimpor ke Canva |
-| `Slide Informatika Kelas XI - SMAN 11 Pinrang.pptx` | 104 slide |
-| `Slide Informatika Kelas XII - SMAN 11 Pinrang.pptx` | 103 slide |
+| `SITE_PASSWORD` | password kelas, misalnya `informatika2026` |
+| `SESSION_SECRET` | teks acak panjang, misalnya 40 karakter campuran huruf-angka |
 
-## Alur setiap dek pertemuan
+Setelah menambahkannya, buka tab **Deployments** → titik tiga pada deployment terakhir →
+**Redeploy**, supaya nilainya terbaca.
 
-**Pembuka** — sampul dan sapaan hangat · tujuan pembelajaran · apersepsi (kaitan dengan pertemuan
-lalu) · pertanyaan pemantik.
-**Isi** — poin kunci berupa kata kunci singkat, visual pendukung, salindia simulasi interaktif (🧪),
-dan salindia **cek pemahaman** yang disisipkan setiap selesai satu sub-bab.
-**Aktivitas & penutup** — instruksi kerja kelompok (langkah bernomor, alokasi waktu, produk yang
-dikumpulkan) · kuis interaktif 3 soal dengan umpan balik instan · refleksi terbuka · tindak lanjut,
-materi pertemuan berikutnya, dan ucapan terima kasih.
+**4. Buka alamatnya**, misalnya `https://nama-proyek.vercel.app`.
+Akan muncul halaman password; setelah diisi benar, aplikasi terbuka.
 
-Pada berkas `.pptx`, kunci jawaban kuis dan catatan guru tersimpan di bagian **Speaker Notes**.
+**5. Menyematkan di Blogger** (opsional):
 
-## Menerbitkan di GitHub Pages
+```html
+<iframe src="https://nama-proyek.vercel.app/" width="100%" height="700"
+        style="border:0" allowfullscreen></iframe>
+```
 
-1. Buat repositori baru, misalnya `informatika-sman11pinrang`.
-2. **Add file → Upload files**, unggah `index.html` dan ketiga berkas `.pptx`, lalu commit.
-3. **Settings → Pages** → Source: *Deploy from a branch* → branch `main`, folder `/ (root)` → Save.
-4. Buka tautan yang muncul, misalnya `https://namapengguna.github.io/informatika-sman11pinrang/`.
+Cookie sesi sudah disetel `SameSite=None; Secure` agar tetap bekerja di dalam iframe,
+dan header `Content-Security-Policy` sudah mengizinkan domain blogspot.
 
-Tombol "Unduh seluruh slide" di halaman kelas mengarah ke berkas `.pptx` di repositori yang sama,
-jadi pastikan berkas tersebut ikut diunggah.
+## Memperbarui materi
 
-## Memakai Canva
+Ganti berkas di `private/` lalu commit ke GitHub. Vercel otomatis membangun ulang
+dalam satu dua menit. Tidak ada cache yang perlu dibersihkan manual.
 
-Ada dua cara memadukan media ini dengan Canva:
+## Apa yang benar-benar terlindungi
 
-**1. Percantik slide di Canva.** Buka Canva → *Buat desain* → *Unggah* → pilih berkas `.pptx`.
-Seluruh slide masuk sebagai desain yang dapat diubah warna, font, dan elemennya.
+**Terlindungi:**
+- Berkas `index.html` dan `.pptx` tidak punya URL publik — mencoba membuka
+  `/private/index.html` akan menghasilkan 404.
+- Repositori GitHub boleh **Private**; Vercel tetap bisa membangunnya.
+- Isi aplikasi hanya dikirim kepada peramban yang memegang cookie sesi yang sah;
+  cookie ditandatangani HMAC, `HttpOnly` (tak terbaca JavaScript), dan kedaluwarsa 3 jam.
+- Berkas slide hanya tersalurkan lewat `/api/file` setelah login, lengkap dengan
+  penyaring nama berkas agar tidak bisa dipakai menjelajah folder lain.
+- Halaman ditandai `noindex` sehingga tidak muncul di mesin pencari.
+- Klik kanan, seret gambar, serta pintasan F12 / Ctrl+Shift+I / Ctrl+U dihambat.
 
-**2. Tempelkan desain Canva ke dalam aplikasi.** Di Canva: *Bagikan → Lainnya → Sematkan*, salin
-tautan `https://www.canva.com/design/…/view?embed`. Buka menu **Pengaturan & Canva** pada aplikasi,
-tempelkan tautan pada baris pertemuan yang sesuai. Slide Canva akan muncul sebagai salindia tambahan
-di awal dek pertemuan tersebut (memerlukan internet saat ditayangkan).
+**Tidak bisa dijanjikan:**
+Setelah halaman tampil di layar, isinya tetap bisa dibaca melalui alat pengembang.
+Peramban wajib menerima HTML dan JavaScript untuk dapat menampilkannya, jadi tidak ada
+teknik mana pun — di Vercel maupun tempat lain — yang membuatnya mustahil dibaca.
+Penghalang klik kanan dan F12 hanya menghambat murid pada umumnya, bukan pengamanan
+sungguhan. Yang benar-benar aman adalah: berkas sumbernya tidak dapat diunduh, dan
+isinya tidak dikirim sama sekali kepada orang yang tidak punya password.
 
-## Mode presentasi
+Bila ingin perlindungan lebih kuat lagi, langkah berikutnya biasanya: memperpendek masa
+sesi, memberi password berbeda per kelas, atau memberi setiap murid akun sendiri.
 
-| Tombol | Fungsi |
-|---|---|
-| `←` `→` | Berpindah salindia |
-| `F` | Masuk/keluar mode presentasi layar penuh |
-| `Esc` | Keluar mode presentasi |
+## Menguji sendiri sebelum mengunggah
 
-Tombol **Unduh slide (PDF)** pada tiap pertemuan membuka jendela cetak; pilih *Simpan sebagai PDF*.
+```bash
+node uji-lokal.js
+```
 
-## Daftar simulasi (17)
-
-Pengurutan · Pencarian berurutan vs biner · Tumpukan dan antrean · Siklus Von Neumann ·
-Konversi biner dan ASCII · Penelusuran pseudocode · Analisis data mini · Lembar kerja dan atribusi
-lisensi · Latihan periksa fakta · Jaringan dan troubleshooting · Daur hidup produk digital ·
-Penelusuran graf BFS/DFS · Brute force vs greedy · Keamanan kata sandi dan 2FA · Tinjauan kualitas
-kode · Perancang spesifikasi komputer · Perencana projek akhir.
-
-## Gambar dan mode luring
-
-Gambar pendukung diambil sekali dari Wikimedia Commons (lisensi bebas) saat aplikasi pertama dibuka,
-lalu disimpan permanen di IndexedDB peramban. Pembukaan berikutnya tidak mengunduh ulang dan tetap
-berjalan tanpa internet; bila pengambilan gagal, dipakai ilustrasi SVG bawaan. Pengaturannya ada di
-menu **Pengaturan & Canva**.
-
-## Menyesuaikan isi
-
-Materi berada pada `const MODULES = [...]` di dalam `index.html`. Setiap salindia memuat
-`k` (label), `t` (judul), `b` (butir isi), `img` (kode gambar), dan `sim` (kode simulasi —
-menyisipkan salindia simulasi tepat setelahnya).
+Perintah itu memeriksa delapan skenario keamanan: isi aplikasi tidak bocor sebelum login,
+password salah ditolak, cookie palsu ditolak, berkas tidak bisa diunduh tanpa login,
+dan percobaan menjelajah folder digagalkan.
