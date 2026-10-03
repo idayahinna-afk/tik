@@ -238,6 +238,39 @@ figure.media img,figure.media svg{max-width:100%;height:auto;border-radius:10px;
 .cache-bar.load .dot{background:var(--warn);animation:bl 1s infinite}
 @keyframes bl{50%{opacity:.25}}
 
+
+/* --- elemen tambahan pada salindia pedagogis --- */
+.sl .pilk{display:inline-block;background:linear-gradient(135deg,var(--c2),var(--c3));color:#fff;border-radius:999px;
+  padding:.2rem .7rem;font-size:clamp(.6rem,1.02vw,.8rem);font-weight:750}
+.sl.dark .pilk{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3)}
+.sl ol.langkah{counter-reset:lk;list-style:none;padding:0;margin:.3rem 0;font-size:clamp(.76rem,1.3vw,1.02rem)}
+.sl ol.langkah li{counter-increment:lk;position:relative;padding:.3rem 0 .3rem 2.3em;margin:.18em 0;line-height:1.4}
+.sl ol.langkah li::before{content:counter(lk);position:absolute;left:0;top:.22em;width:1.65em;height:1.65em;border-radius:9px;
+  background:linear-gradient(135deg,var(--c2),var(--c3));color:#fff;display:grid;place-items:center;font-weight:800;font-size:.86em}
+.sl.kuisslide{justify-content:flex-start}
+.kuisbox{flex:1;min-height:0;display:flex;flex-direction:column;gap:.4rem;overflow:auto;padding-top:.2rem}
+.kuis-top{display:flex;align-items:center;gap:.6rem;font-size:clamp(.62rem,1.05vw,.8rem);font-weight:800;color:var(--c2);
+  letter-spacing:.06em;text-transform:uppercase}
+.kuis-prog{flex:1;height:5px;background:#e6e8f6;border-radius:99px;overflow:hidden}
+.kuis-prog i{display:block;height:100%;background:linear-gradient(90deg,var(--c2),var(--c3));transition:width .3s}
+.kuis-q{font-size:clamp(.88rem,1.7vw,1.3rem);font-weight:750;margin:.1rem 0 .3rem;line-height:1.3}
+.kuis-opt{display:grid;gap:.4rem}
+.kz{text-align:left;padding:.5rem .8rem;border-radius:12px;border:2px solid #e3e6f5;background:#fff;cursor:pointer;
+  font-size:clamp(.76rem,1.3vw,1rem);font-weight:600;color:#1d2140;transition:.15s}
+.kz:hover{border-color:var(--c2);transform:translateX(3px)}
+.kz.ok{background:#dcf7f0;border-color:#00a186;color:#064a3e}
+.kz.no{background:#fce5e5;border-color:#b3302f;color:#6d1a19}
+.kuis-fb{font-size:clamp(.72rem,1.2vw,.95rem);padding:.45rem .7rem;border-radius:10px;background:#f1f2fb;display:flex;
+  align-items:center;flex-wrap:wrap;gap:.3rem}
+.kuis-fb.ok{background:#dcf7f0}.kuis-fb.no{background:#fdf0db}
+.kuis-hasil{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center}
+.kuis-hasil .ring{width:clamp(88px,14vw,132px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+  background:conic-gradient(var(--c3) var(--p,0%),#e6e8f6 0)}
+.kuis-hasil .ring .in{width:76%;aspect-ratio:1;border-radius:50%;background:#fff;display:grid;place-items:center;line-height:1.1}
+.kuis-hasil .ring b{font-size:clamp(1rem,2.2vw,1.6rem)}
+.kuis-hasil .ring span{font-size:.62rem;color:#6b7191;display:block}
+.thumb.act{background:linear-gradient(135deg,var(--warn-soft),var(--brand-soft))}
+
 @media (max-width:900px){
   .app{grid-template-columns:1fr}
   .sidebar{position:fixed;left:0;top:0;width:268px;transform:translateX(-100%);transition:transform .22s}
@@ -268,7 +301,7 @@ figure.media img,figure.media svg{max-width:100%;height:auto;border-radius:10px;
 <div class="app">
   <aside class="sidebar" id="sidebar">
     <div class="brand"><div class="logo">IF</div>
-      <div><b>Mutmainnah Syam</b><span>Informatika · SMAN 11 Pinrang</span></div></div>
+      <div><b>Slide &amp; Simulasi</b><span>Informatika · SMAN 11 Pinrang</span></div></div>
     <nav class="nav" id="nav"></nav>
     <div class="sidebar-foot">
       <div>Mutmainnah Syam, S.Pd., M.Pd.</div>
@@ -615,6 +648,254 @@ M({id:"xii6",kelas:"XII",fase:"F",sem:"Genap",kode:"XII.6",jp:20,elemen:"Literas
   {k:"Penutup",t:"Setelah lulus",b:["Teruslah belajar; teknologi berubah, cara berpikir komputasional tetap berguna.","Bangun portofolio karya digital sejak sekarang.","Jadilah warga digital yang aman, beretika, dan bermanfaat bagi sekitar."]}
  ]})
 ];
+/* =========================================================================
+   KELENGKAPAN PEDAGOGIS TIAP PERTEMUAN
+   cek      : pertanyaan jeda (check for understanding)
+   aktivitas: instruksi tugas / kerja kelompok
+   kuis     : 3 soal pilihan ganda untuk evaluasi formatif instan
+   ========================================================================= */
+const EXTRA = {
+x1:{cek:["Coba sebutkan ulang empat fondasi berpikir komputasional tanpa melihat salindia.",
+        "Kalau kamu diminta membagi tugas piket satu kelas, bagian mana yang disebut dekomposisi?",
+        "Apa bedanya tumpukan dan antrean bila dilihat dari urutan data keluar?"],
+   aktivitas:{t:"Kerja kelompok: Bedah Layanan Sekolah",waktu:"25 menit · kelompok 4 orang",
+     langkah:["Pilih satu layanan sekolah yang sering antre: koperasi, perpustakaan, atau tata usaha.",
+              "Uraikan layanan itu menjadi minimal lima langkah (dekomposisi).",
+              "Tentukan struktur data yang tepat untuk mencatat antreannya, beri alasan.",
+              "Tempel hasil di papan dan jelaskan 2 menit per kelompok."],
+     produk:"Poster langkah layanan + alasan pemilihan struktur data"},
+   kuis:[{q:"Memecah masalah besar menjadi bagian kecil disebut …",o:["Abstraksi","Dekomposisi","Algoritma"],k:1},
+         {q:"Fitur undo pada aplikasi menggunakan prinsip …",o:["FIFO (antrean)","LIFO (tumpukan)","Acak"],k:1},
+         {q:"Antrean cetak dokumen bekerja dengan prinsip …",o:["FIFO","LIFO","Tanpa urutan"],k:0}]},
+x2:{cek:["Mengapa pencarian biner tidak bisa dipakai pada data yang belum terurut?",
+        "Dari tiga algoritma pengurutan tadi, mana yang pertukarannya paling sedikit?",
+        "Apa arti simbol belah ketupat pada diagram alir?"],
+   aktivitas:{t:"Praktik: Mengurutkan Nilai Kelas",waktu:"30 menit · berpasangan",
+     langkah:["Ambil tujuh kartu angka acak dari guru.",
+              "Urutkan dengan bubble sort, catat jumlah perbandingan dan pertukaran.",
+              "Ulangi dengan selection sort pada data yang sama, catat hasilnya.",
+              "Tulis pseudocode salah satu algoritma, lalu tukar dengan pasangan lain untuk diperiksa."],
+     produk:"Tabel perbandingan langkah + satu pseudocode"},
+   kuis:[{q:"Syarat utama pencarian biner adalah …",o:["Data berjumlah genap","Data sudah terurut","Data berupa angka"],k:1},
+         {q:"Pada 16 data terurut, pencarian biner paling banyak memerlukan …",o:["4 langkah","8 langkah","16 langkah"],k:0},
+         {q:"Pseudocode ditulis terutama agar …",o:["Program berjalan lebih cepat","Mudah dibaca dan diperiksa manusia","Menghemat memori"],k:1}]},
+x3:{cek:["Apa bedanya data dan informasi?",
+        "Sebutkan dua ciri data yang berkualitas.",
+        "Mengapa kita harus meminta izin sebelum mengumpulkan data teman?"],
+   aktivitas:{t:"Mini riset: Kebiasaan Digital Kelas Kita",waktu:"35 menit · kelompok 4 orang",
+     langkah:["Susun 4 pertanyaan survei tentang kebiasaan digital murid.",
+              "Kumpulkan jawaban dari minimal 10 teman.",
+              "Olah data pada simulasi Analisis Data: hitung rerata, tertinggi, dan terendah.",
+              "Rumuskan satu rekomendasi untuk kelas berdasarkan datanya."],
+     produk:"Grafik + satu paragraf simpulan dan rekomendasi"},
+   kuis:[{q:"Fakta mentah yang belum diolah disebut …",o:["Informasi","Data","Simpulan"],k:1},
+         {q:"Berikut BUKAN ciri data berkualitas …",o:["Akurat","Relevan","Sebanyak mungkin tanpa cek sumber"],k:2},
+         {q:"Grafik yang paling tepat untuk membandingkan jumlah antarkategori adalah …",o:["Diagram batang","Diagram garis","Diagram lingkaran"],k:0}]},
+x4:{cek:["Sebutkan urutan siklus kerja komputer dari masukan sampai keluaran.",
+        "Apa gagasan utama arsitektur Von Neumann?",
+        "Mengapa komputer bisa menjalankan banyak aplikasi sekaligus?"],
+   aktivitas:{t:"Simulasi peran: Menjadi Komponen Komputer",waktu:"25 menit · kelompok 5 orang",
+     langkah:["Bagi peran: unit masukan, memori, unit kendali, ALU, unit keluaran.",
+              "Guru memberi satu instruksi sederhana, misalnya (12 + 30) − 7.",
+              "Jalankan siklus fetch–decode–execute secara bergiliran dan catat setiap langkah.",
+              "Bandingkan hasil simulasi kelompok dengan simulasi Von Neumann di aplikasi."],
+     produk:"Catatan langkah siklus + simpulan peran sistem operasi"},
+   kuis:[{q:"Yang menjalankan operasi hitung dan logika adalah …",o:["ALU","Memori","Unit keluaran"],k:0},
+         {q:"Perangkat lunak pengatur sumber daya perangkat keras adalah …",o:["Peramban","Sistem operasi","Kompilator"],k:1},
+         {q:"Bilangan 8 bit dapat menyimpan nilai desimal paling besar …",o:["128","255","512"],k:1}]},
+x5:{cek:["Apa beda misinformasi dan disinformasi?",
+        "Sebutkan satu operator pencarian beserta fungsinya.",
+        "Apa langkah pertama membaca lateral ketika menemukan artikel baru?"],
+   aktivitas:{t:"Tim Periksa Fakta Kelas",waktu:"30 menit · kelompok 3 orang",
+     langkah:["Guru membagikan tiga konten viral kepada tiap kelompok.",
+              "Terapkan membaca lateral: periksa penerbit, penulis, tanggal, dan sumber data.",
+              "Bandingkan dengan dua sumber tepercaya lain.",
+              "Tentukan status konten: fakta, opini, atau hoaks, beserta buktinya."],
+     produk:"Lembar verifikasi tiga konten + simpulan"},
+   kuis:[{q:"Informasi keliru yang sengaja dibuat untuk menyesatkan disebut …",o:["Misinformasi","Disinformasi","Opini"],k:1},
+         {q:"Membaca lateral berarti …",o:["Membaca laman itu sampai habis","Membuka tab lain untuk memeriksa sumbernya","Membaca dari bawah ke atas"],k:1},
+         {q:"Tanda kuat sebuah pesan berantai adalah hoaks …",o:["Mendesak untuk segera disebarkan","Menyebut nama lembaga","Berbahasa Indonesia"],k:0}]},
+x6:{cek:["Mengapa memakai fitur gaya (styles) lebih baik daripada memformat satu per satu?",
+        "Apa beda rujukan A1 dan $A$1 pada lembar kerja?",
+        "Apa saja yang wajib dicantumkan saat memakai karya berlisensi CC BY?"],
+   aktivitas:{t:"Produksi Konten Budaya Pinrang",waktu:"40 menit · kelompok 4 orang",
+     langkah:["Pilih satu potensi budaya atau wisata daerah Pinrang.",
+              "Kumpulkan data dan gambar berlisensi terbuka, catat sumbernya.",
+              "Susun konten digital: dokumen, infografis, atau presentasi.",
+              "Cantumkan atribusi lengkap, lalu gelar karya di depan kelas."],
+     produk:"Satu konten digital + daftar atribusi sumber"},
+   kuis:[{q:"Daftar isi yang ikut berubah saat halaman bertambah dibuat dengan …",o:["Mengetik ulang","Fitur daftar isi otomatis","Menyalin dari dokumen lain"],k:1},
+         {q:"Lisensi yang mewajibkan karya turunan memakai lisensi serupa adalah …",o:["CC BY","CC BY-SA","CC0"],k:1},
+         {q:"Fungsi untuk menghitung banyak nilai yang memenuhi syarat adalah …",o:["SUM","COUNTIF","MAX"],k:1}]},
+x7:{cek:["Apa beda jaringan lokal dan internet?",
+        "Mengapa enkripsi WPA2 atau WPA3 lebih aman daripada jaringan terbuka?",
+        "Apa yang sebaiknya tidak dilakukan saat memakai wifi publik?"],
+   aktivitas:{t:"Audit Keamanan Jaringan Laboratorium",waktu:"30 menit · kelompok 4 orang",
+     langkah:["Gambar topologi jaringan laboratorium sekolah.",
+              "Periksa daftar keamanan: kata sandi bawaan, jenis enkripsi, pembaruan perangkat.",
+              "Gunakan simulasi jaringan untuk menguji satu gangguan dan cara menanganinya.",
+              "Susun tiga rekomendasi perbaikan untuk sekolah."],
+     produk:"Gambar topologi + daftar periksa keamanan + rekomendasi"},
+   kuis:[{q:"Perangkat yang menghubungkan jaringan lokal ke internet adalah …",o:["Switch","Router","Monitor"],k:1},
+         {q:"Enkripsi nirkabel yang sebaiknya TIDAK dipakai lagi adalah …",o:["WPA3","WPA2","WEP"],k:2},
+         {q:"Situs yang aman saat memasukkan kata sandi ditandai dengan …",o:["HTTP","HTTPS","WWW"],k:1}]},
+x8:{cek:["Mengapa satu kata sandi untuk semua akun berbahaya?",
+        "Moda autentikasi dua langkah mana yang paling lemah?",
+        "Sebutkan satu profesi bidang Informatika dan kompetensi utamanya."],
+   aktivitas:{t:"Gerakan Akun Aman Kelas",waktu:"30 menit · mandiri lalu berpasangan",
+     langkah:["Uji kekuatan kata sandi percobaan pada simulasi Keamanan Akun.",
+              "Aktifkan autentikasi dua langkah pada satu akun pembelajaran.",
+              "Periksa pengaturan privasi akun media sosialmu dengan daftar periksa.",
+              "Susun peta jalan pribadi kompetensi digital untuk satu tahun ke depan."],
+     produk:"Daftar periksa keamanan akun + peta jalan kompetensi"},
+   kuis:[{q:"Kata sandi yang paling kuat adalah …",o:["Nama sekolah + tahun lahir","Gabungan empat kata acak yang panjang","Delapan angka berurutan"],k:1},
+         {q:"Autentikasi dua langkah berguna karena …",o:["Membuat kata sandi tak perlu","Akun tetap aman meski kata sandi bocor","Mempercepat masuk akun"],k:1},
+         {q:"Jejak digital bersifat …",o:["Hilang setelah dihapus","Permanen dan dapat ditelusuri","Hanya terlihat oleh teman"],k:1}]},
+xi1:{cek:["Mengapa tahap analisis kebutuhan tidak boleh dilewati?",
+         "Apa beda keinginan dan kebutuhan pengguna?",
+         "Mengapa satu persoalan bisa punya lebih dari satu solusi?"],
+   aktivitas:{t:"Riset Kebutuhan Pengguna Sekolah",waktu:"40 menit · kelompok 4 orang",
+     langkah:["Pilih satu unit sekolah: perpustakaan, koperasi, OSIS, atau tata usaha.",
+              "Wawancarai satu pengguna dengan lima pertanyaan terbuka.",
+              "Tulis kebutuhan sebagai pernyataan terukur, minimal tiga butir.",
+              "Rumuskan dua alternatif solusi digital beserta kelebihan dan keterbatasannya."],
+     produk:"Dokumen kebutuhan + dua alternatif solusi"},
+   kuis:[{q:"Tahap pertama pengembangan produk digital adalah …",o:["Menulis kode","Analisis kebutuhan","Pengujian"],k:1},
+         {q:"Kegiatan khas tahap analisis kebutuhan adalah …",o:["Mewawancarai calon pengguna","Memperbaiki kesalahan kode","Memasang aplikasi"],k:0},
+         {q:"Biaya memperbaiki kesalahan paling mahal bila ditemukan pada tahap …",o:["Analisis kebutuhan","Perancangan","Pemeliharaan"],k:2}]},
+xi2:{cek:["Apa ciri utama strategi greedy?",
+         "Kapan brute force masih layak dipakai?",
+         "Mana yang lebih cepat untuk data besar: n² atau n log n?"],
+   aktivitas:{t:"Sidang Algoritma: Membela Pilihan Strategi",waktu:"35 menit · kelompok 4 orang",
+     langkah:["Guru memberi satu persoalan nyata, misalnya penjadwalan ruang laboratorium.",
+              "Setiap kelompok memilih satu strategi algoritmik dan menyusun langkahnya.",
+              "Uji pada data kecil dan besar, catat jumlah langkahnya.",
+              "Sampaikan justifikasi: efisiensi, kelebihan, dan keterbatasan pilihan kalian."],
+     produk:"Lembar justifikasi pemilihan strategi + tabel jumlah langkah"},
+   kuis:[{q:"Strategi yang memecah persoalan menjadi submasalah sejenis adalah …",o:["Greedy","Divide and conquer","Brute force"],k:1},
+         {q:"Greedy mengambil keputusan …",o:["Terbaik pada setiap langkah tanpa meninjau ulang","Secara acak","Setelah mencoba semua kemungkinan"],k:0},
+         {q:"Kriteria pertama memilih solusi adalah …",o:["Kebenaran","Jumlah baris kode","Keindahan tampilan"],k:0}]},
+xi3:{cek:["Mengapa senarai bertaut lebih mudah disisipi data di tengah daripada larik?",
+         "Apa beda pohon dan graf?",
+         "Mengapa tabel hash membuat pencarian jauh lebih cepat?"],
+   aktivitas:{t:"Memodelkan Data Sekolah",waktu:"40 menit · kelompok 4 orang",
+     langkah:["Pilih satu data sekolah: struktur organisasi, jalur evakuasi, atau peminjaman buku.",
+              "Tentukan struktur data paling tepat: senarai bertaut, pohon, graf, atau tabel hash.",
+              "Gambar modelnya di kertas plano dan tandai operasi yang paling sering dipakai.",
+              "Uji penelusurannya memakai simulasi Graf di aplikasi."],
+     produk:"Model struktur data + alasan pemilihannya"},
+   kuis:[{q:"Jalan satu arah antartempat paling tepat dimodelkan dengan …",o:["Graf berarah","Tumpukan","Larik"],k:0},
+         {q:"Struktur hierarkis tanpa siklus disebut …",o:["Graf","Pohon","Antrean"],k:1},
+         {q:"Tabel hash dipakai terutama untuk …",o:["Mengurutkan data","Mempercepat pencarian berdasarkan kunci","Menyimpan data berurutan"],k:1}]},
+xi4:{cek:["Topologi apa yang dipakai laboratorium sekolah kita, dan apa kelemahannya?",
+         "Lapisan TCP/IP mana yang menangani pengalamatan IP?",
+         "Mengapa jaringan dirancang berlapis?"],
+   aktivitas:{t:"Merancang Jaringan Laboratorium Baru",waktu:"25 menit · kelompok 3 orang",
+     langkah:["Anggap sekolah menambah 20 komputer baru.",
+              "Pilih topologi yang paling sesuai dan gambarkan rancangannya.",
+              "Daftar perangkat yang dibutuhkan beserta jumlahnya.",
+              "Jelaskan lapisan TCP/IP yang bekerja saat murid membuka laman sekolah."],
+     produk:"Gambar rancangan jaringan + daftar perangkat"},
+   kuis:[{q:"Topologi yang seluruh perangkatnya terhubung ke satu perangkat pusat adalah …",o:["Bus","Bintang","Cincin"],k:1},
+         {q:"Pengalamatan logis dan perutean terjadi pada lapisan …",o:["Aplikasi","Internet","Akses jaringan"],k:1},
+         {q:"Jaringan yang mencakup satu kota disebut …",o:["LAN","MAN","PAN"],k:1}]},
+xi5:{cek:["Apa langkah pertama saat internet laboratorium mati?",
+         "Apa fungsi perintah ping?",
+         "Apa beda firewall dan enkripsi?"],
+   aktivitas:{t:"Klinik Jaringan: Temukan Penyakitnya",waktu:"40 menit · kelompok 3 orang",
+     langkah:["Guru memasang satu gangguan rahasia pada simulasi jaringan.",
+              "Lakukan diagnosis berurutan: fisik → alamat IP → gateway → internet → DNS.",
+              "Catat hasil setiap langkah pada lembar penanganan.",
+              "Simpulkan penyebabnya dan tuliskan prosedur baku penanganan untuk kelas."],
+     produk:"Lembar diagnosis + prosedur baku penanganan gangguan"},
+   kuis:[{q:"Alamat 192.168.1.10 termasuk alamat …",o:["Publik","Privat","Tidak sah"],k:1},
+         {q:"Jika ping ke gateway gagal tetapi kabel menyala, kemungkinan masalah ada pada …",o:["Konfigurasi alamat IP","Monitor","Aplikasi peramban"],k:0},
+         {q:"VPN berguna untuk …",o:["Mempercepat internet","Membuat jalur aman melewati jaringan publik","Menambah kapasitas penyimpanan"],k:1}]},
+xi6:{cek:["Bagaimana cara memeriksa apakah sebuah gambar pernah beredar sebelumnya?",
+         "Mengapa median kadang lebih mewakili data daripada rerata?",
+         "Apa yang harus dicek sebelum memakai data dari internet?"],
+   aktivitas:{t:"Projek Mini: Data untuk Keputusan Sekolah",waktu:"2 pertemuan · kelompok 4 orang",
+     langkah:["Rumuskan satu pertanyaan riset tentang persoalan sekolah atau daerah.",
+              "Cari data terbuka yang legal, catat sumber dan lisensinya.",
+              "Bersihkan dan olah data, hitung statistik deskriptifnya.",
+              "Buat satu visualisasi jujur dan rumuskan rekomendasi keputusan."],
+     produk:"Laporan analisis data + visualisasi + rekomendasi"},
+   kuis:[{q:"Sebelum memakai data terbuka, yang wajib diperiksa adalah …",o:["Warna grafiknya","Lisensi dan sumbernya","Ukuran berkasnya"],k:1},
+         {q:"Diagram batang sebaiknya dimulai dari nilai …",o:["Nol","Nilai terkecil","Rerata"],k:0},
+         {q:"Korelasi antara dua data berarti …",o:["Pasti sebab-akibat","Belum tentu sebab-akibat","Datanya salah"],k:1}]},
+xii1:{cek:["Mengapa algoritma sebaiknya ditulis sebelum kode?",
+          "Apa manfaat memecah program menjadi fungsi?",
+          "Apa yang wajib ada agar rekursi berhenti?"],
+   aktivitas:{t:"Membangun Program Modular",waktu:"45 menit · berpasangan",
+     langkah:["Pilih satu persoalan: rekap nilai, konversi satuan, atau statistik sederhana.",
+              "Tulis algoritmanya dalam notasi, tentukan strategi algoritmiknya.",
+              "Implementasikan dengan minimal dua fungsi.",
+              "Uji dengan tiga masukan berbeda, termasuk kasus batas."],
+     produk:"Berkas program modular + catatan pengujian"},
+   kuis:[{q:"Ciri program terstruktur adalah …",o:["Satu fungsi panjang","Runtunan, percabangan, perulangan yang jelas dan modular","Tanpa komentar"],k:1},
+         {q:"Fungsi hitung(a,b) mengembalikan a + 2×b. hitung(3,4) bernilai …",o:["10","11","14"],k:1},
+         {q:"Rekursi tanpa kasus dasar akan …",o:["Berjalan selamanya atau gagal","Lebih cepat","Menghemat memori"],k:0}]},
+xii2:{cek:["Mengapa kode yang berjalan belum tentu kode yang baik?",
+          "Sebutkan dua ciri kode berkualitas.",
+          "Kesalahan apa yang paling sering terjadi saat mengimplementasikan algoritma?"],
+   aktivitas:{t:"Tinjauan Kode Sejawat",waktu:"40 menit · kelompok 3 orang",
+     langkah:["Implementasikan satu algoritma pencarian dan satu algoritma pengurutan.",
+              "Tukar kode dengan kelompok lain.",
+              "Nilai dengan daftar periksa: penamaan, modularitas, dokumentasi, penanganan masukan.",
+              "Kembalikan kode disertai tiga saran perbaikan yang spesifik dan sopan."],
+     produk:"Kode yang telah diperbaiki + catatan tinjauan sejawat"},
+   kuis:[{q:"Komentar yang baik menjelaskan …",o:["Apa yang sudah jelas dari kode","Mengapa keputusan itu diambil","Nama pembuat kode"],k:1},
+         {q:"Mencari satu data pada sejuta data terurut paling tepat memakai …",o:["Sequential search","Binary search","Bubble sort"],k:1},
+         {q:"Kode yang sama ditulis berulang di banyak tempat sebaiknya …",o:["Dibiarkan","Dijadikan satu fungsi","Dihapus semua"],k:1}]},
+xii3:{cek:["Apa beda kesalahan sintaksis, runtime, dan logika?",
+          "Mengapa perlu menguji kasus batas?",
+          "Apa yang dimaksud refactoring?"],
+   aktivitas:{t:"Klinik Program: Perbaiki dan Rapikan",waktu:"45 menit · berpasangan",
+     langkah:["Terima berkas program bermasalah dari guru.",
+              "Susun lima kasus uji, termasuk kasus batas dan masukan tidak wajar.",
+              "Telusuri penyebab kesalahan, perbaiki satu per satu, uji ulang.",
+              "Rapikan kode tanpa mengubah perilakunya, lalu lengkapi dokumentasi."],
+     produk:"Program yang telah diuji, dirapikan, dan didokumentasikan"},
+   kuis:[{q:"Pembagian dengan nol saat program berjalan termasuk kesalahan …",o:["Sintaksis","Runtime","Logika"],k:1},
+         {q:"Refactoring berarti memperbaiki struktur kode …",o:["Sekaligus menambah fitur","Tanpa mengubah perilaku program","Dengan menghapus pengujian"],k:1},
+         {q:"Pengujian regresi dilakukan …",o:["Sekali di awal","Setiap kali kode diubah","Hanya jika ada laporan pengguna"],k:1}]},
+xii4:{cek:["Kapan sebaiknya memakai pustaka buatan orang lain?",
+          "Apa yang perlu diperiksa sebelum memilih pustaka?",
+          "Struktur data apa yang tepat untuk pencarian berdasarkan kunci unik?"],
+   aktivitas:{t:"Membangun Fitur dengan Pustaka",waktu:"45 menit · kelompok 3 orang",
+     langkah:["Tentukan satu fitur yang akan dibuat, misalnya pencarian data anggota.",
+              "Pilih struktur data yang tepat dan jelaskan alasannya.",
+              "Integrasikan satu pustaka, baca dokumentasinya lebih dahulu.",
+              "Catat lisensi pustaka yang dipakai pada berkas dokumentasi."],
+     produk:"Program dengan struktur data kompleks + daftar pustaka dan lisensinya"},
+   kuis:[{q:"Sebelum memakai pustaka, yang wajib diperiksa adalah …",o:["Jumlah barisnya","Lisensi dan keaktifan pengembangnya","Warna logonya"],k:1},
+         {q:"Tanggung jawab atas program yang dirilis berada pada …",o:["Pembuat pustaka","Pengembang program itu sendiri","Pengguna"],k:1},
+         {q:"Data berjenjang paling tepat disimpan dengan …",o:["Pohon","Tumpukan","Larik satu dimensi"],k:0}]},
+xii5:{cek:["Mengapa spesifikasi termahal belum tentu paling tepat?",
+          "Komponen apa yang paling berpengaruh saat banyak aplikasi dibuka bersamaan?",
+          "Mengapa perlu menyiapkan dua alternatif spesifikasi?"],
+   aktivitas:{t:"Usulan Pengadaan Komputer Sekolah",waktu:"40 menit · kelompok 4 orang",
+     langkah:["Wawancarai satu calon pengguna di sekolah tentang pekerjaan hariannya.",
+              "Gunakan simulasi Perancang Spesifikasi untuk menyusun dua alternatif.",
+              "Hitung perkiraan anggaran termasuk lisensi dan garansi.",
+              "Susun dokumen usulan satu halaman dan presentasikan kepada pengguna."],
+     produk:"Dokumen usulan pengadaan + presentasi"},
+   kuis:[{q:"Komponen yang paling menentukan banyaknya aplikasi berjalan bersamaan adalah …",o:["RAM","Kartu suara","Ukuran monitor"],k:0},
+         {q:"Untuk server sekolah, yang paling diutamakan adalah …",o:["Kartu grafis mahal","Keandalan dan cadangan daya","Desain casing"],k:1},
+         {q:"Usulan pengadaan yang baik memuat …",o:["Satu pilihan saja","Dua alternatif beserta perbandingannya","Hanya harga total"],k:1}]},
+xii6:{cek:["Perbuatan digital apa yang bisa berujung masalah hukum?",
+          "Mengapa OTP tidak boleh dibagikan kepada siapa pun?",
+          "Apa ciri penawaran daring yang patut dicurigai?"],
+   aktivitas:{t:"Projek Akhir: Karya Digital untuk Masyarakat",waktu:"4 pertemuan · kelompok 4 orang",
+     langkah:["Tentukan persoalan nyata di sekolah atau Kabupaten Pinrang.",
+              "Susun rencana pada simulasi Perencana Projek Akhir.",
+              "Bangun purwarupa, uji bersama calon pengguna, lalu perbaiki.",
+              "Gelar karya: presentasikan proses, produk, dan manfaatnya."],
+     produk:"Karya digital + laporan + presentasi gelar karya"},
+   kuis:[{q:"Menyebarkan data pribadi orang lain tanpa izin melanggar …",o:["Undang-undang pelindungan data pribadi","Aturan sekolah saja","Tidak melanggar apa pun"],k:0},
+         {q:"Saat bertransaksi daring, kode OTP sebaiknya …",o:["Dibagikan kepada penjual","Tidak dibagikan kepada siapa pun","Ditulis di catatan daring"],k:1},
+         {q:"Partisipasi digital yang sehat dilakukan dengan …",o:["Argumen dan bukti","Menyerang pribadi","Menyebar tangkapan layar tanpa sumber"],k:0}]}
+};
 /* ---- Daftar simulasi (17) ---- */
 const SIM_LIST = [
  ["sorting","Visualisasi Pengurutan","Bubble, selection, dan insertion sort bergerak langkah demi langkah dengan penghitung perbandingan dan pertukaran.","🔀"],
@@ -802,41 +1083,114 @@ const after=f=>window.__after=f;
 const crumb=t=>$('#crumb').textContent=t;
 
 /* ---------------- penyusun salindia ---------------- */
+/* ---------------- penyusun salindia: pembuka → isi → aktivitas & penutup --------- */
 function buildDeck(m){
   const kls='slide-'+m.kelas.toLowerCase();
-  const out=[{type:'cover',kls}];
+  const ex=(typeof EXTRA!=='undefined'&&EXTRA[m.id])||{cek:[],kuis:[],aktivitas:null};
+  const daftar=modulesOf(m.kelas), pos=daftar.findIndex(x=>x.id===m.id);
+  const prev=pos>0?daftar[pos-1]:null, next=pos>=0&&pos<daftar.length-1?daftar[pos+1]:null;
+  const out=[{type:'cover',kls},{type:'tujuan',kls},{type:'apersepsi',kls,prev}];
+  const cek=(ex.cek||[]).slice(); let sejak=0;
   m.slides.forEach((s,i)=>{
-    let layout='bullets';
-    if((s.k||'').toLowerCase().startsWith('pemantik')) layout='pemantik';
-    else if(s.img) layout='split';
-    else if(s.b.length>=4 && i%2===1) layout='cards';
+    const pemantik=(s.k||'').toLowerCase().startsWith('pemantik');
+    const layout=pemantik?'pemantik':s.img?'split':(s.b.length>=4&&i%2===1)?'cards':'bullets';
     out.push({type:'konten',layout,s,kls,idx:i});
-    if(s.sim) out.push({type:'sim',sim:s.sim,kls,judul:s.t});
+    if(s.sim){out.push({type:'sim',sim:s.sim,kls,judul:s.t});sejak=0;return}
+    sejak++;
+    if(!pemantik&&sejak>=2&&cek.length){out.push({type:'cek',q:cek.shift(),kls});sejak=0}
   });
-  out.push({type:'tutup',kls});
+  while(cek.length) out.push({type:'cek',q:cek.shift(),kls});
+  if(ex.aktivitas) out.push({type:'aktivitas',a:ex.aktivitas,kls});
+  if(ex.kuis&&ex.kuis.length) out.push({type:'kuis',kuis:ex.kuis,kls});
+  out.push({type:'refleksi',kls});
+  out.push({type:'lanjut',kls,next});
   return out;
+}
+function labelSlide(sl){
+  switch(sl.type){
+    case 'cover':return 'Sampul & sapaan';
+    case 'tujuan':return 'Tujuan pembelajaran';
+    case 'apersepsi':return 'Apersepsi';
+    case 'cek':return '❓ Cek pemahaman';
+    case 'sim':return '🧪 '+(SIM_NAMA[sl.sim]||'Simulasi');
+    case 'aktivitas':return '👥 Aktivitas kelompok';
+    case 'kuis':return '🏁 Kuis interaktif';
+    case 'refleksi':return 'Refleksi';
+    case 'lanjut':return 'Tindak lanjut';
+    case 'canva':return '🎨 Slide Canva';
+    default:return sl.s?sl.s.t:'Materi';
+  }
 }
 function slideHTML(sl,m,i,total){
   const foot=`<div class="foot"><span class="dot"></span><span>${esc(m.kode)} · ${esc(m.judul)}</span><span style="margin-left:auto">${i+1}/${total}</span></div>`;
+  const tag=(t,w)=>`<span class="tahap">${t}</span>`;
   if(sl.type==='cover') return `<div class="sl cover dark">
     <span class="deco b1"></span><span class="deco b2"></span><span class="deco ring"></span>
-    <div class="kick anim">Kelas ${m.kelas} · Fase ${m.fase} · ${m.sem}</div>
+    <div class="kick anim">Kelas ${m.kelas} · Fase ${m.fase} · ${m.sem} · ${m.jp} JP</div>
     <h2 class="anim">${esc(m.judul)}</h2>
-    <p class="anim" style="max-width:46ch;font-size:clamp(.78rem,1.4vw,1.1rem);opacity:.92">${esc(m.ringkas)}</p>
-    <div class="meta anim">${[m.kode,m.jp+' JP',m.elemen].map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
+    <p class="anim" style="max-width:48ch;font-size:clamp(.78rem,1.4vw,1.08rem);opacity:.94">
+      Halo, selamat datang di kelas Informatika! Semoga hari ini kita belajar dengan gembira dan pulang membawa satu kemampuan baru.</p>
+    <div class="meta anim">${[m.kode,m.elemen.slice(0,46),'T.P. '+TAPEL].map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
     <div class="foot"><span class="dot"></span><span>${esc(GURU)} · ${esc(SEKOLAH)}</span></div></div>`;
-  if(sl.type==='tutup') return `<div class="sl cover dark">
+  if(sl.type==='tujuan') return `<div class="sl light">
+    <span class="deco b1" style="opacity:.25"></span><span class="deco dots"></span>
+    <div class="kick anim">Pembuka · Tujuan pembelajaran</div>
+    <h2 class="anim">Di akhir pertemuan ini kamu akan mampu…</h2>
+    <ul class="anim">${m.tp.map(t=>`<li>${esc(t.replace(/^[A-Z]+\.[A-Z]+\.\d+\s*/,''))}</li>`).join('')}</ul>
+    <div class="anim" style="margin-top:auto;display:flex;gap:.5rem;flex-wrap:wrap">
+      <span class="pilk">Alokasi ${m.jp} JP</span><span class="pilk">Elemen: ${esc(m.elemen)}</span>
+      <span class="pilk">Kriteria ketuntasan 75</span></div>${foot}</div>`;
+  if(sl.type==='apersepsi') return `<div class="sl cards light">
+    <span class="deco b1" style="opacity:.22"></span>
+    <div class="kick anim">Pembuka · Apersepsi</div>
+    <h2 class="anim">Menyambung perjalanan belajar kita</h2>
+    <div class="body anim" style="grid-template-columns:1fr 1fr">
+      <div class="kart"><span class="n">←</span><span><b>Pertemuan lalu</b><br>${sl.prev?esc(sl.prev.judul):'Ini pertemuan pertama pada fase ini — kita mulai dari pengalaman kalian sehari-hari dengan teknologi.'}</span></div>
+      <div class="kart"><span class="n">→</span><span><b>Hari ini</b><br>${esc(m.judul)}</span></div>
+      <div class="kart"><span class="n">?</span><span><b>Pertanyaan pembuka</b><br>Apa yang masih kamu ingat dari pertemuan sebelumnya?</span></div>
+      <div class="kart"><span class="n">!</span><span><b>Mengapa penting</b><br>${esc(m.ringkas)}</span></div>
+    </div>${foot}</div>`;
+  if(sl.type==='cek') return `<div class="sl pemantik dark">
+    <span class="deco b1"></span><span class="deco b2"></span><span class="qmark">?</span>
+    <div class="kick anim">Jeda sejenak · Cek pemahaman</div>
+    <h2 class="anim">${esc(sl.q)}</h2>
+    <p class="anim" style="opacity:.9;font-size:clamp(.78rem,1.35vw,1.05rem)">Jawab bersama teman sebangku selama satu menit, lalu dua orang berbagi jawabannya di depan kelas.</p>
+    ${foot}</div>`;
+  if(sl.type==='aktivitas'){const a=sl.a;return `<div class="sl light">
+    <span class="deco b1" style="opacity:.2"></span>
+    <div class="kick anim">Aktivitas · Mengaplikasi</div>
+    <h2 class="anim">${esc(a.t)}</h2>
+    <div class="anim" style="display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:.4rem">
+      <span class="pilk">⏱ ${esc(a.waktu)}</span><span class="pilk">📦 Produk: ${esc(a.produk)}</span></div>
+    <ol class="langkah anim">${a.langkah.map(l=>`<li>${esc(l)}</li>`).join('')}</ol>
+    ${foot}</div>`}
+  if(sl.type==='kuis') return `<div class="sl light kuisslide">
+    <span class="deco b1" style="opacity:.2"></span>
+    <div class="kick">Evaluasi formatif · Kuis cepat</div>
+    <h2 style="margin-bottom:.4rem">Seberapa paham kita hari ini?</h2>
+    <div class="kuisbox" data-kuis="1"></div>${foot}</div>`;
+  if(sl.type==='refleksi') return `<div class="sl cover dark">
     <span class="deco b1"></span><span class="deco dots"></span>
-    <div class="kick anim">Penutup pertemuan</div>
+    <div class="kick anim">Penutup · Refleksi</div>
     <h2 class="anim">Mari kita refleksikan</h2>
-    <ul class="anim" style="font-size:clamp(.8rem,1.4vw,1.1rem)">
-      <li>Apa hal baru yang saya pahami hari ini?</li>
-      <li>Bagian mana yang masih membingungkan?</li>
-      <li>Apa yang akan saya lakukan untuk memperbaikinya?</li></ul>
+    <ul class="anim" style="font-size:clamp(.82rem,1.45vw,1.14rem)">
+      <li>Bagian mana yang paling menarik bagimu hari ini?</li>
+      <li>Apa yang masih membuatmu bingung?</li>
+      <li>Di mana kamu akan memakai pengetahuan ini di luar kelas?</li></ul>
+    <p class="anim" style="opacity:.88;font-size:.9rem">Tuliskan jawabanmu di buku catatan atau sampaikan secara lisan.</p>
+    ${foot}</div>`;
+  if(sl.type==='lanjut') return `<div class="sl cover dark">
+    <span class="deco b1"></span><span class="deco b2"></span><span class="deco ring"></span>
+    <div class="kick anim">Penutup · Tindak lanjut</div>
+    <h2 class="anim">Terima kasih, kalian hebat hari ini!</h2>
+    <ul class="anim" style="font-size:clamp(.8rem,1.4vw,1.08rem)">
+      <li><b>Pertemuan berikutnya:</b> ${sl.next?esc(sl.next.kode+' — '+sl.next.judul):'Asesmen lingkup materi dan gelar karya'}</li>
+      <li><b>Persiapan:</b> ${sl.next?'baca sekilas materi berikutnya dan catat satu pertanyaan yang ingin kamu tanyakan.':'rapikan catatan dan produk belajarmu untuk dikumpulkan.'}</li>
+      <li><b>Latihan mandiri:</b> buka kembali simulasi pada pertemuan ini dan coba dengan data buatanmu sendiri.</li></ul>
+    <div class="meta anim"><span class="chip">${esc(GURU)}</span><span class="chip">Bertanya kapan saja saat jam konsultasi</span></div>
     ${foot}</div>`;
   if(sl.type==='sim') return `<div class="sl simslide">
-    <div class="simhead"><span>🧪</span><b>Simulasi — ${esc(SIM_NAMA[sl.sim]||sl.sim)}</b>
-      <span class="tag">Mengaplikasi</span></div>
+    <div class="simhead"><span>🧪</span><b>Simulasi — ${esc(SIM_NAMA[sl.sim]||sl.sim)}</b><span class="tag">Mengaplikasi</span></div>
     <div class="simarea" data-sim="${sl.sim}"><div class="img-ph"><span class="spin"></span><span>Menyiapkan simulasi…</span></div></div></div>`;
   const s=sl.s;
   if(sl.layout==='pemantik') return `<div class="sl pemantik dark">
@@ -859,6 +1213,41 @@ function slideHTML(sl,m,i,total){
     <span class="deco b1" style="opacity:.25"></span><span class="deco ring"></span>
     <div class="kick anim">${esc(s.k||'')}</div><h2 class="anim">${esc(s.t)}</h2>
     <ul class="anim">${s.b.map(b=>`<li>${b}</li>`).join('')}</ul>${foot}</div>`;
+}
+/* widget kuis interaktif di dalam salindia */
+function mountKuis(box,soal){
+  let i=0,benar=0,terjawab=false;
+  function tampil(){
+    terjawab=false;
+    if(i>=soal.length){
+      const pct=Math.round(benar/soal.length*100);
+      box.innerHTML=`<div class="kuis-hasil">
+        <div class="ring" style="--p:${pct}%"><div class="in"><b>${benar}/${soal.length}</b><span>benar</span></div></div>
+        <p>${pct===100?'Luar biasa! Seluruh jawaban tepat.':pct>=67?'Bagus! Tinggal satu bagian lagi yang perlu diperkuat.':'Mari kita ulas kembali bersama bagian yang masih sulit.'}</p>
+        <button class="btn sm" id="kz-ulang">Ulangi kuis</button></div>`;
+      if(pct===100) confetti(60);
+      $('#kz-ulang',box).onclick=()=>{i=0;benar=0;tampil()};
+      return;
+    }
+    const s=soal[i];
+    box.innerHTML=`<div class="kuis-top"><span>Soal ${i+1} dari ${soal.length}</span>
+      <span class="kuis-prog"><i style="width:${(i)/soal.length*100}%"></i></span></div>
+      <p class="kuis-q">${esc(s.q)}</p>
+      <div class="kuis-opt">${s.o.map((o,j)=>`<button class="kz" data-j="${j}">${String.fromCharCode(65+j)}. ${esc(o)}</button>`).join('')}</div>
+      <div class="kuis-fb" style="display:none"></div>`;
+    $$('.kz',box).forEach(b=>b.onclick=()=>{
+      if(terjawab)return;terjawab=true;
+      const j=+b.dataset.j,ok=j===s.k;
+      $$('.kz',box).forEach(x=>{if(+x.dataset.j===s.k)x.classList.add('ok');});
+      if(!ok)b.classList.add('no');else benar++;
+      const fb=$('.kuis-fb',box);fb.style.display='block';
+      fb.className='kuis-fb '+(ok?'ok':'no');
+      fb.innerHTML=(ok?'<b>Tepat!</b> ':'<b>Belum tepat.</b> Jawaban yang benar: <b>'+esc(s.o[s.k])+'</b>. ')+
+        `<button class="btn sm primary" id="kz-next" style="margin-left:.4rem">${i===soal.length-1?'Lihat hasil':'Soal berikutnya →'}</button>`;
+      $('#kz-next',box).onclick=()=>{i++;tampil()};
+    });
+  }
+  tampil();
 }
 /* =========================================================================
    SIMULASI INTERAKTIF
@@ -2035,10 +2424,19 @@ function pageModul(p){
   const deck=buildDeck(m);
   if(canva) deck.splice(1,0,{type:'canva',url:canva,kls:'slide-'+m.kelas.toLowerCase()});
   const rail=deck.map((sl,i)=>{
-    const lab=sl.type==='cover'?'Sampul':sl.type==='tutup'?'Refleksi':sl.type==='sim'?('🧪 '+(SIM_NAMA[sl.sim]||'')):sl.type==='canva'?'🎨 Slide Canva':(sl.s.t);
-    return `<button class="thumb${sl.type==='sim'?' sim':''}" data-i="${i}"><b>${i+1}. ${esc(String(lab).slice(0,34))}</b><span class="tn">${sl.type==='sim'?'simulasi':''}</span></button>`;
+    const lab=labelSlide(sl);
+    const kelasTh=sl.type==='sim'?' sim':(sl.type==='kuis'||sl.type==='cek'||sl.type==='aktivitas')?' act':'';
+    return `<button class="thumb${kelasTh}" data-i="${i}"><b>${i+1}. ${esc(String(lab).slice(0,34))}</b><span class="tn">${sl.type==='sim'?'simulasi':sl.type==='kuis'?'kuis':''}</span></button>`;
   }).join('');
-  const printAll=deck.filter(s=>s.type!=='sim'&&s.type!=='canva').map((sl,i,a)=>`<div class="stage ${sl.kls}">${slideHTML(sl,m,i,a.length)}</div>`).join('');
+  const printAll=deck.filter(s=>s.type!=='sim'&&s.type!=='canva').map((sl,i,a)=>{
+    if(sl.type==='kuis'){
+      return `<div class="stage ${sl.kls}"><div class="sl light">
+        <div class="kick">Evaluasi formatif · Kuis cepat</div><h2>Seberapa paham kita hari ini?</h2>
+        <ol class="langkah">${sl.kuis.map(q=>`<li><b>${esc(q.q)}</b><br>${q.o.map((o,j)=>String.fromCharCode(65+j)+'. '+esc(o)).join(' &nbsp; ')}</li>`).join('')}</ol>
+        <div class="foot"><span class="dot"></span><span>Kunci: ${sl.kuis.map((q,n)=>(n+1)+String.fromCharCode(65+q.k)).join(' · ')}</span></div></div></div>`;
+    }
+    return `<div class="stage ${sl.kls}">${slideHTML(sl,m,i,a.length)}</div>`;
+  }).join('');
   after(()=>mountDeck(m,deck));
   return `<div class="row" style="justify-content:space-between;align-items:flex-start;gap:.8rem;margin-bottom:.7rem">
     <div style="flex:1;min-width:220px">
@@ -2090,6 +2488,7 @@ function mountDeck(m,deck){
     }else{
       stage.innerHTML=slideHTML(sl,m,i,deck.length);
       if(sl.type==='sim') mountSimInto($('.simarea',stage),sl.sim);
+      else if(sl.type==='kuis'){const b=$('.kuisbox',stage); if(b) mountKuis(b,sl.kuis)}
       else hydrateFigures(stage);
     }
     $('#dk-num').textContent=`${i+1} / ${deck.length}`;
