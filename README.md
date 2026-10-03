@@ -11,10 +11,22 @@ Acuan: Capaian Pembelajaran BSKAP 046/H/KR/2025 · pendekatan Pembelajaran Menda
 
 | Berkas | Keterangan |
 |---|---|
-| `index.html` | Aplikasi: 20 pertemuan, 174 salindia, 17 simulasi interaktif |
-| `Slide Informatika Kelas X - SMAN 11 Pinrang.pptx` | 79 slide siap tayang / siap diimpor ke Canva |
-| `Slide Informatika Kelas XI - SMAN 11 Pinrang.pptx` | Dek Kelas XI |
-| `Slide Informatika Kelas XII - SMAN 11 Pinrang.pptx` | Dek Kelas XII |
+| `index.html` | Aplikasi: 20 pertemuan, 17 simulasi interaktif, kuis formatif di setiap dek |
+| `Slide Informatika Kelas X - SMAN 11 Pinrang.pptx` | 143 slide siap tayang / siap diimpor ke Canva |
+| `Slide Informatika Kelas XI - SMAN 11 Pinrang.pptx` | 104 slide |
+| `Slide Informatika Kelas XII - SMAN 11 Pinrang.pptx` | 103 slide |
+
+## Alur setiap dek pertemuan
+
+**Pembuka** — sampul dan sapaan hangat · tujuan pembelajaran · apersepsi (kaitan dengan pertemuan
+lalu) · pertanyaan pemantik.
+**Isi** — poin kunci berupa kata kunci singkat, visual pendukung, salindia simulasi interaktif (🧪),
+dan salindia **cek pemahaman** yang disisipkan setiap selesai satu sub-bab.
+**Aktivitas & penutup** — instruksi kerja kelompok (langkah bernomor, alokasi waktu, produk yang
+dikumpulkan) · kuis interaktif 3 soal dengan umpan balik instan · refleksi terbuka · tindak lanjut,
+materi pertemuan berikutnya, dan ucapan terima kasih.
+
+Pada berkas `.pptx`, kunci jawaban kuis dan catatan guru tersimpan di bagian **Speaker Notes**.
 
 ## Menerbitkan di GitHub Pages
 
