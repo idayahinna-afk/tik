@@ -1,64 +1,70 @@
-# Media Pembelajaran Informatika — SMA Negeri 11 Pinrang
+# Slide & Simulasi Informatika — SMA Negeri 11 Pinrang
 
-Media pembelajaran berbasis web untuk mata pelajaran **Informatika** Kelas X (Fase E), XI, dan XII (Fase F),
-selaras dengan perangkat ajar Tahun Pelajaran 2026/2027 dan Capaian Pembelajaran versi 2025
-(Keputusan Kepala BSKAP Nomor 046/H/KR/2025).
+Media pembelajaran berbasis web berisi **slide pertemuan** dan **simulasi interaktif** untuk
+Informatika Kelas X (Fase E), XI, dan XII (Fase F). Setiap pertemuan memiliki minimal satu
+salindia simulasi (ditandai 🧪) yang dapat langsung dicoba murid di tengah presentasi.
 
-Penyusun: **Mutmainnah Syam, S.Pd., M.Pd.** — NIP 19930321 202421 2 034
+Penyusun: **Mutmainnah Syam, S.Pd., M.Pd.** — NIP 19930321 202421 2 034 · T.P. 2026/2027
+Acuan: Capaian Pembelajaran BSKAP 046/H/KR/2025 · pendekatan Pembelajaran Mendalam.
 
-## Isi media
+## Isi
 
-| Bagian | Keterangan |
+| Berkas | Keterangan |
 |---|---|
-| Materi dan slide | 20 modul, 120+ salindia presentasi siap tayang (mode layar penuh) |
-| Simulasi interaktif | 15 simulasi: pengurutan, pencarian, tumpukan/antrean, Von Neumann, biner, penelusuran pseudocode, analisis data, periksa fakta, jaringan dan troubleshooting, graf BFS/DFS, strategi algoritmik, keamanan akun dan 2FA, tinjauan kode, perancang spesifikasi, perencana projek |
-| Latihan soal | 3 paket (Kelas X, XI, XII): 10 pilihan ganda dinilai otomatis + 5 uraian dengan pokok jawaban |
-| LKPD digital | 3 lembar kerja yang dapat diisi, tersimpan otomatis, dan dicetak/disimpan sebagai PDF |
-| Panduan guru | Alur pemakaian 3M, program tahunan, rancangan asesmen, glosarium |
+| `index.html` | Aplikasi: 20 pertemuan, 174 salindia, 17 simulasi interaktif |
+| `Slide Informatika Kelas X - SMAN 11 Pinrang.pptx` | 79 slide siap tayang / siap diimpor ke Canva |
+| `Slide Informatika Kelas XI - SMAN 11 Pinrang.pptx` | Dek Kelas XI |
+| `Slide Informatika Kelas XII - SMAN 11 Pinrang.pptx` | Dek Kelas XII |
 
-## Cara menerbitkan di GitHub Pages
+## Menerbitkan di GitHub Pages
 
-1. Buat repositori baru di GitHub, misalnya `informatika-sman11pinrang` (boleh publik).
-2. Klik **Add file → Upload files**, unggah berkas `index.html`, lalu **Commit changes**.
-3. Buka **Settings → Pages**. Pada bagian *Source* pilih **Deploy from a branch**,
-   cabang **main**, folder **/ (root)**, lalu **Save**.
-4. Tunggu 1–2 menit. Alamat media akan muncul, misalnya
-   `https://namapengguna.github.io/informatika-sman11pinrang/`.
+1. Buat repositori baru, misalnya `informatika-sman11pinrang`.
+2. **Add file → Upload files**, unggah `index.html` dan ketiga berkas `.pptx`, lalu commit.
+3. **Settings → Pages** → Source: *Deploy from a branch* → branch `main`, folder `/ (root)` → Save.
+4. Buka tautan yang muncul, misalnya `https://namapengguna.github.io/informatika-sman11pinrang/`.
 
-Tidak diperlukan berkas tambahan, proses build, maupun berkas `.nojekyll`:
-seluruh media berada dalam satu berkas `index.html`.
+Tombol "Unduh seluruh slide" di halaman kelas mengarah ke berkas `.pptx` di repositori yang sama,
+jadi pastikan berkas tersebut ikut diunggah.
 
-Media juga bisa dipakai tanpa GitHub — cukup salin `index.html` ke komputer atau flashdisk,
-lalu klik dua kali untuk membukanya di peramban.
+## Memakai Canva
 
-## Gambar dan mode luring
+Ada dua cara memadukan media ini dengan Canva:
 
-- Saat media dibuka **pertama kali** dan terhubung internet, gambar pendukung diambil dari
-  **Wikimedia Commons** (berlisensi bebas) lalu disimpan permanen di penyimpanan internal
-  peramban (**IndexedDB**). Media juga meminta status penyimpanan permanen agar tidak dihapus otomatis.
-- Pembukaan berikutnya **tidak mengunduh ulang** gambar, sehingga hemat kuota dan tetap berjalan
-  saat jaringan terputus.
-- Jika gambar gagal diambil (tanpa internet atau sumber berubah), media otomatis memakai
-  **ilustrasi SVG bawaan** yang sudah tertanam di dalam berkas, sehingga pembelajaran tetap berjalan.
-- Status, pembaruan, dan penghapusan gambar dapat diatur pada menu **Penyimpanan Media**.
-- Nama pembuat dan lisensi tiap gambar ditampilkan otomatis pada keterangan gambar.
+**1. Percantik slide di Canva.** Buka Canva → *Buat desain* → *Unggah* → pilih berkas `.pptx`.
+Seluruh slide masuk sebagai desain yang dapat diubah warna, font, dan elemennya.
 
-## Catatan privasi
+**2. Tempelkan desain Canva ke dalam aplikasi.** Di Canva: *Bagikan → Lainnya → Sematkan*, salin
+tautan `https://www.canva.com/design/…/view?embed`. Buka menu **Pengaturan & Canva** pada aplikasi,
+tempelkan tautan pada baris pertemuan yang sesuai. Slide Canva akan muncul sebagai salindia tambahan
+di awal dek pertemuan tersebut (memerlukan internet saat ditayangkan).
 
-Kemajuan belajar, jawaban LKPD, dan nilai latihan disimpan di peramban masing-masing pengguna
-(localStorage). Tidak ada data yang dikirim ke server mana pun.
-
-## Pintasan papan ketik saat presentasi
+## Mode presentasi
 
 | Tombol | Fungsi |
 |---|---|
-| `←` `→` atau `spasi` | Berpindah salindia |
-| `F` | Layar penuh |
-| `Esc` | Menutup presentasi |
+| `←` `→` | Berpindah salindia |
+| `F` | Masuk/keluar mode presentasi layar penuh |
+| `Esc` | Keluar mode presentasi |
+
+Tombol **Unduh slide (PDF)** pada tiap pertemuan membuka jendela cetak; pilih *Simpan sebagai PDF*.
+
+## Daftar simulasi (17)
+
+Pengurutan · Pencarian berurutan vs biner · Tumpukan dan antrean · Siklus Von Neumann ·
+Konversi biner dan ASCII · Penelusuran pseudocode · Analisis data mini · Lembar kerja dan atribusi
+lisensi · Latihan periksa fakta · Jaringan dan troubleshooting · Daur hidup produk digital ·
+Penelusuran graf BFS/DFS · Brute force vs greedy · Keamanan kata sandi dan 2FA · Tinjauan kualitas
+kode · Perancang spesifikasi komputer · Perencana projek akhir.
+
+## Gambar dan mode luring
+
+Gambar pendukung diambil sekali dari Wikimedia Commons (lisensi bebas) saat aplikasi pertama dibuka,
+lalu disimpan permanen di IndexedDB peramban. Pembukaan berikutnya tidak mengunduh ulang dan tetap
+berjalan tanpa internet; bila pengambilan gagal, dipakai ilustrasi SVG bawaan. Pengaturannya ada di
+menu **Pengaturan & Canva**.
 
 ## Menyesuaikan isi
 
-Seluruh materi berada pada bagian `const MODULES = [...]` di dalam `index.html`.
-Setiap modul memuat `judul`, `tp` (tujuan pembelajaran), dan daftar `slides`
-berisi `t` (judul salindia), `b` (butir isi), `img` (kode gambar), dan `sim` (kode simulasi).
-Bank soal ada pada `const QUIZ`, LKPD pada `const LKPD`, dan daftar gambar pada `const IMAGES`.
+Materi berada pada `const MODULES = [...]` di dalam `index.html`. Setiap salindia memuat
+`k` (label), `t` (judul), `b` (butir isi), `img` (kode gambar), dan `sim` (kode simulasi —
+menyisipkan salindia simulasi tepat setelahnya).

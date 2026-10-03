@@ -3,320 +3,288 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Media Pembelajaran Informatika — SMA Negeri 11 Pinrang</title>
-<meta name="description" content="Media pembelajaran Informatika Fase E dan F: slide, simulasi interaktif, latihan soal, dan LKPD digital. Mutmainnah Syam, S.Pd., M.Pd. — SMA Negeri 11 Pinrang.">
-<meta name="theme-color" content="#2f2a7a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f2a7a'/%3E%3Cpath d='M18 40V24l8 9 8-9v16' stroke='%2367e8c3' stroke-width='5' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='38' r='4' fill='%2367e8c3'/%3E%3C/svg%3E">
+<title>Slide &amp; Simulasi Informatika — SMA Negeri 11 Pinrang</title>
+<meta name="description" content="Media pembelajaran Informatika Fase E dan F: slide presentasi bergaya desain modern dengan simulasi interaktif di setiap pertemuan.">
+<meta name="theme-color" content="#1b1446">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%231b1446'/%3E%3Cpath d='M16 42V22l9 11 9-11v20' stroke='%2300e0b0' stroke-width='5' fill='none' stroke-linejoin='round' stroke-linecap='round'/%3E%3Ccircle cx='46' cy='39' r='4.5' fill='%23ff8a5b'/%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#f6f7fb; --bg-2:#ffffff; --bg-3:#eef1f8; --line:#dfe3ef; --line-2:#c9cfe2;
-  --ink:#171a2b; --ink-2:#4b5169; --ink-3:#787f99;
-  --brand:#2f2a7a; --brand-2:#4740ad; --brand-soft:#e9e7fb;
-  --accent:#0f7f66; --accent-soft:#dcf5ec; --warn:#9a5b06; --warn-soft:#fdf0d8;
-  --danger:#a12b2b; --danger-soft:#fbe4e4;
-  --shadow:0 1px 2px rgba(16,20,40,.06),0 8px 24px rgba(16,20,40,.07);
-  --shadow-lg:0 20px 60px rgba(16,20,40,.22);
-  --r:14px; --r-sm:9px; --maxw:1120px;
-  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --bg:#f5f6fc; --bg-2:#ffffff; --bg-3:#edeffa; --line:#e0e3f2; --line-2:#c7cce6;
+  --ink:#141833; --ink-2:#4a5071; --ink-3:#7b8199;
+  --brand:#3a2fb0; --brand-2:#5b4ae0; --brand-soft:#eceafd;
+  --accent:#00a186; --accent-soft:#dcf7f0; --warn:#b4650a; --warn-soft:#fdf0db;
+  --danger:#b3302f; --danger-soft:#fce5e5;
+  --shadow:0 1px 2px rgba(16,20,40,.05),0 10px 30px rgba(16,20,40,.08);
+  --shadow-lg:0 30px 80px rgba(16,20,40,.26);
+  --r:16px; --maxw:1180px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 html[data-theme="dark"]{
-  --bg:#0e1020; --bg-2:#171a2e; --bg-3:#1f2339; --line:#2b3050; --line-2:#3a4066;
-  --ink:#eef0fa; --ink-2:#b4bad3; --ink-3:#848bab;
-  --brand:#a9a3ff; --brand-2:#8d85ff; --brand-soft:#262a4d;
-  --accent:#55d6b2; --accent-soft:#17352f; --warn:#f0bb6a; --warn-soft:#3a2c13;
-  --danger:#ff9b9b; --danger-soft:#3a1d1d;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
-  --shadow-lg:0 24px 70px rgba(0,0,0,.6);
+  --bg:#0b0d1c; --bg-2:#141829; --bg-3:#1d2236; --line:#2a3050; --line-2:#3b4167;
+  --ink:#f0f2fc; --ink-2:#b8bed6; --ink-3:#868db0;
+  --brand:#b3aaff; --brand-2:#9a8dff; --brand-soft:#232746;
+  --accent:#4fe0c0; --accent-soft:#14352e; --warn:#f3c278; --warn-soft:#3b2d13;
+  --danger:#ff9e9e; --danger-soft:#3b1e1e;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 34px rgba(0,0,0,.4);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{
-  font-family:var(--sans); background:var(--bg); color:var(--ink);
-  font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
-  overflow-wrap:anywhere;
-}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
 a{color:var(--brand-2)}
-h1,h2,h3,h4{line-height:1.25; margin:0 0 .5rem; color:var(--ink); letter-spacing:-.01em}
-h1{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.1rem)}
-h2{font-size:clamp(1.22rem,1rem + .9vw,1.6rem); margin-top:1.8rem}
-h3{font-size:1.06rem; margin-top:1.2rem}
-p{margin:.5rem 0 .9rem}
-ul,ol{margin:.4rem 0 1rem; padding-left:1.25rem}
-li{margin:.28rem 0}
-code,kbd{font-family:var(--mono); font-size:.9em; background:var(--bg-3); padding:.12em .4em; border-radius:6px}
-button{font-family:inherit; font-size:inherit}
-hr{border:0;border-top:1px solid var(--line);margin:1.5rem 0}
+h1,h2,h3{line-height:1.2;margin:0 0 .5rem;letter-spacing:-.02em}
+h1{font-size:clamp(1.6rem,1.1rem + 1.8vw,2.3rem)}
+h2{font-size:clamp(1.2rem,1rem + .9vw,1.55rem);margin-top:1.6rem}
+h3{font-size:1.02rem;margin-top:1.1rem}
+p{margin:.45rem 0 .85rem}
+code,kbd{font-family:var(--mono);font-size:.9em;background:var(--bg-3);padding:.1em .38em;border-radius:6px}
+button{font-family:inherit;font-size:inherit}
 
-/* ---------- layout ---------- */
-.app{display:grid; grid-template-columns:272px 1fr; min-height:100vh}
-.sidebar{
-  background:var(--bg-2); border-right:1px solid var(--line);
-  position:sticky; top:0; height:100vh; overflow-y:auto; z-index:40;
-  display:flex; flex-direction:column;
-}
-.brand{display:flex;gap:.65rem;align-items:center;padding:1.05rem 1rem .8rem;border-bottom:1px solid var(--line)}
-.brand .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-weight:800;flex:none;font-size:.95rem}
-.brand b{display:block;font-size:.95rem;line-height:1.2}
-.brand span{font-size:.74rem;color:var(--ink-3)}
-.nav{padding:.6rem .6rem 1.2rem;flex:1}
-.nav-group{margin-bottom:.35rem}
-.nav-title{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);padding:.85rem .6rem .35rem;font-weight:700}
-.nav a{
-  display:flex;align-items:center;gap:.55rem;padding:.47rem .6rem;border-radius:9px;
-  color:var(--ink-2);text-decoration:none;font-size:.9rem;font-weight:500;
-}
+/* ---------- shell ---------- */
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{background:var(--bg-2);border-right:1px solid var(--line);position:sticky;top:0;height:100vh;overflow-y:auto;z-index:40;display:flex;flex-direction:column}
+.brand{display:flex;gap:.65rem;align-items:center;padding:1rem .95rem .85rem;border-bottom:1px solid var(--line)}
+.brand .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#3a2fb0,#00a186);display:grid;place-items:center;color:#fff;font-weight:800;flex:none}
+.brand b{display:block;font-size:.93rem;line-height:1.15}
+.brand span{font-size:.72rem;color:var(--ink-3)}
+.nav{padding:.5rem .55rem 1rem;flex:1}
+.nav-title{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding:.8rem .55rem .3rem;font-weight:800}
+.nav a{display:flex;align-items:center;gap:.55rem;padding:.45rem .6rem;border-radius:10px;color:var(--ink-2);text-decoration:none;font-size:.885rem;font-weight:550}
 .nav a:hover{background:var(--bg-3);color:var(--ink)}
-.nav a.active{background:var(--brand-soft);color:var(--brand);font-weight:650}
-.nav a .ic{width:18px;text-align:center;flex:none;opacity:.85}
-.nav details>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.55rem;padding:.47rem .6rem;border-radius:9px;font-size:.9rem;font-weight:600;color:var(--ink-2)}
+.nav a.active{background:var(--brand-soft);color:var(--brand);font-weight:700}
+.nav a .ic{width:20px;text-align:center;flex:none}
+.nav details>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.55rem;padding:.45rem .6rem;border-radius:10px;font-size:.885rem;font-weight:700;color:var(--ink-2)}
 .nav details>summary::-webkit-details-marker{display:none}
 .nav details>summary:hover{background:var(--bg-3)}
-.nav details[open]>summary{color:var(--ink)}
-.nav details .sub{padding-left:.55rem;border-left:2px solid var(--line);margin:.15rem 0 .4rem .9rem}
-.nav details .sub a{font-size:.845rem;padding:.36rem .5rem;font-weight:500}
-.sidebar-foot{padding:.7rem 1rem 1rem;border-top:1px solid var(--line);font-size:.73rem;color:var(--ink-3)}
-
+.nav details .sub{padding-left:.5rem;border-left:2px solid var(--line);margin:.1rem 0 .4rem .95rem}
+.nav details .sub a{font-size:.825rem;padding:.34rem .5rem;font-weight:500}
+.sidebar-foot{padding:.7rem .95rem 1rem;border-top:1px solid var(--line);font-size:.72rem;color:var(--ink-3)}
 .main{min-width:0;display:flex;flex-direction:column}
-.topbar{
-  position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);
-  backdrop-filter:blur(10px); border-bottom:1px solid var(--line);
-  display:flex;align-items:center;gap:.6rem;padding:.55rem .9rem;
-}
+.topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.5rem;padding:.5rem .9rem}
 .topbar .burger{display:none}
 .crumb{font-size:.82rem;color:var(--ink-3);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.content{padding:1.4rem 1.4rem 4rem;max-width:var(--maxw);width:100%;margin:0 auto;flex:1}
+.content{padding:1.3rem 1.3rem 3.5rem;max-width:var(--maxw);width:100%;margin:0 auto;flex:1}
 
 /* ---------- controls ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
-  padding:.5rem .85rem;border-radius:10px;border:1px solid var(--line-2);
-  background:var(--bg-2);color:var(--ink);cursor:pointer;font-size:.88rem;font-weight:600;
-  transition:transform .06s ease, background .15s ease, border-color .15s ease;
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.5rem .9rem;border-radius:11px;border:1px solid var(--line-2);background:var(--bg-2);color:var(--ink);cursor:pointer;font-size:.87rem;font-weight:650;transition:.14s}
 .btn:hover{background:var(--bg-3)}
 .btn:active{transform:translateY(1px)}
-.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
-html[data-theme="dark"] .btn.primary{color:#13162b}
-.btn.primary:hover{background:var(--brand-2);border-color:var(--brand-2)}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border-color:transparent;color:#fff;box-shadow:0 6px 18px rgba(58,47,176,.28)}
+.btn.primary:hover{filter:brightness(1.08)}
 .btn.ghost{background:transparent;border-color:transparent;color:var(--ink-2)}
-.btn.ghost:hover{background:var(--bg-3);color:var(--ink)}
-.btn.sm{padding:.33rem .6rem;font-size:.8rem;border-radius:8px}
-.btn:disabled{opacity:.45;cursor:not-allowed}
-.iconbtn{width:36px;height:36px;padding:0;border-radius:10px}
-select,input[type=text],input[type=number],textarea{
-  font-family:inherit;font-size:.88rem;padding:.44rem .6rem;border-radius:9px;
-  border:1px solid var(--line-2);background:var(--bg-2);color:var(--ink);width:100%;
-}
-textarea{line-height:1.5;resize:vertical}
-input[type=range]{accent-color:var(--brand-2);width:100%}
-label.fld{display:block;font-size:.78rem;font-weight:650;color:var(--ink-2);margin:.5rem 0 .22rem}
+.btn.ghost:hover{background:var(--bg-3)}
+.btn.sm{padding:.33rem .65rem;font-size:.79rem;border-radius:9px}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.iconbtn{width:36px;height:36px;padding:0}
+select,input[type=text],input[type=number],textarea{font-family:inherit;font-size:.87rem;padding:.42rem .6rem;border-radius:10px;border:1px solid var(--line-2);background:var(--bg-2);color:var(--ink);width:100%}
+input[type=range]{accent-color:var(--brand-2)}
+label.fld{display:block;font-size:.76rem;font-weight:700;color:var(--ink-2);margin:.5rem 0 .2rem}
 .row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-.row.end{justify-content:flex-end}
-
-/* ---------- surfaces ---------- */
-.card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:1.05rem 1.15rem;box-shadow:var(--shadow)}
-.card + .card{margin-top:1rem}
+.card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;box-shadow:var(--shadow)}
 .grid{display:grid;gap:1rem}
-.grid.c2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.grid.c3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.grid.c4{grid-template-columns:repeat(auto-fit,minmax(176px,1fr))}
-.tile{
-  display:block;text-decoration:none;color:inherit;background:var(--bg-2);
-  border:1px solid var(--line);border-radius:var(--r);padding:1rem;box-shadow:var(--shadow);
-  transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease;
-}
-.tile:hover{transform:translateY(-2px);border-color:var(--brand-2);box-shadow:var(--shadow-lg)}
-.tile .kicker{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
-.tile h3{margin:.3rem 0 .3rem;font-size:1rem}
-.tile p{margin:0;font-size:.85rem;color:var(--ink-2)}
-.hero{
-  background:linear-gradient(135deg,var(--brand) 0%,#5b4fd6 55%,#3aa58c 140%);
-  color:#fff;border-radius:18px;padding:1.6rem 1.5rem;box-shadow:var(--shadow-lg);position:relative;overflow:hidden
-}
-.hero h1{color:#fff;margin-bottom:.35rem}
-.hero p{color:#e8e7ff;margin:.2rem 0 0;max-width:62ch}
-.hero .meta{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.95rem}
-.hero .pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.26);color:#fff;border-radius:999px;padding:.24rem .68rem;font-size:.76rem;font-weight:600}
-.badge{display:inline-block;padding:.16rem .5rem;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(235px,1fr))}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:1rem;box-shadow:var(--shadow);transition:.15s;position:relative;overflow:hidden}
+.tile:hover{transform:translateY(-3px);border-color:var(--brand-2);box-shadow:var(--shadow-lg)}
+.tile .kicker{font-size:.69rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:800}
+.tile h3{margin:.3rem 0;font-size:.99rem}
+.tile p{margin:0;font-size:.84rem;color:var(--ink-2)}
+.tile .strip{position:absolute;inset:0 auto 0 0;width:5px}
+.badge{display:inline-block;padding:.17rem .55rem;border-radius:999px;font-size:.69rem;font-weight:800;letter-spacing:.02em}
 .b-x{background:var(--brand-soft);color:var(--brand)}
 .b-xi{background:var(--accent-soft);color:var(--accent)}
 .b-xii{background:var(--warn-soft);color:var(--warn)}
 .b-gray{background:var(--bg-3);color:var(--ink-2)}
-.note{border-left:3px solid var(--brand-2);background:var(--brand-soft);padding:.7rem .9rem;border-radius:0 10px 10px 0;font-size:.88rem}
+.note{border-left:3px solid var(--brand-2);background:var(--brand-soft);padding:.65rem .85rem;border-radius:0 11px 11px 0;font-size:.87rem}
 .note.ok{border-color:var(--accent);background:var(--accent-soft)}
 .note.warn{border-color:var(--warn);background:var(--warn-soft)}
-.muted{color:var(--ink-3);font-size:.84rem}
-
-/* ---------- tables ---------- */
-.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2)}
-table{border-collapse:collapse;width:100%;font-size:.85rem;min-width:520px}
-th,td{padding:.55rem .7rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{background:var(--bg-3);font-weight:700;font-size:.78rem;letter-spacing:.02em;position:sticky;top:0}
+.muted{color:var(--ink-3);font-size:.83rem}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+table{border-collapse:collapse;width:100%;font-size:.85rem;min-width:460px}
+th,td{padding:.5rem .65rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--bg-3);font-weight:700;font-size:.77rem}
 tbody tr:last-child td{border-bottom:0}
-tbody tr:hover td{background:color-mix(in srgb,var(--bg-3) 55%,transparent)}
 
-/* ---------- media / images ---------- */
-figure.media{margin:1rem 0;background:var(--bg-3);border:1px solid var(--line);border-radius:12px;padding:.6rem;text-align:center}
-figure.media img,figure.media svg{max-width:100%;height:auto;border-radius:8px;background:#fff}
-html[data-theme="dark"] figure.media img{background:#f3f4fb}
-figure.media figcaption{font-size:.74rem;color:var(--ink-3);margin-top:.45rem;line-height:1.4}
-.img-ph{display:grid;place-items:center;min-height:140px;color:var(--ink-3);font-size:.8rem;gap:.4rem}
-.spin{width:18px;height:18px;border:2.5px solid var(--line-2);border-top-color:var(--brand-2);border-radius:50%;animation:sp .8s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-
-/* ---------- slides ---------- */
-.deck-mask{position:fixed;inset:0;background:#0b0d1a;z-index:100;display:none;flex-direction:column}
-.deck-mask.on{display:flex}
-.deck-top{display:flex;align-items:center;gap:.5rem;padding:.5rem .8rem;color:#cfd3ea;border-bottom:1px solid #262a46}
-.deck-top .t{flex:1;font-size:.84rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.deck-top .btn{background:#1b1f38;border-color:#2e3458;color:#e6e8f6}
-.deck-top .btn:hover{background:#262c4c}
-.deck-body{flex:1;display:grid;place-items:center;padding:1.2rem;overflow:auto}
-.slide{
-  width:min(980px,100%);aspect-ratio:16/9;background:#fff;color:#1a1d31;border-radius:16px;
-  padding:clamp(1rem,2.6vw,2.4rem);display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.5);
-  overflow:auto;
+/* =======================================================================
+   PANGGUNG SLIDE — gaya desain modern (ala Canva)
+   ======================================================================= */
+.stage-wrap{position:relative}
+.stage{
+  position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;
+  box-shadow:var(--shadow-lg);background:#fff;color:#15182f;isolation:isolate;
 }
-@media (max-aspect-ratio:1/1){.slide{aspect-ratio:auto;min-height:62vh}}
-.slide .s-kicker{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#6a62d8;font-weight:800}
-.slide h2{margin:.25rem 0 .7rem;font-size:clamp(1.25rem,2.6vw,2rem);color:#171a2b}
-.slide ul{font-size:clamp(.92rem,1.5vw,1.12rem);padding-left:1.3rem}
-.slide li{margin:.42rem 0}
-.slide .s-cover{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
-  background:linear-gradient(135deg,#2f2a7a,#4740ad 60%,#0f7f66);color:#fff;border-radius:12px;padding:clamp(1rem,3vw,2rem);margin:-.2rem}
-.slide .s-cover h2{color:#fff}
-.slide .s-note{margin-top:auto;font-size:.78rem;color:#6b7191;border-top:1px solid #e6e8f2;padding-top:.5rem}
-.slide .s-img{max-height:46%;object-fit:contain;align-self:center;margin:.3rem 0}
-.deck-bot{display:flex;align-items:center;gap:.7rem;padding:.5rem .8rem;color:#cfd3ea;border-top:1px solid #262a46}
-.deck-prog{flex:1;height:5px;background:#262a46;border-radius:99px;overflow:hidden}
-.deck-prog i{display:block;height:100%;background:linear-gradient(90deg,#6a62d8,#3fcfa8);transition:width .25s ease}
+.stage.full{border-radius:0}
+.slide-x{--c1:#2a1f7c;--c2:#5b4ae0;--c3:#00e0b0;--c4:#ffd166}
+.slide-xi{--c1:#06403a;--c2:#00a186;--c3:#7cf0d2;--c4:#ffb37b}
+.slide-xii{--c1:#3d1452;--c2:#8338a8;--c3:#ff8a5b;--c4:#ffd166}
+.sl{position:absolute;inset:0;display:flex;flex-direction:column;padding:clamp(1rem,3.4vw,3rem);background:#fff;overflow:hidden}
+.sl.light{background:linear-gradient(135deg,#ffffff 0%,#f7f8ff 100%)}
+.sl.dark{background:linear-gradient(135deg,var(--c1) 0%,var(--c2) 70%,var(--c3) 190%);color:#fff}
+.sl .deco{position:absolute;border-radius:50%;filter:blur(.4px);pointer-events:none;opacity:.5}
+.sl .deco.b1{width:34%;aspect-ratio:1;background:radial-gradient(circle at 30% 30%,var(--c3),transparent 70%);right:-8%;top:-14%;opacity:.45}
+.sl .deco.b2{width:24%;aspect-ratio:1;background:radial-gradient(circle at 60% 60%,var(--c2),transparent 70%);left:-7%;bottom:-12%;opacity:.3}
+.sl .deco.ring{border:3px solid var(--c4);background:none;width:14%;aspect-ratio:1;right:7%;bottom:9%;opacity:.35}
+.sl .deco.dots{width:26%;height:30%;border-radius:0;background-image:radial-gradient(currentColor 1.6px,transparent 1.6px);background-size:16px 16px;color:var(--c2);opacity:.17;left:3%;top:6%}
+.sl .kick{font-size:clamp(.62rem,1.05vw,.82rem);letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--c2);display:flex;align-items:center;gap:.5rem}
+.sl.dark .kick{color:var(--c3)}
+.sl .kick::before{content:"";width:26px;height:3px;border-radius:3px;background:currentColor;display:inline-block}
+.sl h2{font-size:clamp(1.3rem,3.1vw,2.5rem);margin:.5rem 0 .7rem;letter-spacing:-.025em;line-height:1.1}
+.sl.dark h2{color:#fff}
+.sl ul{margin:.2rem 0;padding:0;list-style:none;font-size:clamp(.82rem,1.45vw,1.14rem)}
+.sl ul li{position:relative;padding-left:1.5em;margin:.5em 0;line-height:1.45}
+.sl ul li::before{content:"";position:absolute;left:0;top:.52em;width:.62em;height:.62em;border-radius:4px;background:var(--c2);transform:rotate(45deg)}
+.sl.dark ul li::before{background:var(--c3)}
+.sl .foot{margin-top:auto;display:flex;align-items:center;gap:.6rem;font-size:clamp(.6rem,1vw,.76rem);color:#7b8199;padding-top:.6rem}
+.sl.dark .foot{color:rgba(255,255,255,.72)}
+.sl .foot .dot{width:6px;height:6px;border-radius:50%;background:var(--c2)}
+/* layout: cover */
+.sl.cover{justify-content:center}
+.sl.cover .meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.sl.cover .chip{background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.24rem .75rem;font-size:clamp(.6rem,1.05vw,.78rem);font-weight:650}
+.sl.cover h2{font-size:clamp(1.5rem,4.1vw,3.2rem)}
+/* layout: split */
+.sl.split .body{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(.8rem,2.4vw,2rem);align-items:center;flex:1;min-height:0}
+.sl.split .visual{display:grid;place-items:center;height:100%;min-height:0;background:#fff;border-radius:16px;padding:.7rem;box-shadow:0 10px 30px rgba(16,20,40,.1)}
+.sl.split .visual img,.sl.split .visual svg{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+/* layout: pemantik */
+.sl.pemantik{justify-content:center;align-items:flex-start}
+.sl.pemantik h2{font-size:clamp(1.5rem,3.7vw,3rem);max-width:17ch}
+.sl.pemantik .qmark{position:absolute;right:4%;bottom:-4%;font-size:clamp(7rem,22vw,17rem);font-weight:900;color:var(--c3);opacity:.22;line-height:1}
+/* layout: grid kartu */
+.sl.cards .body{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.5rem,1.4vw,1rem);flex:1;min-height:0;margin-top:.3rem}
+.sl.cards .kart{background:linear-gradient(145deg,#ffffff,#f3f4ff);border:1px solid #e6e8fa;border-radius:14px;padding:clamp(.5rem,1.3vw,1rem);display:flex;gap:.6rem;align-items:flex-start;box-shadow:0 6px 18px rgba(16,20,40,.06);font-size:clamp(.74rem,1.25vw,1rem);line-height:1.4}
+.sl.cards .kart .n{flex:none;width:1.9em;height:1.9em;border-radius:9px;background:linear-gradient(135deg,var(--c2),var(--c3));color:#fff;display:grid;place-items:center;font-weight:800;font-size:.92em}
+/* layout: simulasi */
+.sl.simslide{padding:0;background:var(--bg-2);color:var(--ink)}
+.sl.simslide .simhead{display:flex;align-items:center;gap:.6rem;padding:.55rem clamp(.7rem,1.8vw,1.3rem);background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;flex:none}
+.sl.simslide .simhead b{font-size:clamp(.78rem,1.3vw,1rem)}
+.sl.simslide .simhead .tag{margin-left:auto;background:rgba(255,255,255,.18);border-radius:999px;padding:.16rem .6rem;font-size:.68rem;font-weight:700}
+.sl.simslide .simarea{flex:1;overflow:auto;padding:clamp(.6rem,1.5vw,1.1rem);background:var(--bg)}
+/* animasi masuk */
+@keyframes slideIn{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes itemIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.sl{animation:slideIn .45s cubic-bezier(.2,.8,.25,1) both}
+.sl .anim{animation:itemIn .5s cubic-bezier(.2,.8,.25,1) both}
+.sl .anim:nth-child(1){animation-delay:.05s}.sl .anim:nth-child(2){animation-delay:.12s}
+.sl .anim:nth-child(3){animation-delay:.19s}.sl .anim:nth-child(4){animation-delay:.26s}
+.sl .anim:nth-child(5){animation-delay:.33s}.sl .anim:nth-child(6){animation-delay:.4s}
+/* kontrol deck */
+.deckbar{display:flex;align-items:center;gap:.6rem;margin-top:.75rem;flex-wrap:wrap}
+.deckbar .prog{flex:1;min-width:120px;height:6px;background:var(--bg-3);border-radius:99px;overflow:hidden}
+.deckbar .prog i{display:block;height:100%;background:linear-gradient(90deg,var(--brand-2),var(--accent));transition:width .3s}
+.rail{display:flex;gap:.5rem;overflow-x:auto;padding:.7rem .1rem;scrollbar-width:thin}
+.thumb{flex:none;width:122px;aspect-ratio:16/9;border-radius:9px;border:2px solid var(--line);background:var(--bg-2);cursor:pointer;padding:.3rem .35rem;font-size:.52rem;line-height:1.25;color:var(--ink-2);overflow:hidden;position:relative;text-align:left;transition:.14s}
+.thumb:hover{border-color:var(--brand-2)}
+.thumb.on{border-color:var(--brand-2);box-shadow:0 0 0 3px var(--brand-soft)}
+.thumb b{display:block;font-size:.58rem;color:var(--ink);margin-bottom:.1rem}
+.thumb .tn{position:absolute;right:3px;bottom:2px;font-size:.5rem;color:var(--ink-3)}
+.thumb.sim{background:linear-gradient(135deg,var(--brand-soft),var(--accent-soft))}
+.fsbar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);display:none;gap:.4rem;z-index:120;background:rgba(10,12,26,.82);padding:.4rem .5rem;border-radius:14px;backdrop-filter:blur(8px)}
+.stage-wrap.isfull .fsbar{display:flex}
+.fsbar .btn{background:#1d2238;border-color:#333a5c;color:#eef0fa}
+.stage-wrap.isfull{position:fixed;inset:0;z-index:110;background:#05060f;display:grid;place-items:center;padding:0}
+.stage-wrap.isfull .stage{height:100vh;width:100vw;max-width:none;aspect-ratio:auto;border-radius:0}
 
-/* ---------- simulations ---------- */
-.sim{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);overflow:hidden;box-shadow:var(--shadow)}
-.sim-head{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding:.7rem .9rem;border-bottom:1px solid var(--line);background:var(--bg-3)}
-.sim-head b{font-size:.92rem}
-.sim-body{padding:1rem}
-.sim-toolbar{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin-bottom:.9rem}
-.bars{display:flex;align-items:flex-end;gap:4px;height:230px;padding:.5rem;background:var(--bg-3);border-radius:10px;overflow:hidden}
-.bar{flex:1;min-width:8px;background:linear-gradient(180deg,var(--brand-2),var(--brand));border-radius:5px 5px 2px 2px;position:relative;transition:height .18s ease,background .18s ease;display:flex;justify-content:center;align-items:flex-start}
-.bar span{font-size:.62rem;color:#fff;font-weight:700;margin-top:3px}
-.bar.cmp{background:linear-gradient(180deg,#f0a93c,#c77d12)}
-.bar.swp{background:linear-gradient(180deg,#e8614d,#b03423)}
-.bar.done{background:linear-gradient(180deg,#3fcfa8,#0f7f66)}
-.stat-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
-.stat{background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;min-width:104px}
-.stat i{display:block;font-style:normal;font-size:.68rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em;font-weight:700}
-.stat b{font-size:1.05rem;font-variant-numeric:tabular-nums}
-.log{font-family:var(--mono);font-size:.78rem;background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:.6rem .7rem;max-height:170px;overflow:auto;white-space:pre-wrap}
-.cells{display:flex;flex-wrap:wrap;gap:6px}
-.cell{min-width:44px;height:44px;display:grid;place-items:center;border-radius:9px;background:var(--bg-3);border:1px solid var(--line-2);font-weight:700;font-variant-numeric:tabular-nums}
-.cell.hi{background:var(--brand-soft);border-color:var(--brand-2);color:var(--brand)}
-.cell.ok{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
-.cell.no{background:var(--danger-soft);border-color:var(--danger);color:var(--danger)}
-.stackbox{display:flex;flex-direction:column-reverse;gap:5px;min-height:208px;padding:.6rem;background:var(--bg-3);border-radius:10px;border:1px dashed var(--line-2)}
-.qbox{display:flex;gap:5px;min-height:62px;align-items:center;padding:.6rem;background:var(--bg-3);border-radius:10px;border:1px dashed var(--line-2);overflow-x:auto}
-.item{background:var(--brand);color:#fff;border-radius:8px;padding:.42rem .8rem;font-weight:700;animation:pop .2s ease}
-html[data-theme="dark"] .item{color:#121529}
-@keyframes pop{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
-canvas{max-width:100%;background:var(--bg-3);border-radius:10px;border:1px solid var(--line)}
-.trace-tbl td,.trace-tbl th{font-family:var(--mono);font-size:.78rem}
-.code{font-family:var(--mono);font-size:.82rem;background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:.7rem .8rem;overflow-x:auto;line-height:1.55}
-.code .ln{display:block;padding:.06rem .35rem;border-radius:5px}
-.code .ln.cur{background:var(--brand-soft);color:var(--brand);font-weight:700}
-
-/* ---------- quiz ---------- */
-.q-card{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);padding:1rem 1.1rem;margin-bottom:.85rem}
-.q-num{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
-.opt{display:flex;gap:.6rem;align-items:flex-start;padding:.55rem .7rem;border:1px solid var(--line);border-radius:10px;margin:.35rem 0;cursor:pointer;background:var(--bg-2);font-size:.9rem}
+/* ---------- simulasi ---------- */
+.sim-toolbar{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin-bottom:.8rem}
+.bars{display:flex;align-items:flex-end;gap:4px;height:clamp(130px,26vh,240px);padding:.5rem;background:linear-gradient(180deg,var(--bg-3),var(--bg-2));border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.bar{flex:1;min-width:7px;background:linear-gradient(180deg,#6f61ff,#3a2fb0);border-radius:6px 6px 3px 3px;position:relative;transition:height .22s cubic-bezier(.3,1.4,.5,1),background .18s,transform .18s;display:flex;justify-content:center;align-items:flex-start;box-shadow:0 3px 10px rgba(58,47,176,.22)}
+.bar span{font-size:.6rem;color:#fff;font-weight:800;margin-top:3px;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.bar.cmp{background:linear-gradient(180deg,#ffc24d,#e08f00);transform:translateY(-5px) scaleX(1.06)}
+.bar.swp{background:linear-gradient(180deg,#ff7a6b,#c7352a);transform:translateY(-9px) scaleX(1.1)}
+.bar.done{background:linear-gradient(180deg,#4ff0c6,#00a186)}
+.stat-row{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.7rem}
+.stat{background:var(--bg-2);border:1px solid var(--line);border-radius:11px;padding:.4rem .65rem;min-width:96px;box-shadow:var(--shadow)}
+.stat i{display:block;font-style:normal;font-size:.63rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em;font-weight:800}
+.stat b{font-size:1.02rem;font-variant-numeric:tabular-nums}
+.log{font-family:var(--mono);font-size:.76rem;background:var(--bg-3);border:1px solid var(--line);border-radius:11px;padding:.55rem .65rem;max-height:160px;overflow:auto;white-space:pre-wrap}
+.cells{display:flex;flex-wrap:wrap;gap:5px}
+.cell{min-width:40px;height:40px;display:grid;place-items:center;border-radius:10px;background:var(--bg-2);border:1px solid var(--line-2);font-weight:700;font-variant-numeric:tabular-nums;transition:.18s;font-size:.85rem}
+.cell.hi{background:linear-gradient(135deg,#ffd98a,#f0a93c);border-color:#e08f00;color:#4a3000;transform:translateY(-3px) scale(1.06)}
+.cell.ok{background:linear-gradient(135deg,#6ff0cf,#00a186);border-color:#00a186;color:#04302a;animation:pulse .6s ease}
+.cell.no{opacity:.32;filter:grayscale(.7)}
+@keyframes pulse{0%{transform:scale(1)}45%{transform:scale(1.18)}100%{transform:scale(1)}}
+.stackbox{display:flex;flex-direction:column-reverse;gap:5px;min-height:190px;padding:.55rem;background:var(--bg-3);border-radius:12px;border:1px dashed var(--line-2)}
+.qbox{display:flex;gap:5px;min-height:58px;align-items:center;padding:.55rem;background:var(--bg-3);border-radius:12px;border:1px dashed var(--line-2);overflow-x:auto}
+.item{background:linear-gradient(135deg,var(--brand-2),var(--brand));color:#fff;border-radius:9px;padding:.4rem .78rem;font-weight:700;animation:pop .26s cubic-bezier(.3,1.5,.5,1);box-shadow:0 4px 12px rgba(58,47,176,.3)}
+@keyframes pop{from{transform:scale(.6) translateY(8px);opacity:0}to{transform:none;opacity:1}}
+canvas{max-width:100%;background:var(--bg-2);border-radius:12px;border:1px solid var(--line)}
+.code{font-family:var(--mono);font-size:.78rem;background:var(--bg-3);border:1px solid var(--line);border-radius:12px;padding:.6rem .7rem;overflow:auto;line-height:1.55;max-height:290px}
+.code .ln{display:block;padding:.05rem .3rem;border-radius:5px;transition:.15s}
+.code .ln.cur{background:linear-gradient(90deg,var(--brand-soft),transparent);color:var(--brand);font-weight:800;transform:translateX(3px)}
+.chk{display:flex;gap:.5rem;align-items:flex-start;font-size:.86rem;margin:.28rem 0}
+.chk input{accent-color:var(--accent);margin-top:.3rem}
+.q-card{border:1px solid var(--line);border-radius:13px;background:var(--bg-2);padding:.8rem .9rem;margin-bottom:.7rem}
+.q-num{font-size:.68rem;font-weight:800;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.opt{display:flex;gap:.55rem;align-items:flex-start;padding:.45rem .6rem;border:1px solid var(--line);border-radius:10px;margin:.3rem 0;cursor:pointer;background:var(--bg-2);font-size:.86rem}
 .opt:hover{background:var(--bg-3)}
-.opt input{margin-top:.25rem;accent-color:var(--brand-2);flex:none}
 .opt.correct{background:var(--accent-soft);border-color:var(--accent)}
 .opt.wrong{background:var(--danger-soft);border-color:var(--danger)}
-.score-ring{display:grid;place-items:center;width:132px;height:132px;border-radius:50%;background:conic-gradient(var(--accent) var(--p,0%),var(--bg-3) 0);margin:0 auto}
-.score-ring .in{width:104px;height:104px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;text-align:center}
-.score-ring b{font-size:1.7rem;display:block;line-height:1}
-
-/* ---------- misc ---------- */
-.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(14px);background:var(--ink);color:var(--bg);
-  padding:.6rem 1rem;border-radius:11px;font-size:.85rem;font-weight:600;opacity:0;pointer-events:none;transition:.22s ease;z-index:200;box-shadow:var(--shadow-lg)}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:300}
+.confetti i{position:absolute;width:9px;height:14px;opacity:.95;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(760deg);opacity:0}}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(14px);background:var(--ink);color:var(--bg);padding:.55rem 1rem;border-radius:12px;font-size:.84rem;font-weight:650;opacity:0;pointer-events:none;transition:.22s;z-index:400;box-shadow:var(--shadow-lg)}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-.cache-bar{display:flex;align-items:center;gap:.55rem;font-size:.76rem;color:var(--ink-2);background:var(--bg-3);border:1px solid var(--line);border-radius:999px;padding:.24rem .7rem}
+.scrim{position:fixed;inset:0;background:rgba(8,10,22,.5);z-index:35;display:none}
+.scrim.on{display:block}
+figure.media{margin:.6rem 0;text-align:center}
+figure.media img,figure.media svg{max-width:100%;height:auto;border-radius:10px;background:#fff}
+.img-ph{display:grid;place-items:center;min-height:120px;color:var(--ink-3);font-size:.78rem;gap:.4rem}
+.spin{width:18px;height:18px;border:2.5px solid var(--line-2);border-top-color:var(--brand-2);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.cache-bar{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:var(--ink-2);background:var(--bg-3);border:1px solid var(--line);border-radius:999px;padding:.22rem .65rem;cursor:pointer}
 .cache-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--ink-3)}
 .cache-bar.ok .dot{background:var(--accent)}
 .cache-bar.load .dot{background:var(--warn);animation:bl 1s infinite}
 @keyframes bl{50%{opacity:.25}}
-.scrim{position:fixed;inset:0;background:rgba(10,12,24,.5);z-index:35;display:none}
-.scrim.on{display:block}
-.jump{display:flex;gap:.4rem;flex-wrap:wrap;margin:.6rem 0 0}
-.jump a{font-size:.78rem;text-decoration:none;padding:.26rem .6rem;border-radius:999px;background:var(--bg-3);color:var(--ink-2);border:1px solid var(--line)}
-.jump a:hover{background:var(--brand-soft);color:var(--brand);border-color:var(--brand-2)}
-.kbd-hint{font-size:.72rem;color:var(--ink-3)}
-.fillable{width:100%;min-height:76px}
-.chk{display:flex;gap:.5rem;align-items:flex-start;font-size:.88rem;margin:.3rem 0}
-.chk input{accent-color:var(--accent);margin-top:.3rem}
 
 @media (max-width:900px){
   .app{grid-template-columns:1fr}
-  .sidebar{position:fixed;left:0;top:0;width:276px;transform:translateX(-100%);transition:transform .22s ease}
+  .sidebar{position:fixed;left:0;top:0;width:268px;transform:translateX(-100%);transition:transform .22s}
   .sidebar.on{transform:none;box-shadow:var(--shadow-lg)}
   .topbar .burger{display:inline-flex}
-  .content{padding:1rem .9rem 3.5rem}
+  .content{padding:.9rem .8rem 3rem}
+  .sl.split .body{grid-template-columns:1fr;gap:.5rem}
+  .sl.split .visual{max-height:34%}
+  .sl.cards .body{grid-template-columns:1fr;overflow:auto}
 }
 @media print{
-  .sidebar,.topbar,.btn,.jump,.scrim,.deck-mask{display:none !important}
+  .sidebar,.topbar,.deckbar,.rail,.btn,.scrim,.fsbar{display:none !important}
   .app{grid-template-columns:1fr}
-  .card,.tbl-wrap{box-shadow:none;break-inside:avoid}
   body{background:#fff}
+  @page{size:A4 landscape;margin:8mm}
+  .content{padding:0;max-width:none}
+  .printdeck{display:block !important}
+  .printdeck .stage{break-after:page;page-break-after:always;box-shadow:none;border-radius:0;aspect-ratio:16/9;margin:0}
+  .stage-wrap.live{display:none !important}
+  .sl{animation:none !important}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+.printdeck{display:none}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
 </style>
 </head>
 <body>
 <div class="scrim" id="scrim"></div>
 <div class="app">
   <aside class="sidebar" id="sidebar">
-    <div class="brand">
-      <div class="logo">IF</div>
-      <div>
-        <b>Informatika Interaktif</b>
-        <span>SMA Negeri 11 Pinrang</span>
-      </div>
-    </div>
+    <div class="brand"><div class="logo">IF</div>
+      <div><b>Slide &amp; Simulasi</b><span>Informatika · SMAN 11 Pinrang</span></div></div>
     <nav class="nav" id="nav"></nav>
     <div class="sidebar-foot">
       <div>Mutmainnah Syam, S.Pd., M.Pd.</div>
       <div>NIP 19930321 202421 2 034</div>
-      <div style="margin-top:.35rem">CP 2025 · BSKAP 046/H/KR/2025</div>
     </div>
   </aside>
-
   <div class="main">
     <header class="topbar">
       <button class="btn ghost iconbtn burger" id="burger" aria-label="Menu">☰</button>
       <div class="crumb" id="crumb">Beranda</div>
-      <div class="cache-bar" id="cacheBar" title="Status penyimpanan gambar di perangkat ini"><span class="dot"></span><span id="cacheTxt">Media</span></div>
-      <button class="btn ghost iconbtn" id="themeBtn" aria-label="Ganti tema" title="Mode terang/gelap">◐</button>
+      <div class="cache-bar" id="cacheBar" title="Status gambar tersimpan di perangkat"><span class="dot"></span><span id="cacheTxt">Media</span></div>
+      <button class="btn ghost iconbtn" id="themeBtn" title="Mode terang/gelap">◐</button>
     </header>
     <main class="content" id="view"></main>
   </div>
 </div>
-
-<div class="deck-mask" id="deck">
-  <div class="deck-top">
-    <div class="t" id="deckTitle"></div>
-    <button class="btn sm" id="deckFull">⛶ Layar penuh</button>
-    <button class="btn sm" id="deckClose">✕ Tutup</button>
-  </div>
-  <div class="deck-body"><div class="slide" id="slide"></div></div>
-  <div class="deck-bot">
-    <button class="btn sm" id="deckPrev">← Sebelumnya</button>
-    <div class="deck-prog"><i id="deckProg"></i></div>
-    <span id="deckNum" style="font-size:.8rem;font-variant-numeric:tabular-nums"></span>
-    <button class="btn sm" id="deckNext">Berikutnya →</button>
-  </div>
-</div>
-
 <div class="toast" id="toast"></div>
 <script>
 /* =========================================================================
@@ -461,13 +429,13 @@ M({id:"x6",kelas:"X",fase:"E",sem:"Genap",kode:"X.6",jp:10,elemen:"Literasi Digi
  judul:"Perkakas Digital dan Produksi Konten yang Beretika",
  ringkas:"Fitur lanjut aplikasi perkantoran, produksi konten digital, serta lisensi dan atribusi karya.",
  tp:["X.LD.4 Memanfaatkan fitur lanjut aplikasi perkantoran.","X.LD.5 Memproduksi dan mendiseminasikan konten digital secara etis.","X.LD.9 Menghargai hak atas kekayaan intelektual."],
- sims:[],
+ sims:["perkantoran"],
  slides:[
   {k:"Pemantik",t:"Dokumen 60 halaman, daftar isi berubah terus",b:["Memformat satu per satu memakan waktu berjam-jam.","Dengan fitur lanjut, pekerjaan yang sama selesai dalam hitungan menit."]},
   {k:"Pengolah dokumen",t:"Fitur yang wajib dikuasai",b:["<b>Gaya (styles)</b> untuk judul dan isi agar format konsisten.","<b>Daftar isi otomatis</b> yang ikut berubah saat halaman bertambah.","<b>Penomoran halaman, header, dan footer</b>.","<b>Referensi dan sitasi</b> untuk karya ilmiah.","<b>Surat massal (mail merge)</b> untuk membuat banyak surat sekaligus."]},
-  {k:"Lembar kerja",t:"Rumus, fungsi, dan grafik",b:["Rujukan relatif (<code>A1</code>) dan absolut (<code>$A$1</code>).","Fungsi logika <code>IF</code>, pencarian <code>VLOOKUP</code>/<code>XLOOKUP</code>, dan agregasi <code>SUMIF</code>.","Tabel dan filter untuk menyaring data dengan cepat.","Grafik yang terhubung langsung dengan data sehingga ikut berubah."]},
+  {k:"Lembar kerja",t:"Rumus, fungsi, dan grafik",b:["Rujukan relatif (<code>A1</code>) dan absolut (<code>$A$1</code>).","Fungsi logika <code>IF</code>, pencarian <code>VLOOKUP</code>/<code>XLOOKUP</code>, dan agregasi <code>SUMIF</code>.","Tabel dan filter untuk menyaring data dengan cepat.","Grafik yang terhubung langsung dengan data sehingga ikut berubah."],sim:"perkantoran"},
   {k:"Integrasi",t:"Menggabungkan antaraplikasi",b:["Tabel dan grafik dari lembar kerja dapat ditempel ke dokumen dan presentasi.","Gunakan tempel tertaut agar perubahan data otomatis memperbarui dokumen.","Prinsip desain presentasi: satu gagasan satu salindia, kontras tinggi, huruf besar, visual seperlunya."]},
-  {k:"Etika",t:"Hak kekayaan intelektual dan lisensi",b:["Karya orang lain dilindungi hak cipta meskipun diunggah gratis di internet.","Kenali lisensi terbuka: domain publik, Creative Commons (CC BY, CC BY-SA, CC0).","Selalu cantumkan atribusi: judul karya, pencipta, sumber, dan lisensinya.","Plagiarisme dan pembajakan perangkat lunak melanggar hukum dan merusak nama baik."]},
+  {k:"Etika",t:"Hak kekayaan intelektual dan lisensi",b:["Karya orang lain dilindungi hak cipta meskipun diunggah gratis di internet.","Kenali lisensi terbuka: domain publik, Creative Commons (CC BY, CC BY-SA, CC0).","Selalu cantumkan atribusi: judul karya, pencipta, sumber, dan lisensinya.","Plagiarisme dan pembajakan perangkat lunak melanggar hukum dan merusak nama baik."],sim:"perkantoran"},
   {k:"Produksi",t:"Membuat konten yang bermanfaat",b:["Tentukan tujuan dan sasaran pembaca sebelum membuat konten.","Gunakan bahan berlisensi terbuka atau karya sendiri.","Sebarkan melalui kanal yang sesuai dan tanggapi umpan balik dengan santun.","Contoh projek: konten digital tentang potensi budaya dan wisata Kabupaten Pinrang."]}
  ]}),
 M({id:"x7",kelas:"X",fase:"E",sem:"Genap",kode:"X.7",jp:8,elemen:"Literasi Digital",
@@ -500,10 +468,10 @@ M({id:"xi1",kelas:"XI",fase:"F",sem:"Ganjil",kode:"XI.1",jp:10,elemen:"Berpikir 
  judul:"Alur Pengembangan Produk Teknologi Digital dan Analisis Persoalan",
  ringkas:"Dari kebutuhan pengguna sampai pemeliharaan produk, serta merumuskan alternatif solusi.",
  tp:["XI.BK.1 Menjelaskan alur pengembangan produk teknologi digital.","XI.BK.2 Menganalisis persoalan bersolusi jamak dan merumuskan alternatifnya."],
- sims:[],
+ sims:["pengembangan"],
  slides:[
   {k:"Pemantik",t:"Mengapa aplikasi terus diperbarui?",b:["Produk digital tidak pernah benar-benar selesai; ia tumbuh mengikuti kebutuhan penggunanya.","Perbaikan yang terlambat jauh lebih mahal daripada perencanaan yang matang."]},
-  {k:"Daur hidup",t:"Lima tahap pengembangan",b:["<b>Analisis kebutuhan</b> — memahami persoalan dan pengguna sesungguhnya.","<b>Perancangan</b> — alur proses, struktur data, dan rancangan antarmuka.","<b>Implementasi</b> — membangun produk atau menulis kode.","<b>Pengujian</b> — memastikan produk benar dan nyaman dipakai.","<b>Pemeliharaan</b> — memperbaiki, memperbarui, dan mengembangkan."]},
+  {k:"Daur hidup",t:"Lima tahap pengembangan",b:["<b>Analisis kebutuhan</b> — memahami persoalan dan pengguna sesungguhnya.","<b>Perancangan</b> — alur proses, struktur data, dan rancangan antarmuka.","<b>Implementasi</b> — membangun produk atau menulis kode.","<b>Pengujian</b> — memastikan produk benar dan nyaman dipakai.","<b>Pemeliharaan</b> — memperbaiki, memperbarui, dan mengembangkan."],sim:"pengembangan"},
   {k:"Analisis kebutuhan",t:"Menggali kebutuhan pengguna",b:["Wawancara, pengamatan, dan kuesioner singkat kepada calon pengguna.","Bedakan <b>keinginan</b> dan <b>kebutuhan</b>; tanyakan 'mengapa' hingga akar persoalan.","Tulis kebutuhan sebagai pernyataan terukur: 'petugas dapat mencatat presensi 36 murid kurang dari 2 menit'.","Hindari menebak kebutuhan dari balik meja."]},
   {k:"Perancangan",t:"Dari kebutuhan menjadi rancangan",b:["Diagram alur proses menggambarkan jalannya sistem.","Rancangan antarmuka (wireframe) cukup digambar di kertas pada tahap awal.","Tentukan data apa yang disimpan dan bagaimana strukturnya.","Validasi rancangan kepada pengguna sebelum menulis kode."]},
   {k:"Alternatif",t:"Satu persoalan, banyak solusi",b:["Contoh: mempercepat presensi — kartu QR, pemindai kartu pelajar, atau formulir daring.","Setiap alternatif memiliki biaya, kemudahan, dan risiko berbeda.","Bandingkan dengan kriteria: biaya, waktu pengembangan, kemudahan pemakaian, dan keandalan.","Pilih yang paling sesuai konteks sekolah, bukan yang paling canggih."]},
@@ -647,650 +615,255 @@ M({id:"xii6",kelas:"XII",fase:"F",sem:"Genap",kode:"XII.6",jp:20,elemen:"Literas
   {k:"Penutup",t:"Setelah lulus",b:["Teruslah belajar; teknologi berubah, cara berpikir komputasional tetap berguna.","Bangun portofolio karya digital sejak sekarang.","Jadilah warga digital yang aman, beretika, dan bermanfaat bagi sekitar."]}
  ]})
 ];
-/* ---- BANK SOAL (sesuai kisi-kisi sumatif pada perangkat ajar) ---- */
-const QUIZ = {
- X:{judul:"Sumatif Kelas X (Fase E) — Semester Ganjil", durasi:30,
-  pg:[
-   {q:"Kepala sekolah membenahi layanan tata usaha yang rumit dengan membaginya menjadi beberapa bagian layanan yang lebih kecil. Tahapan berpikir komputasional yang digunakan adalah …",
-    o:["Abstraksi","Dekomposisi","Pengenalan pola","Algoritma","Simulasi"],k:1,
-    e:"Memecah persoalan besar menjadi bagian-bagian kecil adalah dekomposisi."},
-   {q:"Struktur data yang menerapkan prinsip data terakhir masuk menjadi data pertama keluar adalah …",
-    o:["Larik","Antrean","Tumpukan","Tabel","Graf"],k:2,
-    e:"Prinsip LIFO (last in first out) adalah ciri tumpukan (stack)."},
-   {q:"Koperasi sekolah melayani pembeli sesuai urutan kedatangan. Struktur data yang paling tepat adalah …",
-    o:["Tumpukan","Antrean","Pohon","Tabel hash","Matriks"],k:1,
-    e:"Urutan kedatangan dilayani lebih dulu = FIFO = antrean (queue)."},
-   {q:"Syarat utama agar algoritma pencarian biner dapat digunakan adalah …",
-    o:["Data berjumlah genap","Data bertipe angka","Data sudah terurut","Data tersimpan di berkas","Data berjumlah besar"],k:2,
-    e:"Binary search membagi dua wilayah pencarian, jadi data wajib terurut."},
-   {q:"Pencarian biner pada 16 data terurut memerlukan jumlah maksimum langkah pembagian sebanyak …",
-    o:["2 langkah","4 langkah","8 langkah","15 langkah","16 langkah"],k:1,
-    e:"log₂(16) = 4, jadi paling banyak 4 kali pembagian."},
-   {q:"Algoritma pengurutan yang membandingkan dua data bersebelahan lalu menukarnya bila terbalik, dan diulang hingga tidak ada pertukaran, adalah …",
-    o:["Selection sort","Insertion sort","Bubble sort","Merge sort","Quick sort"],k:2,
-    e:"Ciri khas bubble sort adalah perbandingan dan pertukaran data bersebelahan."},
-   {q:"Pada diagram alir, simbol belah ketupat digunakan untuk menyatakan …",
-    o:["Awal dan akhir program","Proses perhitungan","Masukan dan keluaran","Percabangan atau pengambilan keputusan","Arah aliran proses"],k:3,
-    e:"Belah ketupat = keputusan/percabangan."},
-   {q:"Perhatikan pseudocode: nilai ← 75; jika nilai ≥ 75 maka tulis \"Lulus\" selain itu tulis \"Belum Lulus\". Keluarannya adalah …",
-    o:["Lulus","Belum Lulus","75","Lulus dan Belum Lulus","Tidak ada keluaran"],k:0,
-    e:"75 ≥ 75 bernilai benar, sehingga cabang pertama dijalankan."},
-   {q:"Pernyataan berikut yang BUKAN ciri data berkualitas adalah …",
-    o:["Akurat sesuai keadaan sebenarnya","Lengkap sesuai kebutuhan","Relevan dengan persoalan","Diperoleh sebanyak mungkin tanpa memeriksa sumbernya","Diperoleh dengan cara yang beretika"],k:3,
-    e:"Banyaknya data tidak berarti berkualitas bila sumbernya tidak diperiksa."},
-   {q:"Perangkat lunak yang mengelola sumber daya perangkat keras dan menjadi perantara pengguna dengan mesin adalah …",
-    o:["Perangkat lunak aplikasi","Sistem operasi","Kompilator","Basis data","Peramban"],k:1,
-    e:"Itulah peran sistem operasi."}],
-  uraian:[
-   {q:"Jelaskan empat fondasi berpikir komputasional dan berikan satu contoh penerapan masing-masing di sekolah!",
-    k:"Dekomposisi (membagi tugas piket), pengenalan pola (pola keterlambatan murid), abstraksi (denah sekolah hanya menampilkan hal penting), algoritma (prosedur peminjaman buku). Skor 12."},
-   {q:"Jelaskan perbedaan tumpukan dan antrean serta satu contoh penerapan masing-masing!",
-    k:"Tumpukan LIFO, masuk dan keluar di satu ujung (tumpukan piring, fitur undo). Antrean FIFO, masuk di belakang keluar di depan (antrean kantin, antrean cetak). Skor 12."},
-   {q:"Data: 7, 3, 9, 1, 5. Tunjukkan proses pengurutan menaik dengan selection sort langkah demi langkah!",
-    k:"L1: 1,3,9,7,5 · L2: 1,3,9,7,5 · L3: 1,3,5,7,9 · L4: 1,3,5,7,9. Hasil akhir 1,3,5,7,9. Skor 12."},
-   {q:"Tuliskan pseudocode membaca lima nilai, menghitung rerata, dan menampilkan \"Tuntas\" bila rerata ≥ 75!",
-    k:"jumlah ← 0; untuk i ← 1 sampai 5: baca nilai; jumlah ← jumlah + nilai; rerata ← jumlah/5; jika rerata ≥ 75 tulis \"Tuntas\" selain itu tulis \"Belum Tuntas\". Skor 12."},
-   {q:"Jelaskan siklus Input-Process-Output-Storage pada model Von Neumann disertai contoh, lalu jelaskan peran sistem operasi!",
-    k:"Masukan diterima perangkat masukan, diproses CPU dengan bantuan memori, hasil ditampilkan perangkat keluaran, dan dapat disimpan. Sistem operasi mengatur proses, memori, berkas, dan perangkat. Skor 12."}]},
- XI:{judul:"Sumatif Kelas XI (Fase F) — Semester Ganjil", durasi:30,
-  pg:[
-   {q:"Urutan tahapan pengembangan produk teknologi digital yang tepat adalah …",
-    o:["Perancangan – analisis kebutuhan – implementasi – pengujian – pemeliharaan",
-       "Analisis kebutuhan – perancangan – implementasi – pengujian – pemeliharaan",
-       "Implementasi – pengujian – perancangan – analisis kebutuhan – pemeliharaan",
-       "Analisis kebutuhan – implementasi – perancangan – pemeliharaan – pengujian",
-       "Perancangan – implementasi – analisis kebutuhan – pengujian – pemeliharaan"],k:1,
-    e:"Pengembangan selalu dimulai dari memahami kebutuhan pengguna."},
-   {q:"Kegiatan yang paling tepat pada tahap analisis kebutuhan adalah …",
-    o:["Menulis kode program","Mewawancarai calon pengguna","Menguji antarmuka","Memperbaiki kesalahan program","Memasang aplikasi"],k:1,
-    e:"Analisis kebutuhan berfokus menggali kebutuhan pengguna."},
-   {q:"Ciri utama strategi greedy adalah …",
-    o:["Mencoba seluruh kemungkinan solusi","Membagi persoalan menjadi submasalah sejenis","Memilih pilihan terbaik pada setiap langkah tanpa meninjau ulang","Menyimpan hasil perhitungan untuk dipakai ulang","Menyelesaikan persoalan secara acak"],k:2,
-    e:"Greedy mengambil keputusan terbaik secara lokal di tiap langkah."},
-   {q:"Strategi yang membagi persoalan menjadi submasalah sejenis, menyelesaikannya, lalu menggabungkan hasilnya disebut …",
-    o:["Brute force","Greedy","Divide and conquer","Backtracking","Heuristik"],k:2,
-    e:"Itulah definisi divide and conquer, contohnya merge sort dan binary search."},
-   {q:"Algoritma P memerlukan langkah sebanding n², algoritma Q sebanding n log n. Untuk data sangat besar …",
-    o:["P lebih efisien","Q lebih efisien","Keduanya sama","Tidak dapat dibandingkan","P selalu lebih cepat"],k:1,
-    e:"n log n tumbuh jauh lebih lambat daripada n²."},
-   {q:"Struktur data paling tepat untuk menggambarkan jalan satu arah antartempat adalah …",
-    o:["Tumpukan","Antrean","Graf berarah","Larik satu dimensi","Tabel hash"],k:2,
-    e:"Relasi berarah antarsimpul digambarkan dengan graf berarah."},
-   {q:"Keunggulan senarai bertaut dibandingkan larik adalah …",
-    o:["Akses elemen ke-n selalu lebih cepat","Penambahan dan penghapusan di tengah lebih mudah","Selalu memerlukan memori lebih kecil","Datanya selalu terurut","Ukurannya tidak dapat berubah"],k:1,
-    e:"Cukup mengubah penunjuk, tanpa menggeser seluruh elemen."},
-   {q:"Tujuan utama penggunaan tabel hash adalah …",
-    o:["Mengurutkan data","Mempercepat pencarian data berdasarkan kunci","Menyimpan data berurutan","Menggambarkan relasi antardata","Menghemat prosesor"],k:1,
-    e:"Fungsi hash memetakan kunci langsung ke lokasi penyimpanan."},
-   {q:"Ciri topologi bintang adalah …",
-    o:["Perangkat terhubung membentuk lingkaran","Seluruh perangkat terhubung pada satu perangkat pusat","Seluruh perangkat pada satu kabel tunggal","Setiap perangkat terhubung ke semua perangkat lain","Tidak memerlukan perangkat penghubung"],k:1,
-    e:"Topologi bintang terpusat pada switch atau hub."},
-   {q:"Pada model TCP/IP, pengalamatan logis dan penentuan rute paket dilakukan pada lapisan …",
-    o:["Aplikasi","Transport","Internet","Akses jaringan","Presentasi"],k:2,
-    e:"Lapisan internet menangani IP dan routing."}],
-  uraian:[
-   {q:"Jelaskan lima tahapan pengembangan produk teknologi digital dan kegiatan utamanya!",
-    k:"Analisis kebutuhan, perancangan, implementasi, pengujian, pemeliharaan — masing-masing dengan kegiatan utama. Skor 12."},
-   {q:"Sekolah ingin mempercepat presensi murid. Rumuskan dua alternatif solusi digital beserta kelebihan, keterbatasan, dan alasan pemilihan terbaik!",
-    k:"Dua alternatif relevan (mis. kartu QR dan formulir daring), kelebihan–keterbatasan tiap alternatif, justifikasi pemilihan. Skor 12."},
-   {q:"Rancanglah struktur data untuk menyimpan data peminjaman buku perpustakaan yang terus bertambah. Jelaskan alasannya!",
-    k:"Senarai bertaut atau tabel hash berkunci nomor anggota; sebutkan elemen data dan alasan pemilihan. Skor 12."},
-   {q:"Jelaskan perbedaan pohon dan graf beserta satu contoh persoalan nyata masing-masing!",
-    k:"Pohon hierarkis tanpa siklus dan punya akar (struktur organisasi); graf relasi bebas dan bisa bersiklus (peta jalan). Skor 12."},
-   {q:"Laboratorium memakai satu perangkat penghubung pusat. Jelaskan topologinya, kelebihan dan kekurangannya, serta lapisan TCP/IP saat membuka laman sekolah!",
-    k:"Topologi bintang; kelebihan mudah dirawat, kekurangan bergantung perangkat pusat; lapisan aplikasi, transport, internet, akses jaringan. Skor 12."}]},
- XII:{judul:"Sumatif Kelas XII (Fase F) — Semester Ganjil", durasi:30,
-  pg:[
-   {q:"Dasar utama pemilihan strategi algoritmik adalah …",
-    o:["Jumlah baris kode","Kebiasaan pemrogram","Karakteristik persoalan, kebenaran, dan efisiensi solusi","Bahasa yang dikuasai","Ketersediaan pustaka berbayar"],k:2,
-    e:"Strategi dipilih dari sifat persoalan, bukan selera."},
-   {q:"Ciri program terstruktur adalah …",
-    o:["Satu fungsi utama yang sangat panjang","Tersusun atas runtunan, percabangan, dan perulangan yang jelas serta termodularisasi","Menggunakan banyak variabel global","Menghindari komentar","Seluruh kode dalam satu baris"],k:1,
-    e:"Program terstruktur memakai tiga struktur dasar dan modularisasi."},
-   {q:"Manfaat utama memecah program menjadi beberapa fungsi adalah …",
-    o:["Mempercepat kompilasi","Menambah ukuran berkas","Meningkatkan keterbacaan dan penggunaan ulang kode","Menghilangkan kebutuhan pengujian","Mengurangi memori otomatis"],k:2,
-    e:"Modularisasi membuat kode mudah dibaca, diuji, dan dipakai ulang."},
-   {q:"Fungsi hitung(a, b) mengembalikan a + 2 × b. Nilai hitung(3, 4) adalah …",
-    o:["7","10","11","14","24"],k:2,
-    e:"3 + 2×4 = 3 + 8 = 11."},
-   {q:"Untuk mencari satu data pada kumpulan data terurut berukuran besar, algoritma paling tepat adalah …",
-    o:["Sequential search","Binary search","Bubble sort","Selection sort","Insertion sort"],k:1,
-    e:"Data terurut memungkinkan binary search yang jauh lebih cepat."},
-   {q:"Praktik penulisan kode yang paling mencerminkan kualitas baik adalah …",
-    o:["Nama variabel satu huruf untuk semua","Menyalin kode sama berulang kali","Nama bermakna, fungsi ringkas, dan dokumentasi secukupnya","Menghapus seluruh komentar","Seluruh logika dalam satu fungsi"],k:2,
-    e:"Keterbacaan, modularitas, dan dokumentasi adalah inti kualitas kode."},
-   {q:"Dua program menghasilkan keluaran sama; program 1 memakai pencarian berurutan, program 2 pencarian biner pada 1.000.000 data terurut. Pernyataan yang tepat …",
-    o:["Program 1 lebih cepat","Program 2 jauh lebih cepat","Kecepatan sama","Algoritma tidak berpengaruh","Program 2 selalu salah"],k:1,
-    e:"±20 langkah berbanding hingga 1.000.000 langkah."},
-   {q:"Pembagian dengan nol saat program dijalankan termasuk kesalahan …",
-    o:["Sintaksis","Logika","Runtime","Tipografi","Dokumentasi"],k:2,
-    e:"Muncul saat eksekusi, jadi termasuk runtime error."},
-   {q:"Tujuan utama menyusun kasus uji adalah …",
-    o:["Memperindah tampilan","Memastikan program benar pada berbagai kondisi masukan","Mempercepat penulisan kode","Menambah baris program","Menggantikan dokumentasi"],k:1,
-    e:"Kasus uji menguji kebenaran termasuk kasus batas."},
-   {q:"Memperbaiki struktur kode agar rapi tanpa mengubah perilaku program disebut …",
-    o:["Debugging","Refactoring","Compiling","Deploying","Profiling"],k:1,
-    e:"Refactoring mengubah bentuk, bukan perilaku."}],
-  uraian:[
-   {q:"Jelaskan tiga strategi algoritmik beserta satu contoh persoalan yang sesuai!",
-    k:"Brute force (mencoba semua kemungkinan), greedy (pilihan lokal terbaik, mis. penukaran uang), divide and conquer (mis. merge sort). Skor 12."},
-   {q:"Susun algoritma dan kode modular (minimal satu fungsi) untuk menghitung total dan rerata nilai sejumlah murid!",
-    k:"Algoritma runtut, fungsi dengan parameter dan nilai kembalian, perhitungan total dan rerata benar. Skor 12."},
-   {q:"Kode ditulis dengan nama variabel a, b, c, tanpa komentar, seluruh logika dalam satu fungsi panjang. Sebutkan tiga kelemahan dan cara memperbaikinya!",
-    k:"Penamaan tidak bermakna → nama deskriptif; tanpa dokumentasi → tambahkan komentar/README; fungsi terlalu panjang → pecah per tugas. Skor 12."},
-   {q:"Program menampilkan hasil penjumlahan keliru untuk masukan tertentu. Susun langkah penelusuran kesalahan dan tiga kasus uji!",
-    k:"Tirukan kesalahan, persempit kode, periksa variabel, perbaiki, uji ulang; kasus uji normal, batas, dan tidak wajar. Skor 12."},
-   {q:"Jelaskan pentingnya dokumentasi dan pengelolaan versi pada pengembangan berkelompok!",
-    k:"Dokumentasi memudahkan keterbacaan dan pemeliharaan; pengelolaan versi menyimpan riwayat, memudahkan kolaborasi dan pemulihan. Skor 12."}]}
-};
-
-/* ---- LKPD digital ---- */
-const LKPD = [
- {id:"lkpd-x",kelas:"X",judul:"LKPD 1 — Algoritma Pengurutan dan Pseudocode",modul:"Modul X.2",
-  tujuan:["Menerapkan algoritma pengurutan pada sekumpulan data.","Membandingkan jumlah langkah dua algoritma.","Menuliskan solusi dalam bentuk pseudocode."],
-  langkah:["Gunakan data: 8, 2, 7, 4, 1, 9, 3.","Jalankan simulasi pengurutan pada menu Simulasi untuk bubble sort, catat hasilnya.","Ulangi dengan selection sort dan catat hasilnya.","Isi tabel di bawah, lalu tulis pseudocode salah satu algoritma."],
-  fields:[["id","Nama / Kelompok","text"],["kls","Kelas","text"],
-          ["bs","Bubble sort — jumlah perbandingan dan pertukaran","text"],
-          ["ss","Selection sort — jumlah perbandingan dan pertukaran","text"],
-          ["bd","Susunan data setelah 3 langkah pertama (bubble sort)","area"],
-          ["code","Pseudocode algoritma pilihanmu","area"],
-          ["d1","Algoritma mana yang lebih sedikit pertukarannya? Mengapa?","area"],
-          ["d2","Apa yang terjadi bila data menjadi 100 buah?","area"],
-          ["sim","Simpulan","area"]],
-  sim:"sorting"},
- {id:"lkpd-xi",kelas:"XI",judul:"LKPD 2 — Analisis Data Terbuka untuk Pengambilan Keputusan",modul:"Modul XI.6",
-  tujuan:["Memanfaatkan sumber data terbuka yang tepercaya dan legal.","Mengolah data menjadi simpulan dan rekomendasi.","Menyajikan hasil dalam visualisasi yang jujur."],
-  langkah:["Tentukan satu persoalan di sekolah atau daerah.","Cari satu kumpulan data terbuka yang relevan dan catat identitasnya.","Bersihkan data, lalu hitung statistik deskriptifnya pada simulasi Analisis Data.","Buat satu visualisasi dan rumuskan rekomendasi."],
-  fields:[["id","Nama Kelompok","text"],["kls","Kelas","text"],
-          ["masalah","Persoalan yang dianalisis","area"],
-          ["sumber","Judul data, penerbit, tahun, dan tautan sumber","area"],
-          ["lisensi","Lisensi / ketentuan penggunaan data","text"],
-          ["bersih","Langkah pembersihan data yang dilakukan","area"],
-          ["hasil","Hasil perhitungan (rerata, median, maksimum, minimum)","area"],
-          ["temuan","Temuan utama dari data","area"],
-          ["rek","Rekomendasi keputusan untuk sekolah atau daerah","area"]],
-  sim:"dataviz"},
- {id:"lkpd-xii",kelas:"XII",judul:"LKPD 3 — Pengujian, Debugging, dan Perapian Kode",modul:"Modul XII.3",
-  tujuan:["Menyusun kasus uji untuk sebuah program.","Menelusuri dan memperbaiki kesalahan secara sistematis.","Merapikan kode tanpa mengubah perilaku program."],
-  langkah:["Ambil program bermasalah dari guru atau gunakan contoh pada simulasi Tinjauan Kode.","Susun minimal lima kasus uji termasuk kasus batas.","Telusuri penyebab kesalahan dan perbaiki satu per satu.","Rapikan kode lalu jalankan ulang seluruh kasus uji."],
-  fields:[["id","Nama / Kelompok","text"],["kls","Kelas","text"],
-          ["uji","Lima kasus uji: masukan → hasil diharapkan → hasil sebenarnya","area"],
-          ["salah","Jenis kesalahan, lokasi, dan penyebabnya","area"],
-          ["perbaikan","Tindakan perbaikan yang dilakukan","area"],
-          ["refactor","Perapian kode yang dilakukan (penamaan, pemecahan fungsi, dokumentasi)","area"],
-          ["ulang","Hasil pengujian ulang setelah perapian","area"],
-          ["refleksi","Refleksi: pelajaran apa yang kamu dapat?","area"]],
-  sim:"kodereview"}
-];
-
-/* ---- Perangkat guru (ringkas, selaras dokumen perangkat ajar) ---- */
-const PROTA = {
- X:[["Ganjil","Modul 1 — Berpikir Komputasional dan Struktur Data","10 JP","Juli–Agustus"],
-    ["Ganjil","Modul 2 — Algoritma Standar dan Pseudocode","12 JP","Agustus–September"],
-    ["Ganjil","Modul 3 — Proses Komputasi untuk Data Berkualitas","8 JP","Oktober"],
-    ["Ganjil","Modul 4 — Von Neumann dan Sistem Operasi","6 JP","November"],
-    ["Genap","Modul 5 — Literasi Informasi dan Periksa Fakta","10 JP","Januari"],
-    ["Genap","Modul 6 — Perkakas Digital dan Produksi Konten","10 JP","Februari–Maret"],
-    ["Genap","Modul 7 — Jaringan Komputer dan Keamanan Dasar","8 JP","Maret–April"],
-    ["Genap","Modul 8 — Keamanan Akun, HKI, dan Profesi Informatika","8 JP","Mei–Juni"]],
- XI:[["Ganjil","Modul 1 — Alur Pengembangan Produk dan Analisis Persoalan","10 JP","Juli–Agustus"],
-    ["Ganjil","Modul 2 — Strategi Algoritmik dan Justifikasi Efisiensi","10 JP","September"],
-    ["Ganjil","Modul 3 — Struktur Data Kompleks dan Abstrak","12 JP","Oktober–November"],
-    ["Ganjil","Modul 4 — Model dan Topologi Jaringan","4 JP","November"],
-    ["Genap","Modul 5 — Pengiriman Data, Troubleshooting, Keamanan Jaringan","14 JP","Januari–Februari"],
-    ["Genap","Modul 6 — Riset Digital, Verifikasi, dan Analisis Data","22 JP","Maret–Juni"]],
- XII:[["Ganjil","Modul 1 — Strategi Algoritmik dan Program Terstruktur","16 JP","Juli–September"],
-    ["Ganjil","Modul 2 — Implementasi Algoritma Standar dan Kualitas Kode","10 JP","Oktober"],
-    ["Ganjil","Modul 3 — Pemeliharaan dan Penyempurnaan Program","10 JP","November"],
-    ["Genap","Modul 4 — Struktur Data Kompleks dan Library","10 JP","Januari–Februari"],
-    ["Genap","Modul 5 — Perancangan Kebutuhan Sistem Komputer","6 JP","Februari–Maret"],
-    ["Genap","Modul 6 — Hukum, Demokrasi, Transaksi Digital, dan Projek Akhir","20 JP","Maret–Juni"]]
-};
-const ASESMEN_INFO = [
- ["Diagnostik","Awal tahun dan awal lingkup materi","Tes singkat, angket, tanya jawab","Pemetaan kesiapan belajar dan dasar diferensiasi"],
- ["Formatif","Selama proses pembelajaran","Observasi, LKPD, kuis, unjuk kerja","Umpan balik dan perbaikan segera"],
- ["Sumatif","Akhir lingkup materi, semester, dan tahun","Tes tertulis, unjuk kerja, projek, portofolio","Penentuan ketercapaian dan pelaporan"]
-];
-const GLOSARIUM = [
- ["Abstraksi","Mengambil hal pokok dari persoalan dan mengabaikan rincian yang tidak diperlukan."],
- ["Algoritma","Urutan langkah logis dan sistematis untuk menyelesaikan persoalan."],
- ["Antrean (queue)","Struktur data berprinsip FIFO: pertama masuk, pertama keluar."],
- ["Berpikir komputasional","Kemampuan menyelesaikan masalah secara sistematis sehingga solusinya dapat dijalankan manusia atau mesin."],
- ["Dekomposisi","Pemecahan persoalan besar menjadi bagian yang lebih kecil."],
- ["Graf","Struktur data berupa simpul yang dihubungkan sisi."],
- ["Literasi digital","Kecakapan bermedia digital secara etis, aman, berbudaya, dan seimbang."],
- ["Membaca lateral","Memeriksa kredibilitas informasi dengan menelusuri sumber lain di luar laman yang dibaca."],
- ["Pembelajaran mendalam","Pendekatan belajar berkesadaran, bermakna, dan menggembirakan melalui memahami, mengaplikasi, dan merefleksi."],
- ["Pseudocode","Penulisan algoritma dengan bahasa mirip program namun mudah dibaca manusia."],
- ["Refactoring","Perbaikan struktur kode tanpa mengubah perilaku program."],
- ["Struktur data","Cara penyusunan dan penyimpanan data agar efisien digunakan."],
- ["Tabel hash","Struktur data yang memetakan kunci ke lokasi penyimpanan agar pencarian cepat."],
- ["Topologi jaringan","Pola hubungan antarperangkat dalam jaringan komputer."],
- ["Troubleshooting","Mendiagnosis dan memperbaiki gangguan sistem secara sistematis."],
- ["Tumpukan (stack)","Struktur data berprinsip LIFO: terakhir masuk, pertama keluar."]
-];
+/* ---- Daftar simulasi (17) ---- */
 const SIM_LIST = [
- ["sorting","Visualisasi Pengurutan","Bubble, selection, dan insertion sort langkah demi langkah dengan penghitung perbandingan dan pertukaran.","X · XI · XII"],
- ["searching","Pencarian Berurutan vs Biner","Bandingkan jumlah langkah kedua algoritma pada data terurut.","X · XII"],
- ["stackqueue","Tumpukan dan Antrean","Praktik push, pop, enqueue, dan dequeue secara interaktif.","X · XI"],
- ["vonneumann","Siklus Komputer Von Neumann","Animasi fetch–decode–execute pada memori dan register.","X"],
- ["biner","Konversi Biner dan ASCII","Ubah bilangan desimal ke biner serta lihat sandi huruf.","X"],
- ["pseudocode","Penelusuran Pseudocode","Jalankan program langkah demi langkah dan amati nilai variabel.","X · XII"],
- ["dataviz","Analisis Data Mini","Masukkan data, hitung statistik, dan buat grafiknya.","X · XI"],
- ["fakta","Latihan Periksa Fakta","Klasifikasikan klaim menjadi fakta, opini, atau hoaks.","X · XI"],
- ["jaringan","Simulasi Jaringan dan Troubleshooting","Kirim paket data, timbulkan gangguan, lalu diagnosis berlapis.","X · XI"],
- ["graf","Penelusuran Graf dan Pohon","Animasi BFS dan DFS pada graf contoh.","XI · XII"],
- ["strategi","Perbandingan Strategi Algoritmik","Brute force vs greedy pada persoalan penukaran uang.","XI · XII"],
- ["sandi","Pemeriksa Kata Sandi dan 2FA","Uji kekuatan kata sandi dan simulasikan kode autentikasi.","X · XII"],
- ["kodereview","Tinjauan Kualitas Kode","Temukan kelemahan kode dan bandingkan dengan versi rapi.","XII"],
- ["spek","Perancang Spesifikasi Komputer","Susun spesifikasi sesuai beban kerja dan anggaran.","XII"],
- ["projek","Perencana Projek Akhir","Susun rencana projek digital dan pantau kemajuannya.","XII"]
+ ["sorting","Visualisasi Pengurutan","Bubble, selection, dan insertion sort bergerak langkah demi langkah dengan penghitung perbandingan dan pertukaran.","🔀"],
+ ["searching","Pencarian Berurutan vs Biner","Balapan dua algoritma pencarian pada data terurut.","🔎"],
+ ["stackqueue","Tumpukan dan Antrean","Praktik push, pop, enqueue, dan dequeue secara langsung.","🗂️"],
+ ["vonneumann","Siklus Komputer Von Neumann","Animasi fetch–decode–execute pada memori, register, dan ALU.","🖥️"],
+ ["biner","Konversi Biner dan Sandi Huruf","Nyalakan bit satu per satu dan lihat huruf menjadi deretan 0 dan 1.","0️⃣"],
+ ["pseudocode","Penelusuran Pseudocode","Jalankan program baris demi baris dan amati nilai variabel.","📜"],
+ ["dataviz","Analisis Data Mini","Olah data survei kelas menjadi statistik dan grafik.","📊"],
+ ["perkantoran","Lembar Kerja dan Lisensi Karya","Rumus otomatis pada lembar kerja plus penyusun atribusi lisensi.","📑"],
+ ["fakta","Latihan Periksa Fakta","Pilah fakta, opini, dan hoaks lalu cek dengan membaca lateral.","🕵️"],
+ ["jaringan","Jaringan dan Troubleshooting","Kirim paket data, timbulkan gangguan, lalu diagnosis berlapis.","🌐"],
+ ["pengembangan","Daur Hidup Produk Digital","Susun tahapan pengembangan dan lihat biaya perbaikan membengkak.","🚀"],
+ ["graf","Penelusuran Graf: BFS dan DFS","Animasi penelusuran melebar dan mendalam pada graf.","🕸️"],
+ ["strategi","Brute Force vs Greedy","Bandingkan dua strategi pada persoalan penukaran uang.","♟️"],
+ ["sandi","Keamanan Kata Sandi dan 2FA","Uji kekuatan sandi dan coba kode autentikasi 30 detik.","🔐"],
+ ["kodereview","Tinjauan Kualitas Kode","Temukan kelemahan kode lalu bandingkan versi rapinya.","🧹"],
+ ["spek","Perancang Spesifikasi Komputer","Susun spesifikasi sesuai beban kerja dan anggaran.","🧮"],
+ ["projek","Perencana Projek Akhir","Rencanakan projek digital kelompok dan pantau kemajuannya.","🎯"]
 ];
+const SIM_NAMA = Object.fromEntries(SIM_LIST.map(s=>[s[0],s[1]]));
 /* =========================================================================
-   INTI APLIKASI: penyimpanan gambar luring, perutean, dan tampilan halaman
+   INTI: penyimpanan gambar, perutean, pemutar slide
    ========================================================================= */
 const $ = (s,r=document)=>r.querySelector(s);
 const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
 const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const store = {
-  get(k,d){try{const v=localStorage.getItem('mpi:'+k);return v?JSON.parse(v):d}catch(e){return d}},
-  set(k,v){try{localStorage.setItem('mpi:'+k,JSON.stringify(v))}catch(e){}}
-};
-function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2600)}
+const store={get(k,d){try{const v=localStorage.getItem('mpi:'+k);return v?JSON.parse(v):d}catch(e){return d}},
+             set(k,v){try{localStorage.setItem('mpi:'+k,JSON.stringify(v))}catch(e){}}};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2600)}
+const rnd=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 
-/* ---------------- Tema ---------------- */
-(function(){
-  const saved = store.get('tema', null);
-  const prefers = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark':'light';
-  document.documentElement.dataset.theme = saved || prefers;
-})();
+/* timer bercakupan: dibersihkan saat pindah halaman */
+let SCOPE=[];
+const _si=window.setInterval.bind(window);
+window.setInterval=(f,t)=>{const id=_si(f,t);SCOPE.push(id);return id};
+function clearScope(){SCOPE.forEach(id=>clearInterval(id));SCOPE=[]}
+window.addEventListener('error',e=>{console.warn('diabaikan:',e.message)});
+window.addEventListener('unhandledrejection',e=>{console.warn('diabaikan:',e.reason&&e.reason.message)});
 
-/* ---------------- Penyimpanan gambar permanen (IndexedDB) -------------- */
-const IDB = (()=>{
-  const NAME='mpi-media', STORE='img', VER=1; let dbp=null;
-  function open(){
-    if(dbp) return dbp;
-    dbp = new Promise((res,rej)=>{
-      if(!('indexedDB' in window)) return rej(new Error('IndexedDB tidak tersedia'));
-      const r = indexedDB.open(NAME,VER);
-      r.onupgradeneeded = ()=>{ const db=r.result; if(!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE); };
-      r.onsuccess = ()=>res(r.result); r.onerror = ()=>rej(r.error);
-    });
-    return dbp;
+/* konfeti kecil untuk umpan balik yang hidup */
+function confetti(n=70){
+  const box=document.createElement('div');box.className='confetti';document.body.appendChild(box);
+  const warna=['#5b4ae0','#00e0b0','#ffd166','#ff8a5b','#8338a8'];
+  for(let i=0;i<n;i++){
+    const it=document.createElement('i');
+    it.style.left=Math.random()*100+'vw';it.style.top='-20px';
+    it.style.background=warna[rnd(0,warna.length-1)];
+    it.style.animationDuration=(1.1+Math.random()*1.3)+'s';
+    it.style.animationDelay=(Math.random()*.4)+'s';
+    it.style.transform='rotate('+rnd(0,360)+'deg)';
+    box.appendChild(it);
   }
-  async function get(k){ try{const db=await open();return await new Promise((res,rej)=>{const t=db.transaction(STORE,'readonly').objectStore(STORE).get(k);t.onsuccess=()=>res(t.result);t.onerror=()=>rej(t.error)})}catch(e){return null} }
-  async function set(k,v){ try{const db=await open();return await new Promise((res,rej)=>{const t=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);t.onsuccess=()=>res(1);t.onerror=()=>rej(t.error)})}catch(e){return null} }
-  async function keys(){ try{const db=await open();return await new Promise((res)=>{const t=db.transaction(STORE,'readonly').objectStore(STORE).getAllKeys();t.onsuccess=()=>res(t.result||[]);t.onerror=()=>res([])})}catch(e){return []} }
-  async function clear(){ try{const db=await open();return await new Promise((res)=>{const t=db.transaction(STORE,'readwrite').objectStore(STORE).clear();t.onsuccess=()=>res(1);t.onerror=()=>res(0)})}catch(e){return 0} }
-  return {get,set,keys,clear};
-})();
+  setTimeout(()=>box.remove(),2800);
+}
+
+/* tema */
+(function(){const s=store.get('tema',null);
+ const p=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+ document.documentElement.dataset.theme=s||p;})();
+
+/* ---------------- penyimpanan gambar permanen ---------------- */
+const IDB=(()=>{const NAME='mpi-media',STORE='img';let dbp=null;
+ function open(){if(dbp)return dbp;dbp=new Promise((res,rej)=>{if(!('indexedDB'in window))return rej(new Error('x'));
+  const r=indexedDB.open(NAME,1);r.onupgradeneeded=()=>{const db=r.result;if(!db.objectStoreNames.contains(STORE))db.createObjectStore(STORE)};
+  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});return dbp}
+ async function get(k){try{const db=await open();return await new Promise((res,rej)=>{const t=db.transaction(STORE,'readonly').objectStore(STORE).get(k);t.onsuccess=()=>res(t.result);t.onerror=()=>rej(t.error)})}catch(e){return null}}
+ async function set(k,v){try{const db=await open();return await new Promise((res,rej)=>{const t=db.transaction(STORE,'readwrite').objectStore(STORE).put(v,k);t.onsuccess=()=>res(1);t.onerror=()=>rej(t.error)})}catch(e){return null}}
+ async function keys(){try{const db=await open();return await new Promise(res=>{const t=db.transaction(STORE,'readonly').objectStore(STORE).getAllKeys();t.onsuccess=()=>res(t.result||[]);t.onerror=()=>res([])})}catch(e){return []}}
+ async function clear(){try{const db=await open();return await new Promise(res=>{const t=db.transaction(STORE,'readwrite').objectStore(STORE).clear();t.onsuccess=()=>res(1);t.onerror=()=>res(0)})}catch(e){return 0}}
+ return {get,set,keys,clear}})();
 
 const API='https://commons.wikimedia.org/w/api.php';
-const objUrls = {};
-
+const objUrls={};
 async function queryByTitle(title,w){
-  const u=`${API}?action=query&format=json&origin=*&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=${w}&titles=${encodeURIComponent('File:'+title)}`;
-  const r=await fetch(u,{mode:'cors'}); if(!r.ok) throw new Error('api');
-  const j=await r.json(); const pages=j.query&&j.query.pages||{};
-  const p=Object.values(pages)[0];
-  if(!p||p.missing!==undefined||!p.imageinfo) return null;
-  return p.imageinfo[0];
+  const r=await fetch(`${API}?action=query&format=json&origin=*&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=${w}&titles=${encodeURIComponent('File:'+title)}`,{mode:'cors'});
+  if(!r.ok)throw new Error('api');const j=await r.json();const p=Object.values(j.query&&j.query.pages||{})[0];
+  return (!p||p.missing!==undefined||!p.imageinfo)?null:p.imageinfo[0];
 }
 async function queryBySearch(q,w){
-  const u=`${API}?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrnamespace=6&gsrlimit=1&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=${w}`;
-  const r=await fetch(u,{mode:'cors'}); if(!r.ok) throw new Error('api');
-  const j=await r.json(); const pages=j.query&&j.query.pages||{};
-  const p=Object.values(pages)[0];
-  if(!p||!p.imageinfo) return null;
-  return p.imageinfo[0];
+  const r=await fetch(`${API}?action=query&format=json&origin=*&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrnamespace=6&gsrlimit=1&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=${w}`,{mode:'cors'});
+  if(!r.ok)throw new Error('api');const j=await r.json();const p=Object.values(j.query&&j.query.pages||{})[0];
+  return (!p||!p.imageinfo)?null:p.imageinfo[0];
 }
-function creditOf(info){
-  try{
-    const m=info.extmetadata||{};
-    const art=(m.Artist&&m.Artist.value||'').replace(/<[^>]+>/g,'').trim();
-    const lic=(m.LicenseShortName&&m.LicenseShortName.value||'').trim();
-    return [art,lic].filter(Boolean).join(' · ');
-  }catch(e){return ''}
-}
-/* Ambil satu gambar: IndexedDB → judul berkas → pencarian → gagal */
+function creditOf(i){try{const m=i.extmetadata||{};
+  const a=(m.Artist&&m.Artist.value||'').replace(/<[^>]+>/g,'').trim();
+  const l=(m.LicenseShortName&&m.LicenseShortName.value||'').trim();
+  return [a,l].filter(Boolean).join(' · ')}catch(e){return ''}}
 async function fetchAndStore(slot){
-  const meta=IMAGES[slot]; if(!meta) return null;
-  const w=meta.w||800;
-  let info=null;
-  try{ info=await queryByTitle(meta.title,w); }catch(e){}
-  if(!info){ try{ info=await queryBySearch(meta.q,w); }catch(e){} }
-  if(!info) return null;
-  const url=info.thumburl||info.url;
-  const resp=await fetch(url,{mode:'cors'}); if(!resp.ok) return null;
-  const blob=await resp.blob();
-  if(!blob || blob.size<200) return null;
+  const meta=IMAGES[slot];if(!meta)return null;const w=meta.w||800;let info=null;
+  try{info=await queryByTitle(meta.title,w)}catch(e){}
+  if(!info){try{info=await queryBySearch(meta.q,w)}catch(e){}}
+  if(!info)return null;
+  const resp=await fetch(info.thumburl||info.url,{mode:'cors'});if(!resp.ok)return null;
+  const blob=await resp.blob();if(!blob||blob.size<200)return null;
   const rec={blob,credit:creditOf(info),page:info.descriptionurl||'',ts:Date.now()};
-  await IDB.set(slot,rec);
-  return rec;
+  await IDB.set(slot,rec);return rec;
 }
 async function getImage(slot){
-  let rec=await IDB.get(slot);
-  if(!rec){ rec=await fetchAndStore(slot); }
-  if(!rec) return null;
-  if(!objUrls[slot]) objUrls[slot]=URL.createObjectURL(rec.blob);
-  return {src:objUrls[slot],credit:rec.credit,page:rec.page};
+  let rec=await IDB.get(slot); if(!rec) rec=await fetchAndStore(slot);
+  if(!rec)return null; if(!objUrls[slot])objUrls[slot]=URL.createObjectURL(rec.blob);
+  return {src:objUrls[slot],credit:rec.credit};
 }
-
-/* Ilustrasi cadangan (selalu tersedia, tanpa internet) */
-const FALLBACK = {
- vonneumann:`<svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skema Von Neumann">
- <style>.bx{fill:#eef1fb;stroke:#4740ad;stroke-width:2;rx:10}.tx{font:600 13px system-ui;fill:#2f2a7a;text-anchor:middle}.ar{stroke:#0f7f66;stroke-width:2.5;fill:none;marker-end:url(#a)}</style>
- <defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9z" fill="#0f7f66"/></marker></defs>
- <rect class="bx" x="12" y="104" width="112" height="52"/><text class="tx" x="68" y="134">Unit Masukan</text>
- <rect class="bx" x="176" y="20" width="288" height="52"/><text class="tx" x="320" y="50">Memori (data + instruksi)</text>
- <rect class="bx" x="176" y="104" width="136" height="52"/><text class="tx" x="244" y="134">Unit Kendali</text>
- <rect class="bx" x="328" y="104" width="136" height="52"/><text class="tx" x="396" y="134">ALU</text>
- <rect class="bx" x="176" y="188" width="288" height="48"/><text class="tx" x="320" y="217">CPU</text>
- <rect class="bx" x="516" y="104" width="112" height="52"/><text class="tx" x="572" y="134">Unit Keluaran</text>
- <path class="ar" d="M124 130 H170"/><path class="ar" d="M464 130 H512"/>
- <path class="ar" d="M244 100 V76"/><path class="ar" d="M396 76 V100"/></svg>`,
- topologi:`<svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Topologi jaringan">
- <style>.n{fill:#4740ad}.c{fill:#0f7f66}.l{stroke:#8a90b5;stroke-width:2}.t{font:600 12px system-ui;fill:#4b5169;text-anchor:middle}</style>
- <g><text class="t" x="100" y="20">Bintang</text><circle class="c" cx="100" cy="80" r="12"/>
- <g class="l"><line x1="100" y1="80" x2="40" y2="40"/><line x1="100" y1="80" x2="160" y2="40"/><line x1="100" y1="80" x2="40" y2="130"/><line x1="100" y1="80" x2="160" y2="130"/></g>
- <circle class="n" cx="40" cy="40" r="9"/><circle class="n" cx="160" cy="40" r="9"/><circle class="n" cx="40" cy="130" r="9"/><circle class="n" cx="160" cy="130" r="9"/></g>
- <g><text class="t" x="320" y="20">Bus</text><line class="l" x1="230" y1="85" x2="410" y2="85"/>
- <g><line class="l" x1="260" y1="85" x2="260" y2="55"/><line class="l" x1="320" y1="85" x2="320" y2="55"/><line class="l" x1="380" y1="85" x2="380" y2="55"/></g>
- <circle class="n" cx="260" cy="48" r="9"/><circle class="n" cx="320" cy="48" r="9"/><circle class="n" cx="380" cy="48" r="9"/></g>
- <g><text class="t" x="540" y="20">Cincin</text>
- <g class="l" fill="none"><path d="M480 80 L540 45 L600 80 L540 130 Z"/></g>
- <circle class="n" cx="480" cy="80" r="9"/><circle class="n" cx="540" cy="45" r="9"/><circle class="n" cx="600" cy="80" r="9"/><circle class="n" cx="540" cy="130" r="9"/></g></svg>`,
- stack:`<svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tumpukan LIFO">
- <style>.b{fill:#eef1fb;stroke:#4740ad;stroke-width:2}.t{font:600 13px system-ui;fill:#2f2a7a;text-anchor:middle}.s{font:12px system-ui;fill:#4b5169}</style>
- <rect class="b" x="140" y="150" width="140" height="34"/><text class="t" x="210" y="172">data 1</text>
- <rect class="b" x="140" y="112" width="140" height="34"/><text class="t" x="210" y="134">data 2</text>
- <rect class="b" x="140" y="74" width="140" height="34"/><text class="t" x="210" y="96">data 3 (atas)</text>
- <text class="s" x="300" y="60">push ↓ / pop ↑</text><text class="s" x="110" y="205" text-anchor="end">LIFO</text></svg>`,
- queue:`<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Antrean FIFO">
- <style>.b{fill:#dcf5ec;stroke:#0f7f66;stroke-width:2}.t{font:600 13px system-ui;fill:#0f7f66;text-anchor:middle}.s{font:12px system-ui;fill:#4b5169;text-anchor:middle}</style>
- <rect class="b" x="60" y="56" width="90" height="40"/><text class="t" x="105" y="81">data 1</text>
- <rect class="b" x="160" y="56" width="90" height="40"/><text class="t" x="205" y="81">data 2</text>
- <rect class="b" x="260" y="56" width="90" height="40"/><text class="t" x="305" y="81">data 3</text>
- <rect class="b" x="360" y="56" width="90" height="40"/><text class="t" x="405" y="81">data 4</text>
- <text class="s" x="60" y="124">keluar (dequeue)</text><text class="s" x="440" y="124">masuk (enqueue)</text></svg>`,
- tcpip:`<svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lapisan TCP/IP">
- <style>.l{stroke:#4740ad;stroke-width:2}.t{font:600 13px system-ui;fill:#2f2a7a}.d{font:12px system-ui;fill:#4b5169}</style>
- <rect x="40" y="20" width="440" height="42" rx="9" fill="#eef1fb" class="l"/><text class="t" x="58" y="47">1. Aplikasi — HTTP, DNS, SMTP</text>
- <rect x="40" y="72" width="440" height="42" rx="9" fill="#e6f6f0" class="l"/><text class="t" x="58" y="99">2. Transport — TCP, UDP</text>
- <rect x="40" y="124" width="440" height="42" rx="9" fill="#eef1fb" class="l"/><text class="t" x="58" y="151">3. Internet — IP, perutean</text>
- <rect x="40" y="176" width="440" height="42" rx="9" fill="#e6f6f0" class="l"/><text class="t" x="58" y="203">4. Akses jaringan — Ethernet, Wi-Fi</text></svg>`,
- generic:`<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi">
- <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4740ad"/><stop offset="1" stop-color="#0f7f66"/></linearGradient></defs>
- <rect width="480" height="200" rx="14" fill="url(#g)" opacity=".12"/>
- <circle cx="130" cy="100" r="42" fill="none" stroke="#4740ad" stroke-width="3"/>
- <rect x="210" y="62" width="76" height="76" rx="12" fill="none" stroke="#0f7f66" stroke-width="3"/>
- <path d="M320 138 L358 62 L396 138 Z" fill="none" stroke="#4740ad" stroke-width="3"/>
- <text x="240" y="182" font="600 13px system-ui" fill="#4b5169" text-anchor="middle" style="font:600 13px system-ui">Ilustrasi konsep</text></svg>`
+const FALLBACK={
+ vonneumann:`<svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg"><style>.bx{fill:#eef1fb;stroke:#4740ad;stroke-width:2}.tx{font:600 13px system-ui;fill:#2f2a7a;text-anchor:middle}.ar{stroke:#0f7f66;stroke-width:2.5;fill:none;marker-end:url(#a)}</style><defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9z" fill="#0f7f66"/></marker></defs><rect class="bx" x="12" y="104" width="112" height="52" rx="10"/><text class="tx" x="68" y="134">Unit Masukan</text><rect class="bx" x="176" y="20" width="288" height="52" rx="10"/><text class="tx" x="320" y="50">Memori (data + instruksi)</text><rect class="bx" x="176" y="104" width="136" height="52" rx="10"/><text class="tx" x="244" y="134">Unit Kendali</text><rect class="bx" x="328" y="104" width="136" height="52" rx="10"/><text class="tx" x="396" y="134">ALU</text><rect class="bx" x="516" y="104" width="112" height="52" rx="10"/><text class="tx" x="572" y="134">Unit Keluaran</text><path class="ar" d="M124 130 H170"/><path class="ar" d="M464 130 H512"/><path class="ar" d="M244 100 V76"/><path class="ar" d="M396 76 V100"/></svg>`,
+ topologi:`<svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg"><style>.n{fill:#4740ad}.c{fill:#0f7f66}.l{stroke:#8a90b5;stroke-width:2}.t{font:600 12px system-ui;fill:#4b5169;text-anchor:middle}</style><text class="t" x="100" y="20">Bintang</text><circle class="c" cx="100" cy="80" r="12"/><g class="l"><line x1="100" y1="80" x2="40" y2="40"/><line x1="100" y1="80" x2="160" y2="40"/><line x1="100" y1="80" x2="40" y2="130"/><line x1="100" y1="80" x2="160" y2="130"/></g><circle class="n" cx="40" cy="40" r="9"/><circle class="n" cx="160" cy="40" r="9"/><circle class="n" cx="40" cy="130" r="9"/><circle class="n" cx="160" cy="130" r="9"/><text class="t" x="320" y="20">Bus</text><line class="l" x1="230" y1="85" x2="410" y2="85"/><line class="l" x1="260" y1="85" x2="260" y2="55"/><line class="l" x1="320" y1="85" x2="320" y2="55"/><line class="l" x1="380" y1="85" x2="380" y2="55"/><circle class="n" cx="260" cy="48" r="9"/><circle class="n" cx="320" cy="48" r="9"/><circle class="n" cx="380" cy="48" r="9"/><text class="t" x="540" y="20">Cincin</text><path class="l" fill="none" d="M480 80 L540 45 L600 80 L540 130 Z"/><circle class="n" cx="480" cy="80" r="9"/><circle class="n" cx="540" cy="45" r="9"/><circle class="n" cx="600" cy="80" r="9"/><circle class="n" cx="540" cy="130" r="9"/></svg>`,
+ stack:`<svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg"><style>.b{fill:#eef1fb;stroke:#4740ad;stroke-width:2}.t{font:600 13px system-ui;fill:#2f2a7a;text-anchor:middle}.s{font:12px system-ui;fill:#4b5169}</style><rect class="b" x="140" y="150" width="140" height="34" rx="8"/><text class="t" x="210" y="172">data 1</text><rect class="b" x="140" y="112" width="140" height="34" rx="8"/><text class="t" x="210" y="134">data 2</text><rect class="b" x="140" y="74" width="140" height="34" rx="8"/><text class="t" x="210" y="96">data 3 (atas)</text><text class="s" x="296" y="60">push ↓ / pop ↑</text></svg>`,
+ queue:`<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg"><style>.b{fill:#dcf5ec;stroke:#0f7f66;stroke-width:2}.t{font:600 13px system-ui;fill:#0f7f66;text-anchor:middle}.s{font:12px system-ui;fill:#4b5169;text-anchor:middle}</style><rect class="b" x="60" y="56" width="90" height="40" rx="8"/><text class="t" x="105" y="81">data 1</text><rect class="b" x="160" y="56" width="90" height="40" rx="8"/><text class="t" x="205" y="81">data 2</text><rect class="b" x="260" y="56" width="90" height="40" rx="8"/><text class="t" x="305" y="81">data 3</text><rect class="b" x="360" y="56" width="90" height="40" rx="8"/><text class="t" x="405" y="81">data 4</text><text class="s" x="75" y="124">keluar (dequeue)</text><text class="s" x="430" y="124">masuk (enqueue)</text></svg>`,
+ tcpip:`<svg viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg"><style>.l{stroke:#4740ad;stroke-width:2}.t{font:600 13px system-ui;fill:#2f2a7a}</style><rect x="40" y="20" width="440" height="42" rx="9" fill="#eef1fb" class="l"/><text class="t" x="58" y="47">1. Aplikasi — HTTP, DNS, SMTP</text><rect x="40" y="72" width="440" height="42" rx="9" fill="#e6f6f0" class="l"/><text class="t" x="58" y="99">2. Transport — TCP, UDP</text><rect x="40" y="124" width="440" height="42" rx="9" fill="#eef1fb" class="l"/><text class="t" x="58" y="151">3. Internet — IP, perutean</text><rect x="40" y="176" width="440" height="42" rx="9" fill="#e6f6f0" class="l"/><text class="t" x="58" y="203">4. Akses jaringan — Ethernet, Wi-Fi</text></svg>`,
+ generic:`<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4740ad"/><stop offset="1" stop-color="#0f7f66"/></linearGradient></defs><rect width="480" height="200" rx="14" fill="url(#g)" opacity=".12"/><circle cx="130" cy="100" r="42" fill="none" stroke="#4740ad" stroke-width="3"/><rect x="210" y="62" width="76" height="76" rx="12" fill="none" stroke="#0f7f66" stroke-width="3"/><path d="M320 138 L358 62 L396 138 Z" fill="none" stroke="#4740ad" stroke-width="3"/></svg>`
 };
-
-/* Elemen gambar yang memuat dari penyimpanan lokal */
-function mediaFigure(slot){
-  const meta=IMAGES[slot]; if(!meta) return '';
-  return `<figure class="media" data-slot="${slot}">
-    <div class="img-ph"><span class="spin"></span><span>Memuat gambar…</span></div>
-    <figcaption>${esc(meta.cap)}</figcaption></figure>`;
-}
+function mediaFigure(slot){const m=IMAGES[slot];if(!m)return '';
+  return `<figure class="media" data-slot="${slot}"><div class="img-ph"><span class="spin"></span><span>Memuat gambar…</span></div></figure>`}
 async function hydrateFigures(root=document){
   for(const fig of $$('figure.media[data-slot]',root)){
-    if(fig.dataset.done) continue; fig.dataset.done='1';
-    const slot=fig.dataset.slot, meta=IMAGES[slot];
-    const ph=$('.img-ph',fig);
-    let res=null;
-    try{ res=await getImage(slot); }catch(e){}
-    if(res){
-      const img=new Image(); img.src=res.src; img.alt=meta.cap; img.loading='lazy';
-      ph.replaceWith(img);
-      const cap=$('figcaption',fig);
-      cap.innerHTML=esc(meta.cap)+(res.credit?` <span class="muted">— Sumber: Wikimedia Commons, ${esc(res.credit)}</span>`:' <span class="muted">— Sumber: Wikimedia Commons</span>');
-    }else{
-      ph.outerHTML = FALLBACK[slot]||FALLBACK.generic;
-      $('figcaption',fig).innerHTML = esc(meta.cap)+' <span class="muted">— ilustrasi bawaan (gambar daring belum tersimpan)</span>';
-    }
+    if(fig.dataset.done)continue;fig.dataset.done='1';
+    const slot=fig.dataset.slot,meta=IMAGES[slot],ph=$('.img-ph',fig);let res=null;
+    try{res=await getImage(slot)}catch(e){}
+    if(res){const img=new Image();img.src=res.src;img.alt=meta.cap;ph.replaceWith(img);
+      fig.title=meta.cap+(res.credit?' — Wikimedia Commons, '+res.credit:'');}
+    else{ph.outerHTML=FALLBACK[slot]||FALLBACK.generic;fig.title=meta.cap+' — ilustrasi bawaan'}
   }
 }
-
-/* Pengunduhan massal saat pertama kali dibuka */
-let cacheState={total:Object.keys(IMAGES).length,done:0,running:false};
-function setCacheBar(txt,cls){
-  const b=$('#cacheBar'); b.className='cache-bar'+(cls?' '+cls:''); $('#cacheTxt').textContent=txt;
-}
+let cacheKeys=[];
+function setCacheBar(t,c){const b=$('#cacheBar');b.className='cache-bar'+(c?' '+c:'');$('#cacheTxt').textContent=t}
 async function prefetchAll(force){
-  if(cacheState.running) return; cacheState.running=true;
-  const keys=Object.keys(IMAGES); const have=await IDB.keys();
-  let done=have.length, fail=0;
-  setCacheBar(`Menyiapkan media ${done}/${keys.length}`,'load');
+  const keys=Object.keys(IMAGES);const have=await IDB.keys();let done=have.length,fail=0;
+  setCacheBar(`Menyiapkan ${done}/${keys.length}`,'load');
   for(const k of keys){
-    if(!force && have.includes(k)) continue;
-    try{ const r=await fetchAndStore(k); if(r){done++;}else{fail++;} }catch(e){fail++;}
-    setCacheBar(`Menyiapkan media ${Math.min(done,keys.length)}/${keys.length}`,'load');
+    if(!force&&have.includes(k))continue;
+    try{const r=await fetchAndStore(k);r?done++:fail++}catch(e){fail++}
+    setCacheBar(`Menyiapkan ${Math.min(done,keys.length)}/${keys.length}`,'load');
   }
-  cacheState.running=false;
-  const now=(await IDB.keys()).length;
-  store.set('mediaSiap',true);
-  if(now>0) setCacheBar(`Media tersimpan ${now}/${keys.length}`,'ok');
-  else setCacheBar('Media: ilustrasi bawaan','');
-  hydrateFigures();
-  return {now,fail};
+  const now=(await IDB.keys()).length;cacheKeys=await IDB.keys();
+  setCacheBar(now?`Media ${now}/${keys.length}`:'Ilustrasi bawaan',now?'ok':'');
+  hydrateFigures();return {now,fail};
 }
 
-/* ---------------- Navigasi ---------------- */
-function groupModules(k){ return MODULES.filter(m=>m.kelas===k) }
+/* ---------------- navigasi ---------------- */
+const KELAS=['X','XI','XII'];
+const modulesOf=k=>MODULES.filter(m=>m.kelas===k);
 function buildNav(){
-  const g=(kelas)=>groupModules(kelas).map(m=>`<a href="#/modul/${m.id}" data-r="/modul/${m.id}"><span class="ic">▸</span>${esc(m.kode)} ${esc(m.judul.length>34?m.judul.slice(0,32)+'…':m.judul)}</a>`).join('');
+  const g=k=>modulesOf(k).map(m=>`<a href="#/modul/${m.id}" data-r="/modul/${m.id}"><span class="ic">▸</span>${esc(m.kode)} · ${esc(m.judul.length>28?m.judul.slice(0,26)+'…':m.judul)}</a>`).join('');
   $('#nav').innerHTML=`
-  <div class="nav-group">
-    <a href="#/" data-r="/"><span class="ic">🏠</span>Beranda</a>
-    <a href="#/landasan" data-r="/landasan"><span class="ic">📘</span>Capaian &amp; Landasan</a>
-  </div>
-  <div class="nav-title">Materi &amp; Slide</div>
-  <details open><summary><span class="ic">🅧</span>Kelas X — Fase E</summary><div class="sub">${g('X')}</div></details>
-  <details><summary><span class="ic">🅧🅘</span>Kelas XI — Fase F</summary><div class="sub">${g('XI')}</div></details>
-  <details><summary><span class="ic">🅧🅘🅘</span>Kelas XII — Fase F</summary><div class="sub">${g('XII')}</div></details>
-  <div class="nav-title">Aktivitas</div>
-  <a href="#/simulasi" data-r="/simulasi"><span class="ic">🧪</span>Simulasi Interaktif</a>
-  <a href="#/latihan" data-r="/latihan"><span class="ic">📝</span>Latihan &amp; Soal</a>
-  <a href="#/lkpd" data-r="/lkpd"><span class="ic">📋</span>LKPD Digital</a>
-  <div class="nav-title">Guru &amp; Sistem</div>
-  <a href="#/guru" data-r="/guru"><span class="ic">🎓</span>Panduan Guru</a>
-  <a href="#/media" data-r="/media"><span class="ic">💾</span>Penyimpanan Media</a>
-  <a href="#/tentang" data-r="/tentang"><span class="ic">ℹ️</span>Tentang</a>`;
+  <div><a href="#/" data-r="/"><span class="ic">🏠</span>Beranda</a></div>
+  <div class="nav-title">Slide pertemuan</div>
+  <details open><summary><span class="ic">🟣</span>Kelas X — Fase E</summary><div class="sub">${g('X')}</div></details>
+  <details><summary><span class="ic">🟢</span>Kelas XI — Fase F</summary><div class="sub">${g('XI')}</div></details>
+  <details><summary><span class="ic">🟠</span>Kelas XII — Fase F</summary><div class="sub">${g('XII')}</div></details>
+  <div class="nav-title">Simulasi</div>
+  <a href="#/simulasi" data-r="/simulasi"><span class="ic">🧪</span>Semua simulasi</a>
+  <div class="nav-title">Lainnya</div>
+  <a href="#/pengaturan" data-r="/pengaturan"><span class="ic">⚙️</span>Pengaturan &amp; Canva</a>`;
 }
-function markNav(route){
-  $$('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.r===route));
-  const act=$('#nav a.active');
-  if(act){const d=act.closest('details'); if(d) d.open=true;}
-}
+function markNav(r){$$('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.r===r));
+  const act=$('#nav a.active');if(act){const d=act.closest('details');if(d)d.open=true}}
 
-/* ---------------- Perutean ---------------- */
+/* ---------------- perutean ---------------- */
 const ROUTES=[];
-function route(pattern,fn){ROUTES.push({pattern,fn})}
+const route=(p,f)=>ROUTES.push({p,f});
+let simCache={};
 function go(){
-  const hash=location.hash.replace(/^#/,'')||'/';
-  const path=hash.split('?')[0];
+  const path=(location.hash.replace(/^#/,'')||'/').split('?')[0];
   for(const r of ROUTES){
-    const pk=r.pattern.split('/'), ck=path.split('/');
-    if(pk.length!==ck.length) continue;
-    const params={}; let ok=true;
+    const pk=r.p.split('/'),ck=path.split('/');
+    if(pk.length!==ck.length)continue;
+    const params={};let ok=true;
     for(let i=0;i<pk.length;i++){
-      if(pk[i].startsWith(':')) params[pk[i].slice(1)]=decodeURIComponent(ck[i]);
+      if(pk[i][0]===':')params[pk[i].slice(1)]=decodeURIComponent(ck[i]);
       else if(pk[i]!==ck[i]){ok=false;break}
     }
-    if(ok){ render(r.fn(params), path); return; }
+    if(ok)return render(r.f(params),path);
   }
-  render(pageNotFound(), path);
+  render(`<div class="card"><h1>Halaman tidak ditemukan</h1><p><a href="#/">Kembali ke beranda</a></p></div>`,path);
 }
 function render(html,path){
-  const v=$('#view'); v.innerHTML=html; window.scrollTo(0,0);
-  markNav(path);
-  hydrateFigures(v);
-  if(typeof window.__afterRender==='function'){const f=window.__afterRender;window.__afterRender=null;f();}
-  $('#sidebar').classList.remove('on'); $('#scrim').classList.remove('on');
+  clearScope();simCache={};
+  const v=$('#view');v.innerHTML=html;window.scrollTo&&window.scrollTo(0,0);
+  markNav(path);hydrateFigures(v);
+  if(window.__after){const f=window.__after;window.__after=null;try{f()}catch(e){console.warn(e)}}
+  $('#sidebar').classList.remove('on');$('#scrim').classList.remove('on');
 }
-function crumb(t){$('#crumb').textContent=t}
-function after(fn){window.__afterRender=fn}
+const after=f=>window.__after=f;
+const crumb=t=>$('#crumb').textContent=t;
 
-/* ---------------- Halaman ---------------- */
-function pageNotFound(){crumb('Tidak ditemukan');return `<div class="card"><h1>Halaman tidak ditemukan</h1><p>Silakan kembali ke <a href="#/">beranda</a>.</p></div>`}
-
-function pageBeranda(){
-  crumb('Beranda');
-  const prog=store.get('baca',{});
-  const dibaca=MODULES.filter(m=>prog[m.id]).length;
-  const tiles=[
-    ["#/landasan","Landasan","Capaian Pembelajaran 2025, 8 Dimensi Profil Lulusan, dan kerangka Pembelajaran Mendalam."],
-    ["#/simulasi","Simulasi Interaktif","15 simulasi: pengurutan, pencarian, jaringan, graf, analisis data, keamanan akun, dan lainnya."],
-    ["#/latihan","Latihan &amp; Soal","Bank soal sumatif tiap tingkat kelas dengan penilaian otomatis dan pembahasan."],
-    ["#/lkpd","LKPD Digital","Lembar kerja yang dapat diisi langsung, tersimpan otomatis, dan dapat dicetak."],
-    ["#/guru","Panduan Guru","Program tahunan, rancangan asesmen, dan cara memakai media ini di kelas."],
-    ["#/media","Penyimpanan Media","Status gambar yang disimpan di perangkat agar media dapat dibuka tanpa internet."]
-  ].map(([h,t,d])=>`<a class="tile" href="${h}"><div class="kicker">Buka</div><h3>${t}</h3><p>${d}</p></a>`).join('');
-  const kelasCards=['X','XI','XII'].map(k=>{
-    const ms=groupModules(k);
-    const jp=ms.reduce((a,b)=>a+b.jp,0);
-    return `<a class="tile" href="#/kelas/${k}">
-      <span class="badge b-${k.toLowerCase()}">Kelas ${k} · Fase ${k==='X'?'E':'F'}</span>
-      <h3>${ms.length} modul · ${jp} JP</h3>
-      <p>${esc(ms.slice(0,3).map(m=>m.judul.split(' ').slice(0,4).join(' ')).join(' · '))} …</p></a>`;
-  }).join('');
-  return `
-  <div class="hero">
-    <h1>Media Pembelajaran Informatika</h1>
-    <p>Slide, simulasi interaktif, latihan soal, dan LKPD digital untuk Kelas X, XI, dan XII — selaras dengan perangkat ajar Kurikulum Merdeka berpendekatan Pembelajaran Mendalam.</p>
-    <div class="meta">
-      <span class="pill">${esc(SEKOLAH)}</span><span class="pill">T.P. ${TAPEL}</span>
-      <span class="pill">CP 2025 · BSKAP 046/H/KR/2025</span><span class="pill">${MODULES.length} modul · ${SIM_LIST.length} simulasi</span>
-    </div>
-  </div>
-  <div class="grid c3" style="margin-top:1.1rem">${kelasCards}</div>
-  <h2>Mulai dari sini</h2>
-  <div class="grid c3">${tiles}</div>
-  <div class="card" style="margin-top:1.2rem">
-    <h3 style="margin-top:0">Kemajuan belajar di perangkat ini</h3>
-    <p class="muted">Modul yang sudah dibuka: <b>${dibaca}</b> dari ${MODULES.length}. Catatan LKPD dan nilai latihan juga tersimpan di peramban ini.</p>
-    <div class="deck-prog" style="background:var(--bg-3)"><i style="width:${Math.round(dibaca/MODULES.length*100)}%"></i></div>
-    <div class="row" style="margin-top:.8rem"><button class="btn sm" onclick="if(confirm('Hapus catatan kemajuan, jawaban LKPD, dan nilai latihan di perangkat ini?')){localStorage.clear();location.reload()}">Setel ulang kemajuan</button></div>
-  </div>
-  <div class="card">
-    <h3 style="margin-top:0">Guru pengampu</h3>
-    <p style="margin:0">${esc(GURU)} — NIP ${esc(NIP)}<br><span class="muted">${esc(SEKOLAH)} · Dinas Pendidikan Provinsi Sulawesi Selatan</span></p>
-  </div>`;
+/* ---------------- penyusun salindia ---------------- */
+function buildDeck(m){
+  const kls='slide-'+m.kelas.toLowerCase();
+  const out=[{type:'cover',kls}];
+  m.slides.forEach((s,i)=>{
+    let layout='bullets';
+    if((s.k||'').toLowerCase().startsWith('pemantik')) layout='pemantik';
+    else if(s.img) layout='split';
+    else if(s.b.length>=4 && i%2===1) layout='cards';
+    out.push({type:'konten',layout,s,kls,idx:i});
+    if(s.sim) out.push({type:'sim',sim:s.sim,kls,judul:s.t});
+  });
+  out.push({type:'tutup',kls});
+  return out;
 }
-
-function pageLandasan(){
-  crumb('Capaian & Landasan');
-  const cpTbl=(arr)=>`<div class="tbl-wrap"><table><thead><tr><th style="width:22%">Elemen</th><th>Capaian Pembelajaran</th></tr></thead><tbody>${arr.map(([a,b])=>`<tr><td><b>${esc(a)}</b></td><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>`;
-  const li=(arr)=>`<div class="tbl-wrap"><table><tbody>${arr.map(([a,b])=>`<tr><td style="width:30%"><b>${esc(a)}</b></td><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>`;
-  return `<h1>Capaian Pembelajaran dan Landasan</h1>
-  <p class="muted">Keputusan Kepala BSKAP Nomor 046/H/KR/2025 · Permendikdasmen Nomor 10, 12, dan 13 Tahun 2025.</p>
-  <div class="jump"><a href="#cpE">CP Fase E</a><a href="#cpF">CP Fase F</a><a href="#dim">8 Dimensi Profil Lulusan</a><a href="#pm">Pembelajaran Mendalam</a></div>
-  <h2 id="cpE">Capaian Pembelajaran Fase E (Kelas X)</h2>${cpTbl(CP.E)}
-  <div class="note" style="margin-top:.8rem">Pada Fase E, kompetensi Analisis Data serta Algoritma dan Pemrograman dibelajarkan terpadu di dalam kedua elemen di atas.</div>
-  <h2 id="cpF">Capaian Pembelajaran Fase F (Kelas XI dan XII)</h2>${cpTbl(CP.F)}
-  <h2 id="dim">Delapan Dimensi Profil Lulusan</h2>${li(DIMENSI)}
-  <h2 id="pm">Kerangka Pembelajaran Mendalam (8-3-3-4)</h2>
-  <h3>Tiga prinsip</h3>${li(PM.prinsip)}
-  <h3>Tiga pengalaman belajar</h3>${li(PM.pengalaman)}
-  <h3>Empat unsur pendukung</h3>${li(PM.kerangka)}`;
-}
-
-function pageKelas(p){
-  const k=p.kelas.toUpperCase(); const ms=groupModules(k);
-  if(!ms.length) return pageNotFound();
-  crumb('Kelas '+k);
-  const cards=ms.map(m=>`<a class="tile" href="#/modul/${m.id}">
-    <div class="kicker">${esc(m.kode)} · ${m.sem} · ${m.jp} JP</div>
-    <h3>${esc(m.judul)}</h3><p>${esc(m.ringkas)}</p></a>`).join('');
-  return `<h1>Kelas ${k} — Fase ${k==='X'?'E':'F'}</h1>
-  <p class="muted">${ms.length} modul · ${ms.reduce((a,b)=>a+b.jp,0)} JP · Tahun Pelajaran ${TAPEL}</p>
-  <div class="grid c2">${cards}</div>`;
-}
-
-function pageModul(p){
-  const m=MODULES.find(x=>x.id===p.id); if(!m) return pageNotFound();
-  crumb(`Kelas ${m.kelas} › ${m.kode}`);
-  const prog=store.get('baca',{}); prog[m.id]=true; store.set('baca',prog);
-  const sims=(m.sims||[]).map(s=>{const d=SIM_LIST.find(x=>x[0]===s);return d?`<a class="tile" href="#/simulasi/${s}"><div class="kicker">Simulasi</div><h3>${esc(d[1])}</h3><p>${esc(d[2])}</p></a>`:''}).join('');
-  const isi=m.slides.map((s,i)=>`
-    <div class="card" id="s${i}">
-      <div class="kicker muted" style="font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700">${esc(s.k||'')}</div>
-      <h3 style="margin-top:.2rem">${esc(s.t)}</h3>
-      ${s.img?mediaFigure(s.img):''}
-      <ul>${s.b.map(b=>`<li>${b}</li>`).join('')}</ul>
-      ${s.sim?`<a class="btn sm" href="#/simulasi/${s.sim}">▶ Coba simulasinya</a>`:''}
-      ${s.note?`<div class="note" style="margin-top:.6rem"><b>Catatan guru:</b> ${esc(s.note)}</div>`:''}
-    </div>`).join('');
-  after(()=>{ $('#btnDeck').onclick=()=>openDeck(m); });
-  return `
-  <div class="row" style="justify-content:space-between;align-items:flex-start;gap:1rem">
-    <div style="flex:1;min-width:240px">
-      <span class="badge b-${m.kelas.toLowerCase()}">Kelas ${m.kelas} · Fase ${m.fase} · ${m.sem}</span>
-      <h1 style="margin-top:.45rem">${esc(m.kode)} — ${esc(m.judul)}</h1>
-      <p class="muted">${esc(m.elemen)} · ${m.jp} JP · ${m.slides.length} salindia</p>
-    </div>
-    <button class="btn primary" id="btnDeck">▶ Mulai presentasi</button>
-  </div>
-  <div class="card"><h3 style="margin-top:0">Tujuan Pembelajaran</h3><ul>${m.tp.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
-  <p style="margin-bottom:0"><span class="muted">${esc(m.ringkas)}</span></p></div>
-  <h2>Materi</h2>
-  ${isi}
-  ${sims?`<h2>Simulasi untuk modul ini</h2><div class="grid c2">${sims}</div>`:''}
-  <h2>Langkah berikutnya</h2>
-  <div class="grid c3">
-    <a class="tile" href="#/latihan/${m.kelas}"><div class="kicker">Asesmen</div><h3>Latihan soal Kelas ${m.kelas}</h3><p>Uji pemahamanmu dengan penilaian otomatis.</p></a>
-    <a class="tile" href="#/lkpd"><div class="kicker">Praktik</div><h3>LKPD digital</h3><p>Kerjakan lembar kerja dan simpan jawabanmu.</p></a>
-    <a class="tile" href="#/kelas/${m.kelas}"><div class="kicker">Navigasi</div><h3>Modul lain Kelas ${m.kelas}</h3><p>Lihat seluruh lingkup materi satu tahun.</p></a>
-  </div>`;
-}
-
-/* ---------------- Presentasi ---------------- */
-let DECK={m:null,i:0};
-function openDeck(m,idx){
-  DECK={m,i:idx||0};
-  $('#deck').classList.add('on'); $('#deckTitle').textContent=`${m.kode} — ${m.judul}`;
-  drawSlide();
-}
-function closeDeck(){$('#deck').classList.remove('on')}
-function drawSlide(){
-  const m=DECK.m; if(!m) return;
-  const total=m.slides.length+1;
-  const el=$('#slide');
-  if(DECK.i===0){
-    el.innerHTML=`<div class="s-cover">
-      <div style="font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85;font-weight:800">Kelas ${m.kelas} · Fase ${m.fase} · ${m.sem} · ${m.jp} JP</div>
-      <h2 style="margin:.5rem 0">${esc(m.kode)} — ${esc(m.judul)}</h2>
-      <p style="max-width:48ch;opacity:.95">${esc(m.ringkas)}</p>
-      <div style="margin-top:auto;font-size:.82rem;opacity:.9">${esc(GURU)} · ${esc(SEKOLAH)}</div></div>`;
-  }else{
-    const s=m.slides[DECK.i-1];
-    el.innerHTML=`<div class="s-kicker">${esc(s.k||'')}</div><h2>${esc(s.t)}</h2>
-      ${s.img?`<div data-dslot="${s.img}" style="text-align:center"></div>`:''}
-      <ul>${s.b.map(b=>`<li>${b}</li>`).join('')}</ul>
-      ${s.note?`<div class="s-note"><b>Catatan guru:</b> ${esc(s.note)}</div>`:''}`;
-    const holder=$('[data-dslot]',el);
-    if(holder){ getImage(holder.dataset.dslot).then(r=>{
-      if(r){const im=new Image();im.src=r.src;im.className='s-img';im.style.maxHeight='40vh';im.style.maxWidth='100%';holder.appendChild(im);}
-      else{holder.innerHTML=(FALLBACK[holder.dataset.dslot]||FALLBACK.generic).replace('<svg','<svg style="max-height:34vh;max-width:100%"');}
-    });}
-  }
-  $('#deckNum').textContent=`${DECK.i+1} / ${total}`;
-  $('#deckProg').style.width=((DECK.i+1)/total*100)+'%';
-  $('#deckPrev').disabled=DECK.i===0; $('#deckNext').disabled=DECK.i>=total-1;
-}
-function deckMove(d){
-  const total=DECK.m.slides.length+1;
-  DECK.i=Math.max(0,Math.min(total-1,DECK.i+d)); drawSlide();
+function slideHTML(sl,m,i,total){
+  const foot=`<div class="foot"><span class="dot"></span><span>${esc(m.kode)} · ${esc(m.judul)}</span><span style="margin-left:auto">${i+1}/${total}</span></div>`;
+  if(sl.type==='cover') return `<div class="sl cover dark">
+    <span class="deco b1"></span><span class="deco b2"></span><span class="deco ring"></span>
+    <div class="kick anim">Kelas ${m.kelas} · Fase ${m.fase} · ${m.sem}</div>
+    <h2 class="anim">${esc(m.judul)}</h2>
+    <p class="anim" style="max-width:46ch;font-size:clamp(.78rem,1.4vw,1.1rem);opacity:.92">${esc(m.ringkas)}</p>
+    <div class="meta anim">${[m.kode,m.jp+' JP',m.elemen].map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
+    <div class="foot"><span class="dot"></span><span>${esc(GURU)} · ${esc(SEKOLAH)}</span></div></div>`;
+  if(sl.type==='tutup') return `<div class="sl cover dark">
+    <span class="deco b1"></span><span class="deco dots"></span>
+    <div class="kick anim">Penutup pertemuan</div>
+    <h2 class="anim">Mari kita refleksikan</h2>
+    <ul class="anim" style="font-size:clamp(.8rem,1.4vw,1.1rem)">
+      <li>Apa hal baru yang saya pahami hari ini?</li>
+      <li>Bagian mana yang masih membingungkan?</li>
+      <li>Apa yang akan saya lakukan untuk memperbaikinya?</li></ul>
+    ${foot}</div>`;
+  if(sl.type==='sim') return `<div class="sl simslide">
+    <div class="simhead"><span>🧪</span><b>Simulasi — ${esc(SIM_NAMA[sl.sim]||sl.sim)}</b>
+      <span class="tag">Mengaplikasi</span></div>
+    <div class="simarea" data-sim="${sl.sim}"><div class="img-ph"><span class="spin"></span><span>Menyiapkan simulasi…</span></div></div></div>`;
+  const s=sl.s;
+  if(sl.layout==='pemantik') return `<div class="sl pemantik dark">
+    <span class="deco b1"></span><span class="deco b2"></span><span class="qmark">?</span>
+    <div class="kick anim">${esc(s.k||'Pemantik')}</div>
+    <h2 class="anim">${esc(s.t)}</h2>
+    <ul class="anim" style="max-width:52ch">${s.b.slice(0,3).map(b=>`<li>${b}</li>`).join('')}</ul>
+    ${foot}</div>`;
+  if(sl.layout==='split') return `<div class="sl split light">
+    <span class="deco b1" style="opacity:.22"></span>
+    <div class="kick anim">${esc(s.k||'')}</div><h2 class="anim">${esc(s.t)}</h2>
+    <div class="body anim"><ul>${s.b.map(b=>`<li>${b}</li>`).join('')}</ul>
+      <div class="visual">${mediaFigure(s.img)}</div></div>${foot}</div>`;
+  if(sl.layout==='cards') return `<div class="sl cards light">
+    <span class="deco dots"></span>
+    <div class="kick anim">${esc(s.k||'')}</div><h2 class="anim">${esc(s.t)}</h2>
+    <div class="body anim">${s.b.slice(0,4).map((b,n)=>`<div class="kart"><span class="n">${n+1}</span><span>${b}</span></div>`).join('')}</div>
+    ${foot}</div>`;
+  return `<div class="sl light">
+    <span class="deco b1" style="opacity:.25"></span><span class="deco ring"></span>
+    <div class="kick anim">${esc(s.k||'')}</div><h2 class="anim">${esc(s.t)}</h2>
+    <ul class="anim">${s.b.map(b=>`<li>${b}</li>`).join('')}</ul>${foot}</div>`;
 }
 /* =========================================================================
    SIMULASI INTERAKTIF
    ========================================================================= */
 const SIMS={};
-const rnd=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
-const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 
 /* ---------- 1. Pengurutan ---------- */
 SIMS.sorting={
@@ -1351,7 +924,9 @@ SIMS.sorting={
     }).join('');
     $('#so-cmp').textContent=s.cmp; $('#so-swp').textContent=s.swp;
     $('#so-stp').textContent=`${idx} / ${steps.length-1}`;
-    $('#so-sts').textContent=s.type==='done'?'Selesai':(idx===0?'Siap':'Berjalan');
+    $('#so-sts').textContent=s.type==='done'?'Selesai ✓':(idx===0?'Siap':'Berjalan');
+    if(s.type==='done'&&!draw._done){draw._done=1;confetti(50)}
+    if(s.type!=='done')draw._done=0;
   }
   function reset(){
     clearInterval(timer);timer=null;
@@ -1421,7 +996,7 @@ SIMS.searching={
       n++;paint([i]);$('#se-step').textContent=n;
       log(`Langkah ${n}: periksa indeks ${i} → ${data[i]} ${data[i]===t?'= target, ditemukan!':'bukan target'}`);
       await sleep(170);
-      if(data[i]===t){paint([],i);$('#se-res').textContent=`Ketemu (indeks ${i})`;busy=false;return}
+      if(data[i]===t){paint([],i);$('#se-res').textContent=`Ketemu (indeks ${i})`;confetti(36);busy=false;return}
     }
     $('#se-res').textContent='Tidak ada';busy=false;
   }
@@ -1435,7 +1010,7 @@ SIMS.searching={
       paint([mid],-1,buang);$('#se-step').textContent=n;
       log(`Langkah ${n}: wilayah [${lo}..${hi}], tengah indeks ${mid} → ${data[mid]}`);
       await sleep(420);
-      if(data[mid]===t){paint([],mid,buang);$('#se-res').textContent=`Ketemu (indeks ${mid})`;log('Target ditemukan.');busy=false;return}
+      if(data[mid]===t){paint([],mid,buang);$('#se-res').textContent=`Ketemu (indeks ${mid})`;log('Target ditemukan.');confetti(36);busy=false;return}
       if(data[mid]<t){log(`  ${data[mid]} < ${t}, buang separuh kiri`);lo=mid+1}
       else{log(`  ${data[mid]} > ${t}, buang separuh kanan`);hi=mid-1}
     }
@@ -1772,6 +1347,7 @@ SIMS.fakta={
       else exp.innerHTML=`<b style="color:var(--danger)">Belum tepat</b> — jawaban: <b>${it.j}</b>. ${esc(it.e)}`;
     });
     $('#fk-skor').textContent=`Skor: ${b} / ${ITEMS.length}`;
+    if(b===ITEMS.length)confetti(60);
   };
   $('#fk-ulang').onclick=()=>{SIMS.fakta.mount();$('#fk-skor').textContent='';};
  }
@@ -1841,12 +1417,13 @@ SIMS.jaringan={
       ${box('sw','Switch','jaringan lokal')}
       ${box('rt','Router','gateway 192.168.1.1')}
       ${box('net','Internet','server sekolah')}
-      <circle id="jr-pkt" r="7" fill="#f0a93c" style="display:none"/>`;
+      <defs><filter id="glow"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <circle id="jr-pkt" r="8" fill="#f0a93c" filter="url(#glow)" style="display:none"/>`;
   }
   async function kirim(){
     const f=$('#jr-fault').value;
     render();
-    const pkt=$('#jr-pkt',svg); pkt.style.display='';
+    const pkt=$('#jr-pkt',svg); if(!pkt)return; pkt.style.display='';
     const jalur=[['pc1','sw'],['sw','rt'],['rt','net']];
     const putus = f==='kabel'?0 : f==='ip'?0 : f==='router'?2 : -1;
     for(let s=0;s<jalur.length;s++){
@@ -1859,7 +1436,7 @@ SIMS.jaringan={
       if(s===putus){pkt.setAttribute('fill','#b03423');log(`✗ Paket berhenti pada jalur ${a.toUpperCase()} → ${b.toUpperCase()}.`);return}
     }
     if(f==='dns'){pkt.setAttribute('fill','#b03423');log('✗ Paket sampai ke internet, tetapi nama situs tidak dapat diterjemahkan (DNS gagal).');return}
-    pkt.setAttribute('fill','#0f7f66');log('✓ Paket berhasil sampai ke server. Jaringan berfungsi normal.');
+    pkt.setAttribute('fill','#0f7f66');log('✓ Paket berhasil sampai ke server. Jaringan berfungsi normal.');confetti(30);
   }
   function log(s){const l=$('#jr-log');
     if(!l.textContent.trim()||/^(Pilih gangguan|Gangguan)/.test(l.textContent)) l.textContent=s;
@@ -1887,6 +1464,7 @@ SIMS.jaringan={
     const a=$('#jr-ans').value,f=$('#jr-fault').value;
     if(!a)return toast('Pilih dahulu penyebabnya');
     $('#jr-fb').className='note '+(a===f?'ok':'warn');
+    if(a===f)confetti(40);
     $('#jr-fb').innerHTML = a===f
       ? '<b>Tepat.</b> Diagnosis berlapis dari fisik ke aplikasi membuat penyebab ditemukan lebih cepat dan tanpa menebak.'
       : `<b>Belum tepat.</b> Perhatikan kembali hasil tiap langkah: gejala pada lapisan paling bawah yang gagal biasanya menunjukkan penyebab sesungguhnya. Penyebab sebenarnya: <b>${{none:'tidak ada masalah',kabel:'masalah fisik kabel',ip:'kesalahan konfigurasi IP',router:'router mati',dns:'DNS bermasalah'}[f]}</b>.`;
@@ -1919,7 +1497,7 @@ SIMS.graf={
   Object.keys(ADJ).forEach(k=>ADJ[k].sort());
   $('#gf-start').innerHTML=Object.keys(P).map(k=>`<option value="${k}">Mulai dari ${k}</option>`).join('');
   function draw(visited=[],cur=null,frontier=[]){
-    const svg=$('#gf-svg');
+    const svg=$('#gf-svg'); if(!svg) return;
     let h=E.map(([a,b])=>`<line x1="${P[a][0]}" y1="${P[a][1]}" x2="${P[b][0]}" y2="${P[b][1]}" stroke="#8a90b5" stroke-width="2"/>`).join('');
     h+=Object.entries(P).map(([k,[x,y]])=>{
       const fill=k===cur?'#0f7f66':visited.includes(k)?'#4740ad':frontier.includes(k)?'#f0a93c':'#ffffff';
@@ -1938,7 +1516,7 @@ SIMS.graf={
       const cur=alg==='bfs'?ds.shift():ds.pop();
       order.push(cur);
       draw(order,cur,ds);
-      $('#gf-ds').textContent=ds.join(' ')||'—';
+      if(!$('#gf-ds'))return; $('#gf-ds').textContent=ds.join(' ')||'—';
       $('#gf-order').textContent=order.join(' → ');
       await sleep(650);
       const tet=alg==='bfs'?ADJ[cur]:[...ADJ[cur]].reverse();
@@ -1947,6 +1525,7 @@ SIMS.graf={
       $('#gf-ds').textContent=ds.join(' ')||'—';
       await sleep(250);
     }
+    confetti(40);
     $('#gf-ket').innerHTML=`Selesai. Urutan kunjungan <b>${alg.toUpperCase()}</b> dari simpul ${start}: <b>${order.join(' → ')}</b>. ${alg==='bfs'?'BFS cocok mencari jarak terpendek dalam jumlah sisi.':'DFS cocok menelusuri seluruh cabang, misalnya mencari jalan keluar labirin.'}`;
     busy=false;
   }
@@ -2220,299 +1799,428 @@ SIMS.projek={
   hitung();
  }
 };
+/* ---------- 16. Lembar kerja dan lisensi karya ---------- */
+SIMS.perkantoran={
+ judul:"Lembar Kerja Otomatis dan Penyusun Atribusi Lisensi",
+ desc:"Ubah angka pada lembar kerja dan lihat seluruh rumus menghitung ulang seketika, lalu susun atribusi karya digital agar tetap menghargai hak cipta.",
+ html:`<div class="sim-toolbar">
+   <button class="btn sm primary" id="pk-tab1">📊 Lembar kerja</button>
+   <button class="btn sm" id="pk-tab2">©️ Atribusi lisensi</button>
+ </div>
+ <div id="pk-p1">
+   <div class="grid c2">
+     <div>
+       <h3 style="margin-top:0">Nilai murid (boleh diubah)</h3>
+       <div class="tbl-wrap"><table><thead><tr><th>Nama</th><th>Nilai</th><th>Predikat</th></tr></thead><tbody id="pk-rows"></tbody></table></div>
+       <div class="row" style="margin-top:.6rem"><button class="btn sm" id="pk-acak">Isi acak</button>
+       <label class="chk" style="margin:0"><input type="checkbox" id="pk-show"> Tampilkan rumusnya</label></div>
+     </div>
+     <div>
+       <h3 style="margin-top:0">Hasil perhitungan otomatis</h3>
+       <div class="stat-row" id="pk-stats" style="margin-top:0"></div>
+       <div class="code" id="pk-rumus" style="margin-top:.8rem;display:none"></div>
+       <canvas id="pk-cv" width="480" height="220" style="margin-top:.8rem"></canvas>
+       <div class="note ok" id="pk-sim" style="margin-top:.7rem"></div>
+     </div>
+   </div>
+ </div>
+ <div id="pk-p2" style="display:none">
+   <div class="grid c2">
+    <div>
+     <label class="fld">Judul karya yang dipakai</label><input id="lc-judul" type="text" value="Foto Pantai Ujung Lero">
+     <label class="fld">Nama pencipta</label><input id="lc-pencipta" type="text" value="Andi Rahman">
+     <label class="fld">Alamat sumber</label><input id="lc-sumber" type="text" value="https://commons.wikimedia.org/…">
+     <label class="fld">Lisensi</label>
+     <select id="lc-lis">
+       <option value="CC BY 4.0">CC BY 4.0 — wajib mencantumkan pencipta</option>
+       <option value="CC BY-SA 4.0">CC BY-SA 4.0 — wajib atribusi dan berbagi serupa</option>
+       <option value="CC BY-NC 4.0">CC BY-NC 4.0 — atribusi, nonkomersial</option>
+       <option value="CC0 / Domain Publik">CC0 / Domain Publik — bebas dipakai</option>
+       <option value="Hak cipta penuh">Hak cipta penuh — perlu izin tertulis</option>
+     </select>
+     <div class="row" style="margin-top:.7rem"><button class="btn sm primary" id="lc-buat">Susun atribusi</button><button class="btn sm" id="lc-salin">Salin</button></div>
+    </div>
+    <div>
+     <h3 style="margin-top:0">Teks atribusi</h3>
+     <div class="code" id="lc-out" style="min-height:70px"></div>
+     <h3>Yang boleh dan tidak boleh</h3>
+     <div id="lc-aturan"></div>
+    </div>
+   </div>
+ </div>`,
+ mount(){
+  const NAMA=["Andi","Besse","Caca","Dewi","Erik","Fitri"];
+  let nilai=[88,72,95,64,79,83];
+  const ctx=$('#pk-cv').getContext('2d');
+  function hitung(){
+    const n=nilai.length,sum=nilai.reduce((a,b)=>a+b,0),avg=sum/n;
+    const tuntas=nilai.filter(v=>v>=75).length;
+    $('#pk-rows').innerHTML=nilai.map((v,i)=>`<tr><td>${NAMA[i]}</td>
+      <td><input type="number" class="pk-n" data-i="${i}" value="${v}" min="0" max="100" style="width:84px"></td>
+      <td><span class="badge ${v>=75?'b-xi':'b-xii'}">${v>=75?'Tuntas':'Belum'}</span></td></tr>`).join('');
+    $$('.pk-n').forEach(el=>el.oninput=()=>{nilai[+el.dataset.i]=Math.max(0,Math.min(100,+el.value||0));hitung()});
+    $('#pk-stats').innerHTML=[['Jumlah (SUM)',sum],['Rerata (AVERAGE)',avg.toFixed(1)],['Tertinggi (MAX)',Math.max(...nilai)],
+      ['Terendah (MIN)',Math.min(...nilai)],['Tuntas (COUNTIF)',tuntas+' / '+n],['Ketuntasan',Math.round(tuntas/n*100)+'%']]
+      .map(([a,b])=>`<div class="stat"><i>${a}</i><b>${b}</b></div>`).join('');
+    $('#pk-rumus').textContent=
+`B8  =SUM(B2:B7)              → ${sum}
+B9  =AVERAGE(B2:B7)          → ${avg.toFixed(1)}
+B10 =MAX(B2:B7)              → ${Math.max(...nilai)}
+B11 =MIN(B2:B7)              → ${Math.min(...nilai)}
+B12 =COUNTIF(B2:B7;">=75")   → ${tuntas}
+C2  =IF(B2>=75;"Tuntas";"Belum")`;
+    $('#pk-sim').innerHTML=`<b>Pembacaan otomatis:</b> ${tuntas} dari ${n} murid mencapai kriteria 75. Rerata kelas ${avg.toFixed(1)}. ${avg>=75?'Kelas sudah berada di atas kriteria ketuntasan.':'Rerata masih di bawah kriteria — perlu pembelajaran ulang pada tujuan yang belum tercapai.'}`;
+    chart();
+  }
+  function chart(){
+    const W=480,H=220,P=32;ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle='#d8dcee';ctx.beginPath();ctx.moveTo(P,H-P);ctx.lineTo(W-6,H-P);ctx.stroke();
+    ctx.setLineDash([4,4]);ctx.strokeStyle='#00a186';
+    const y75=H-P-(H-P*1.6)*(75/100);ctx.beginPath();ctx.moveTo(P,y75);ctx.lineTo(W-6,y75);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle='#00a186';ctx.font='11px system-ui';ctx.fillText('KKTP 75',W-66,y75-5);
+    const bw=(W-P-10)/nilai.length;
+    nilai.forEach((v,i)=>{
+      const h=(H-P*1.6)*(v/100),x=P+i*bw+bw*.18,y=H-P-h;
+      const g=ctx.createLinearGradient(0,y,0,H-P);
+      if(v>=75){g.addColorStop(0,'#4fe0c0');g.addColorStop(1,'#00a186')}else{g.addColorStop(0,'#ffb37b');g.addColorStop(1,'#d9752a')}
+      ctx.fillStyle=g;ctx.fillRect(x,y,bw*.64,h);
+      ctx.fillStyle='#4a5071';ctx.textAlign='center';ctx.fillText(v,x+bw*.32,y-4);
+      ctx.fillText(NAMA[i],x+bw*.32,H-P+14);ctx.textAlign='left';
+    });
+  }
+  $('#pk-acak').onclick=()=>{nilai=nilai.map(()=>rnd(55,98));hitung()};
+  $('#pk-show').onchange=e=>$('#pk-rumus').style.display=e.target.checked?'block':'none';
+  const tab=(n)=>{$('#pk-p1').style.display=n===1?'':'none';$('#pk-p2').style.display=n===2?'':'none';
+    $('#pk-tab1').className='btn sm'+(n===1?' primary':'');$('#pk-tab2').className='btn sm'+(n===2?' primary':'')};
+  $('#pk-tab1').onclick=()=>tab(1);$('#pk-tab2').onclick=()=>tab(2);
+  const ATURAN={
+   'CC BY 4.0':[['Boleh dipakai, diubah, dan disebarkan, termasuk untuk keperluan komersial',1],['Wajib mencantumkan nama pencipta, sumber, dan lisensinya',1],['Tidak boleh menghapus keterangan pencipta',0]],
+   'CC BY-SA 4.0':[['Boleh dipakai dan diubah',1],['Wajib atribusi lengkap',1],['Karya turunan wajib memakai lisensi serupa (BY-SA)',1],['Tidak boleh dikunci menjadi hak cipta penuh',0]],
+   'CC BY-NC 4.0':[['Boleh dipakai dan diubah untuk keperluan pendidikan',1],['Wajib atribusi lengkap',1],['Tidak boleh dipakai untuk kegiatan komersial',0]],
+   'CC0 / Domain Publik':[['Boleh dipakai bebas tanpa syarat',1],['Atribusi tetap dianjurkan sebagai penghargaan',1],['Tidak perlu izin khusus',1]],
+   'Hak cipta penuh':[['Wajib meminta izin tertulis kepada pencipta',0],['Tidak boleh disebarkan ulang tanpa izin',0],['Cari alternatif berlisensi terbuka bila izin sulit diperoleh',1]]
+  };
+  function atribusi(){
+    const j=$('#lc-judul').value,p=$('#lc-pencipta').value,s=$('#lc-sumber').value,l=$('#lc-lis').value;
+    const teks=l==='Hak cipta penuh'
+      ? `"${j}" oleh ${p}. Digunakan atas izin tertulis pencipta. Sumber: ${s}`
+      : `"${j}" oleh ${p}, sumber: ${s}, lisensi ${l}.`;
+    $('#lc-out').textContent=teks;
+    $('#lc-aturan').innerHTML=(ATURAN[l]||[]).map(([t,ok])=>`<div class="chk"><span>${ok?'✅':'⛔'}</span><span>${esc(t)}</span></div>`).join('');
+  }
+  $('#lc-buat').onclick=atribusi;
+  $('#lc-lis').onchange=atribusi;
+  $('#lc-salin').onclick=async()=>{try{await navigator.clipboard.writeText($('#lc-out').textContent);toast('Atribusi disalin')}catch(e){toast('Peramban menolak penyalinan')}};
+  hitung();atribusi();tab(1);
+ }
+};
+
+/* ---------- 17. Daur hidup produk digital ---------- */
+SIMS.pengembangan={
+ judul:"Daur Hidup Pengembangan Produk Digital",
+ desc:"Susun tahapan pengembangan sampai benar, lalu lihat mengapa kesalahan yang ditemukan terlambat menjadi jauh lebih mahal.",
+ html:`<p class="muted">Klik kartu tahapan sesuai urutan yang benar. Klik kartu pada baris urutan untuk mengembalikannya.</p>
+ <h3>Kartu tahapan</h3><div class="cells" id="pg-pool" style="gap:8px"></div>
+ <h3>Urutan yang kamu susun</h3><div class="qbox" id="pg-slot" style="min-height:70px"></div>
+ <div class="row" style="margin-top:.7rem"><button class="btn sm primary" id="pg-cek">Periksa urutan</button>
+  <button class="btn sm" id="pg-ulang">Acak ulang</button><span id="pg-skor" style="font-weight:700"></span></div>
+ <div class="note" id="pg-fb" style="margin-top:.8rem">Ingat: produk digital selalu dimulai dari memahami kebutuhan penggunanya.</div>
+ <div class="grid c2" style="margin-top:1rem">
+  <div><h3 style="margin-top:0">Biaya memperbaiki satu kesalahan</h3>
+   <canvas id="pg-cv" width="470" height="220"></canvas>
+   <p class="muted">Semakin terlambat kesalahan ditemukan, semakin mahal biaya perbaikannya.</p></div>
+  <div><h3 style="margin-top:0">Kegiatan utama tiap tahap</h3><div id="pg-det"></div></div>
+ </div>`,
+ mount(){
+  const TAHAP=[
+   {n:"Analisis kebutuhan",d:"Wawancara pengguna, menulis daftar kebutuhan yang terukur.",biaya:1},
+   {n:"Perancangan",d:"Diagram alur, struktur data, dan rancangan antarmuka.",biaya:5},
+   {n:"Implementasi",d:"Menulis kode atau membangun produk sesuai rancangan.",biaya:10},
+   {n:"Pengujian",d:"Menjalankan kasus uji, mencatat dan memperbaiki kesalahan.",biaya:30},
+   {n:"Pemeliharaan",d:"Memperbaiki, memperbarui, dan mengembangkan setelah dipakai.",biaya:100}
+  ];
+  let pool=[],slot=[];
+  const ctx=$('#pg-cv').getContext('2d');
+  function acak(){pool=TAHAP.map((t,i)=>i).sort(()=>Math.random()-.5);slot=[];paint();$('#pg-skor').textContent='';
+    $('#pg-fb').className='note';$('#pg-fb').textContent='Ingat: produk digital selalu dimulai dari memahami kebutuhan penggunanya.'}
+  function paint(){
+    $('#pg-pool').innerHTML=pool.map(i=>`<button class="btn sm" data-p="${i}" style="min-width:150px">${TAHAP[i].n}</button>`).join('')||'<span class="muted">Semua kartu sudah dipakai.</span>';
+    $('#pg-slot').innerHTML=slot.map((i,n)=>`<span class="item" data-s="${n}" style="cursor:pointer">${n+1}. ${TAHAP[i].n}</span>`).join('')||'<span class="muted">Belum ada kartu.</span>';
+    $$('#pg-pool [data-p]').forEach(b=>b.onclick=()=>{const i=+b.dataset.p;pool=pool.filter(x=>x!==i);slot.push(i);paint()});
+    $$('#pg-slot [data-s]').forEach(b=>b.onclick=()=>{const n=+b.dataset.s;pool.push(slot[n]);slot.splice(n,1);paint()});
+    $('#pg-det').innerHTML=TAHAP.map((t,i)=>`<div class="q-card" style="padding:.6rem .75rem;margin-bottom:.45rem">
+      <div class="q-num">Tahap ${i+1}</div><b>${t.n}</b><div class="muted" style="font-size:.84rem">${t.d}</div></div>`).join('');
+  }
+  function chart(hi=-1){
+    const W=470,H=220,P=34;ctx.clearRect(0,0,W,H);
+    const max=100;const bw=(W-P-10)/TAHAP.length;
+    ctx.strokeStyle='#d8dcee';ctx.beginPath();ctx.moveTo(P,H-P);ctx.lineTo(W-6,H-P);ctx.stroke();
+    ctx.font='11px system-ui';
+    TAHAP.forEach((t,i)=>{
+      const h=(H-P*1.7)*(t.biaya/max),x=P+i*bw+bw*.17,y=H-P-h;
+      const g=ctx.createLinearGradient(0,y,0,H-P);
+      g.addColorStop(0,i>=3?'#ff8a5b':'#6f61ff');g.addColorStop(1,i>=3?'#c7352a':'#3a2fb0');
+      ctx.fillStyle=g;ctx.fillRect(x,y,bw*.66,h);
+      ctx.fillStyle='#4a5071';ctx.textAlign='center';
+      ctx.fillText(t.biaya+'×',x+bw*.33,y-5);
+      ctx.fillText(t.n.split(' ')[0],x+bw*.33,H-P+14);ctx.textAlign='left';
+    });
+  }
+  $('#pg-cek').onclick=()=>{
+    if(slot.length<TAHAP.length)return toast('Susun seluruh lima tahapan dahulu');
+    const benar=slot.every((v,i)=>v===i);
+    const cocok=slot.filter((v,i)=>v===i).length;
+    $('#pg-skor').textContent=`Tepat ${cocok} dari 5 posisi`;
+    $('#pg-fb').className='note '+(benar?'ok':'warn');
+    $('#pg-fb').innerHTML=benar
+      ? '<b>Urutan benar.</b> Analisis kebutuhan → perancangan → implementasi → pengujian → pemeliharaan. Perhatikan grafik di bawah: kesalahan yang baru ketahuan saat pemeliharaan bisa seratus kali lebih mahal daripada bila ditemukan pada tahap analisis kebutuhan.'
+      : '<b>Belum tepat.</b> Mulailah dari memahami kebutuhan pengguna, baru merancang. Menulis kode sebelum tahu kebutuhan adalah penyebab kegagalan produk yang paling sering.';
+    if(benar)confetti(50);
+  };
+  $('#pg-ulang').onclick=acak;
+  acak();chart();
+ }
+};
 /* =========================================================================
-   HALAMAN: simulasi, latihan, LKPD, guru, media, tentang + inisialisasi
+   HALAMAN
    ========================================================================= */
+function pageBeranda(){
+  crumb('Beranda');
+  const kartu=KELAS.map(k=>{
+    const ms=modulesOf(k);const warna=k==='X'?'linear-gradient(135deg,#3a2fb0,#6f61ff)':k==='XI'?'linear-gradient(135deg,#00705f,#00c9a7)':'linear-gradient(135deg,#6d2a8f,#ff8a5b)';
+    return `<a class="tile" href="#/kelas/${k}"><span class="strip" style="background:${warna}"></span>
+      <div class="kicker">Fase ${k==='X'?'E':'F'}</div><h3>Kelas ${k}</h3>
+      <p>${ms.length} pertemuan · ${ms.reduce((a,b)=>a+b.jp,0)} JP · ${ms.reduce((a,m)=>a+m.slides.filter(s=>s.sim).length,0)} simulasi tertanam</p></a>`}).join('');
+  const simTile=SIM_LIST.slice(0,6).map(([id,n,d,ic])=>`<a class="tile" href="#/simulasi/${id}"><div class="kicker">${ic} Simulasi</div><h3>${esc(n)}</h3><p>${esc(d)}</p></a>`).join('');
+  return `<div class="stage" style="aspect-ratio:auto">
+    <div class="sl cover dark slide-x" style="position:relative;min-height:300px">
+      <span class="deco b1"></span><span class="deco b2"></span><span class="deco ring"></span>
+      <div class="kick">Media pembelajaran interaktif</div>
+      <h2 style="font-size:clamp(1.5rem,3.6vw,2.8rem)">Slide &amp; Simulasi Informatika</h2>
+      <p style="max-width:56ch;opacity:.93">Setiap pertemuan tersaji sebagai slide presentasi yang dirancang menarik, dan di tengahnya terdapat simulasi interaktif untuk membantu murid memahami konsepnya secara langsung.</p>
+      <div class="meta">${[SEKOLAH,'T.P. '+TAPEL,MODULES.length+' pertemuan',SIM_LIST.length+' simulasi'].map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
+    </div></div>
+  <h2>Pilih tingkat kelas</h2><div class="grid c3">${kartu}</div>
+  <h2>Simulasi populer</h2><div class="grid c3">${simTile}</div>
+  <div class="row" style="margin-top:.8rem"><a class="btn" href="#/simulasi">Lihat seluruh ${SIM_LIST.length} simulasi →</a></div>
+  <div class="card" style="margin-top:1.2rem"><h3 style="margin-top:0">Cara memakai di kelas</h3>
+   <ol><li><b>Memahami</b> — tayangkan slide pertemuan, mulai dari salindia pemantik.</li>
+   <li><b>Mengaplikasi</b> — saat sampai pada salindia bertanda 🧪, murid mencoba simulasinya langsung di layar atau perangkat masing-masing.</li>
+   <li><b>Merefleksi</b> — tutup dengan salindia refleksi di akhir dek.</li></ol>
+   <p class="muted" style="margin-bottom:0">Tombol <b>Unduh slide</b> pada setiap pertemuan menyimpan dek sebagai PDF melalui jendela cetak peramban.</p></div>`;
+}
+
+function pageKelas(p){
+  const k=p.kelas.toUpperCase();const ms=modulesOf(k);if(!ms.length)return '';
+  crumb('Kelas '+k);
+  const berkas=encodeURI(`Slide Informatika Kelas ${k} - SMAN 11 Pinrang.pptx`);
+  return `<h1>Kelas ${k} — Fase ${k==='X'?'E':'F'}</h1>
+  <p class="muted">${ms.length} pertemuan · ${ms.reduce((a,b)=>a+b.jp,0)} JP · Tahun Pelajaran ${TAPEL}</p>
+  <div class="row" style="margin-bottom:.9rem">
+    <a class="btn" href="${berkas}" download>⬇ Unduh seluruh slide Kelas ${k} (PowerPoint)</a>
+    <span class="muted">Berkas ini juga dapat diimpor ke Canva untuk dipercantik lebih lanjut.</span>
+  </div>
+  <div class="grid c2">${ms.map(m=>`<a class="tile" href="#/modul/${m.id}">
+    <div class="kicker">${esc(m.kode)} · ${m.sem} · ${m.jp} JP</div><h3>${esc(m.judul)}</h3>
+    <p>${esc(m.ringkas)}</p>
+    <p style="margin-top:.5rem"><span class="badge b-${k.toLowerCase()}">${m.slides.length+2} salindia</span>
+    <span class="badge b-gray">${m.slides.filter(s=>s.sim).length} simulasi</span></p></a>`).join('')}</div>`;
+}
+
+/* ---------------- pemutar slide ---------------- */
+function pageModul(p){
+  const m=MODULES.find(x=>x.id===p.id);if(!m)return '';
+  crumb(`Kelas ${m.kelas} › ${m.kode}`);
+  const canva=store.get('canva',{})[m.id]||'';
+  const deck=buildDeck(m);
+  if(canva) deck.splice(1,0,{type:'canva',url:canva,kls:'slide-'+m.kelas.toLowerCase()});
+  const rail=deck.map((sl,i)=>{
+    const lab=sl.type==='cover'?'Sampul':sl.type==='tutup'?'Refleksi':sl.type==='sim'?('🧪 '+(SIM_NAMA[sl.sim]||'')):sl.type==='canva'?'🎨 Slide Canva':(sl.s.t);
+    return `<button class="thumb${sl.type==='sim'?' sim':''}" data-i="${i}"><b>${i+1}. ${esc(String(lab).slice(0,34))}</b><span class="tn">${sl.type==='sim'?'simulasi':''}</span></button>`;
+  }).join('');
+  const printAll=deck.filter(s=>s.type!=='sim'&&s.type!=='canva').map((sl,i,a)=>`<div class="stage ${sl.kls}">${slideHTML(sl,m,i,a.length)}</div>`).join('');
+  after(()=>mountDeck(m,deck));
+  return `<div class="row" style="justify-content:space-between;align-items:flex-start;gap:.8rem;margin-bottom:.7rem">
+    <div style="flex:1;min-width:220px">
+      <span class="badge b-${m.kelas.toLowerCase()}">Kelas ${m.kelas} · ${m.sem} · ${m.jp} JP</span>
+      <h1 style="margin:.4rem 0 .2rem;font-size:clamp(1.2rem,1rem + 1.1vw,1.7rem)">${esc(m.kode)} — ${esc(m.judul)}</h1>
+      <p class="muted" style="margin:0">${esc(m.elemen)}</p>
+    </div>
+    <div class="row">
+      <button class="btn" id="dk-print">⬇ Unduh slide (PDF)</button>
+      <button class="btn primary" id="dk-full">⛶ Mode presentasi</button>
+    </div></div>
+  <div class="stage-wrap live" id="dk-wrap">
+    <div class="stage ${'slide-'+m.kelas.toLowerCase()}" id="dk-stage"></div>
+    <div class="fsbar">
+      <button class="btn sm" id="fs-prev">←</button><button class="btn sm" id="fs-next">→</button>
+      <button class="btn sm" id="fs-exit">Keluar</button></div>
+  </div>
+  <div class="deckbar">
+    <button class="btn sm" id="dk-prev">← Sebelumnya</button>
+    <div class="prog"><i id="dk-prog"></i></div>
+    <span class="muted" id="dk-num" style="font-variant-numeric:tabular-nums"></span>
+    <button class="btn sm primary" id="dk-next">Berikutnya →</button>
+  </div>
+  <div class="rail" id="dk-rail">${rail}</div>
+  <p class="muted">Pintasan: <kbd>←</kbd> <kbd>→</kbd> berpindah salindia · <kbd>F</kbd> mode presentasi · <kbd>Esc</kbd> keluar.
+  Salindia bertanda 🧪 berisi simulasi yang bisa dicoba langsung.</p>
+  <div class="printdeck">${printAll}</div>`;
+}
+
+function mountDeck(m,deck){
+  let i=0;
+  const stage=$('#dk-stage'),wrap=$('#dk-wrap');
+  function mountSimInto(area,id){
+    if(!area)return;
+    let node=simCache[id];
+    if(node){area.innerHTML='';area.appendChild(node);return}
+    node=document.createElement('div');
+    area.innerHTML='';area.appendChild(node);
+    node.innerHTML=(SIMS[id]&&SIMS[id].html)||'<p class="muted">Simulasi belum tersedia.</p>';
+    try{SIMS[id]&&SIMS[id].mount()}catch(e){console.warn(e);area.innerHTML='<p class="muted">Simulasi gagal dimuat.</p>'}
+    simCache[id]=node;
+  }
+  function show(n){
+    i=Math.max(0,Math.min(deck.length-1,n));
+    const sl=deck[i];
+    if(sl.type==='canva'){
+      stage.innerHTML=`<div class="sl" style="padding:0;background:#111">
+        <iframe src="${esc(sl.url)}" style="width:100%;height:100%;border:0" allow="fullscreen" loading="lazy"></iframe></div>`;
+    }else{
+      stage.innerHTML=slideHTML(sl,m,i,deck.length);
+      if(sl.type==='sim') mountSimInto($('.simarea',stage),sl.sim);
+      else hydrateFigures(stage);
+    }
+    $('#dk-num').textContent=`${i+1} / ${deck.length}`;
+    $('#dk-prog').style.width=((i+1)/deck.length*100)+'%';
+    $('#dk-prev').disabled=i===0;$('#dk-next').disabled=i===deck.length-1;
+    $$('#dk-rail .thumb').forEach(t=>t.classList.toggle('on',+t.dataset.i===i));
+    const on=$('#dk-rail .thumb.on');if(on&&on.scrollIntoView)on.scrollIntoView({block:'nearest',inline:'center',behavior:'smooth'});
+  }
+  const move=d=>show(i+d);
+  $('#dk-prev').onclick=()=>move(-1);$('#dk-next').onclick=()=>move(1);
+  $('#fs-prev').onclick=()=>move(-1);$('#fs-next').onclick=()=>move(1);
+  $$('#dk-rail .thumb').forEach(t=>t.onclick=()=>show(+t.dataset.i));
+  function toggleFull(on){
+    wrap.classList.toggle('isfull',on);
+    if(on&&wrap.requestFullscreen)wrap.requestFullscreen().catch(()=>{});
+    else if(!on&&document.fullscreenElement)document.exitFullscreen().catch(()=>{});
+  }
+  $('#dk-full').onclick=()=>toggleFull(true);
+  $('#fs-exit').onclick=()=>toggleFull(false);
+  document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)wrap.classList.remove('isfull')});
+  $('#dk-print').onclick=()=>{toast('Pilih "Simpan sebagai PDF" pada jendela cetak');setTimeout(()=>window.print(),500)};
+  window.__deckKeys=e=>{
+    if(['INPUT','TEXTAREA','SELECT'].includes((e.target.tagName||'')))return;
+    if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();move(1)}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();move(-1)}
+    else if(e.key.toLowerCase()==='f'){toggleFull(!wrap.classList.contains('isfull'))}
+    else if(e.key==='Escape'){toggleFull(false)}
+  };
+  show(0);
+}
+
+/* ---------------- simulasi ---------------- */
 function pageSimIndex(){
-  crumb('Simulasi Interaktif');
-  const cards=SIM_LIST.map(([id,nama,desc,kls])=>`<a class="tile" href="#/simulasi/${id}">
-    <div class="kicker">${esc(kls)}</div><h3>${esc(nama)}</h3><p>${esc(desc)}</p></a>`).join('');
+  crumb('Simulasi');
   return `<h1>Simulasi Interaktif</h1>
-  <p class="muted">Seluruh simulasi berjalan langsung di peramban, tanpa internet, dan dapat diproyeksikan di kelas.</p>
-  <div class="grid c2">${cards}</div>`;
+  <p class="muted">Seluruh simulasi berjalan luring di perangkat ini dan juga tertanam di dalam slide pertemuan terkait.</p>
+  <div class="grid c3">${SIM_LIST.map(([id,n,d,ic])=>`<a class="tile" href="#/simulasi/${id}">
+    <div class="kicker">${ic} ${esc((MODULES.filter(m=>(m.sims||[]).includes(id)).map(m=>'Kelas '+m.kelas)[0])||'Semua kelas')}</div>
+    <h3>${esc(n)}</h3><p>${esc(d)}</p></a>`).join('')}</div>`;
 }
 function pageSim(p){
-  const s=SIMS[p.id], meta=SIM_LIST.find(x=>x[0]===p.id);
-  if(!s) return pageNotFound();
-  crumb('Simulasi › '+(meta?meta[1]:p.id));
-  const terkait=MODULES.filter(m=>(m.sims||[]).includes(p.id));
-  after(()=>{try{s.mount()}catch(e){console.error(e);toast('Simulasi gagal dimuat')}});
-  return `<h1>${esc(s.judul)}</h1>
-  <p class="muted" style="max-width:76ch">${esc(s.desc)}</p>
-  <div class="sim"><div class="sim-head"><b>Ruang simulasi</b><span class="muted" style="font-size:.76rem">Berjalan luring di perangkat ini</span></div>
-  <div class="sim-body">${s.html}</div></div>
-  ${terkait.length?`<h2>Dipakai pada modul</h2><div class="grid c3">${terkait.map(m=>`<a class="tile" href="#/modul/${m.id}"><div class="kicker">Kelas ${m.kelas} · ${m.kode}</div><h3 style="font-size:.95rem">${esc(m.judul)}</h3></a>`).join('')}</div>`:''}
+  const s=SIMS[p.id];if(!s)return '';
+  crumb('Simulasi › '+(SIM_NAMA[p.id]||p.id));
+  const pakai=MODULES.filter(m=>(m.sims||[]).includes(p.id));
+  after(()=>{try{s.mount()}catch(e){console.warn(e);toast('Simulasi gagal dimuat')}});
+  return `<h1>${esc(s.judul)}</h1><p class="muted" style="max-width:76ch">${esc(s.desc)}</p>
+  <div class="card">${s.html}</div>
+  ${pakai.length?`<h2>Dipakai pada pertemuan</h2><div class="grid c3">${pakai.map(m=>`<a class="tile" href="#/modul/${m.id}"><div class="kicker">Kelas ${m.kelas} · ${esc(m.kode)}</div><h3 style="font-size:.93rem">${esc(m.judul)}</h3></a>`).join('')}</div>`:''}
   <div class="row" style="margin-top:1rem"><a class="btn" href="#/simulasi">← Semua simulasi</a></div>`;
 }
 
-/* ---------------- Latihan soal ---------------- */
-function pageLatihanIndex(){
-  crumb('Latihan & Soal');
-  const nilai=store.get('nilai',{});
-  const cards=Object.keys(QUIZ).map(k=>{
-    const n=nilai[k];
-    return `<a class="tile" href="#/latihan/${k}">
-      <span class="badge b-${k.toLowerCase()}">Kelas ${k}</span>
-      <h3>${esc(QUIZ[k].judul)}</h3>
-      <p>10 pilihan ganda (bobot 40) dan 5 uraian (bobot 60).${n?` <b>Nilai terakhir: ${n.pg}/40 pada pilihan ganda.</b>`:''}</p></a>`;
-  }).join('');
-  return `<h1>Latihan dan Soal</h1>
-  <p class="muted">Soal disusun dari kisi-kisi sumatif akhir semester pada perangkat ajar. Pilihan ganda dinilai otomatis; uraian dilengkapi pokok jawaban untuk penilaian diri atau penilaian guru.</p>
-  <div class="grid c3">${cards}</div>
-  <div class="card"><h3 style="margin-top:0">Cara memakai</h3>
-  <ul><li>Kerjakan seluruh soal pilihan ganda, lalu tekan <b>Periksa jawaban</b> untuk melihat nilai dan pembahasan.</li>
-  <li>Soal uraian dikerjakan di buku atau LKPD; pokok jawaban dapat dibuka setelah mencoba sendiri.</li>
-  <li>Nilai tersimpan di perangkat ini sebagai catatan kemajuan belajar.</li></ul></div>`;
-}
-function pageLatihan(p){
-  const k=p.kelas.toUpperCase(), q=QUIZ[k]; if(!q) return pageNotFound();
-  crumb('Latihan › Kelas '+k);
-  const pg=q.pg.map((it,i)=>`
-    <div class="q-card" data-i="${i}">
-      <div class="q-num">Soal ${i+1} · pilihan ganda</div>
-      <p style="margin:.35rem 0 .6rem">${esc(it.q)}</p>
-      ${it.o.map((o,j)=>`<label class="opt" data-j="${j}"><input type="radio" name="q${i}" value="${j}"><span>${String.fromCharCode(65+j)}. ${esc(o)}</span></label>`).join('')}
-      <div class="muted q-exp" style="display:none;margin-top:.5rem"></div>
-    </div>`).join('');
-  const ur=q.uraian.map((it,i)=>`
-    <div class="q-card">
-      <div class="q-num">Soal ${i+11} · uraian</div>
-      <p style="margin:.35rem 0 .6rem">${esc(it.q)}</p>
-      <textarea rows="4" class="ur-in" data-i="${i}" placeholder="Tulis jawabanmu di sini (tersimpan otomatis)…"></textarea>
-      <div class="row" style="margin-top:.5rem"><button class="btn sm ur-key" data-i="${i}">Lihat pokok jawaban</button></div>
-      <div class="note ok ur-exp" style="display:none;margin-top:.5rem"></div>
-    </div>`).join('');
-  after(()=>{
-    const KEY='ur-'+k, saved=store.get(KEY,{});
-    $$('.ur-in').forEach(t=>{ if(saved[t.dataset.i]) t.value=saved[t.dataset.i];
-      t.oninput=()=>{saved[t.dataset.i]=t.value;store.set(KEY,saved)} });
-    $$('.ur-key').forEach(b=>b.onclick=()=>{
-      const d=b.closest('.q-card').querySelector('.ur-exp');
-      d.style.display='block'; d.innerHTML='<b>Pokok jawaban:</b> '+esc(q.uraian[+b.dataset.i].k);
-    });
-    $('#lt-cek').onclick=()=>{
-      let benar=0, jwb=0;
-      q.pg.forEach((it,i)=>{
-        const card=document.querySelector(`.q-card[data-i="${i}"]`);
-        const sel=card.querySelector('input:checked');
-        $$('.opt',card).forEach(o=>o.classList.remove('correct','wrong'));
-        $$('.opt',card)[it.k].classList.add('correct');
-        if(sel){ jwb++; if(+sel.value===it.k) benar++; else $$('.opt',card)[+sel.value].classList.add('wrong'); }
-        const e=$('.q-exp',card); e.style.display='block';
-        e.innerHTML=`<b>Kunci: ${String.fromCharCode(65+it.k)}.</b> ${esc(it.e)}`;
-      });
-      const skor=benar*4;
-      const nilai=store.get('nilai',{}); nilai[k]={pg:skor,benar,tgl:Date.now()}; store.set('nilai',nilai);
-      const pers=Math.round(benar/q.pg.length*100);
-      $('#lt-hasil').innerHTML=`
-        <div class="score-ring" style="--p:${pers}%"><div class="in"><b>${skor}</b><span class="muted" style="font-size:.72rem">dari 40</span></div></div>
-        <p style="text-align:center;margin-top:.7rem"><b>${benar} benar</b> dari ${q.pg.length} soal${jwb<q.pg.length?` · ${q.pg.length-jwb} soal belum dijawab`:''}.
-        ${pers>=75?'Pertahankan — kamu sudah mencapai kriteria ketuntasan pada bagian pilihan ganda.':'Pelajari kembali pembahasan di bawah setiap soal, lalu ulangi latihan ini.'}</p>`;
-      const _h=$('#lt-hasil'); if(_h.scrollIntoView) _h.scrollIntoView({behavior:'smooth',block:'center'});
-    };
-    $('#lt-reset').onclick=()=>{ $$('input[type=radio]').forEach(r=>r.checked=false);
-      $$('.opt').forEach(o=>o.classList.remove('correct','wrong'));
-      $$('.q-exp').forEach(e=>e.style.display='none'); $('#lt-hasil').innerHTML=''; window.scrollTo(0,0); };
-  });
-  return `<h1>${esc(q.judul)}</h1>
-  <p class="muted">Pilihan ganda bernilai 4 per butir (total 40) dan uraian bernilai 12 per butir (total 60). Kriteria ketuntasan 75.</p>
-  <h2>A. Pilihan Ganda</h2>${pg}
-  <div class="row" style="margin:1rem 0"><button class="btn primary" id="lt-cek">Periksa jawaban</button><button class="btn" id="lt-reset">Kosongkan</button></div>
-  <div id="lt-hasil"></div>
-  <h2>B. Uraian</h2>
-  <p class="muted">Kerjakan lebih dahulu, baru buka pokok jawaban. Jawabanmu tersimpan otomatis di perangkat ini.</p>${ur}
-  <div class="row" style="margin-top:1rem"><button class="btn" onclick="window.print()">Cetak lembar soal</button><a class="btn" href="#/latihan">← Pilihan latihan lain</a></div>`;
-}
-
-/* ---------------- LKPD ---------------- */
-function pageLkpdIndex(){
-  crumb('LKPD Digital');
-  return `<h1>LKPD Digital</h1>
-  <p class="muted">Lembar kerja yang dapat diisi langsung di perangkat. Jawaban tersimpan otomatis dan dapat dicetak atau disimpan sebagai PDF untuk diserahkan kepada guru.</p>
-  <div class="grid c3">${LKPD.map(l=>`<a class="tile" href="#/lkpd/${l.id}">
-    <span class="badge b-${l.kelas.toLowerCase()}">Kelas ${l.kelas}</span><h3>${esc(l.judul)}</h3><p>${esc(l.modul)}</p></a>`).join('')}</div>`;
-}
-function pageLkpd(p){
-  const l=LKPD.find(x=>x.id===p.id); if(!l) return pageNotFound();
-  crumb('LKPD › '+l.judul);
-  const fields=l.fields.map(([k,lab,t])=>`
-    <label class="fld">${esc(lab)}</label>
-    ${t==='area'?`<textarea class="fillable lk" data-k="${k}" rows="3"></textarea>`:`<input class="lk" data-k="${k}" type="text">`}`).join('');
-  after(()=>{
-    const KEY='lkpd-'+l.id, saved=store.get(KEY,{});
-    $$('.lk').forEach(el=>{ if(saved[el.dataset.k]) el.value=saved[el.dataset.k];
-      el.oninput=()=>{saved[el.dataset.k]=el.value;store.set(KEY,saved);$('#lk-info').textContent='Tersimpan otomatis '+new Date().toLocaleTimeString('id-ID')} });
-    $('#lk-print').onclick=()=>window.print();
-    $('#lk-clear').onclick=()=>{ if(!confirm('Kosongkan seluruh jawaban LKPD ini?'))return;
-      store.set(KEY,{}); $$('.lk').forEach(el=>el.value=''); toast('LKPD dikosongkan'); };
-    $('#lk-copy').onclick=async()=>{
-      const t=l.judul+'\n'+l.modul+'\n\n'+l.fields.map(([k,lab])=>lab+':\n'+(($('.lk[data-k="'+k+'"]')||{}).value||'-')).join('\n\n');
-      try{await navigator.clipboard.writeText(t);toast('Jawaban disalin ke papan klip')}catch(e){toast('Peramban menolak penyalinan')}
-    };
-  });
-  return `<span class="badge b-${l.kelas.toLowerCase()}">Kelas ${l.kelas} · ${esc(l.modul)}</span>
-  <h1 style="margin-top:.4rem">${esc(l.judul)}</h1>
-  <div class="card"><h3 style="margin-top:0">Tujuan kegiatan</h3><ol>${l.tujuan.map(t=>`<li>${esc(t)}</li>`).join('')}</ol>
-  <h3>Langkah kegiatan</h3><ol>${l.langkah.map(t=>`<li>${esc(t)}</li>`).join('')}</ol>
-  ${l.sim?`<a class="btn sm" href="#/simulasi/${l.sim}">▶ Buka simulasi pendukung</a>`:''}</div>
-  <div class="card"><h3 style="margin-top:0">Lembar isian</h3>${fields}
-  <div class="row" style="margin-top:1rem"><button class="btn primary" id="lk-print">Cetak / simpan PDF</button>
-  <button class="btn" id="lk-copy">Salin jawaban</button><button class="btn" id="lk-clear">Kosongkan</button>
-  <span class="muted" id="lk-info">Jawaban tersimpan otomatis di perangkat ini.</span></div></div>`;
-}
-
-/* ---------------- Panduan guru ---------------- */
-function pageGuru(){
-  crumb('Panduan Guru');
-  const prota=(k)=>`<h3>Kelas ${k}</h3><div class="tbl-wrap"><table><thead><tr><th>Semester</th><th>Lingkup materi / modul</th><th>JP</th><th>Perkiraan waktu</th></tr></thead>
-    <tbody>${PROTA[k].map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>`;
-  return `<h1>Panduan Guru</h1>
-  <p class="muted">Media ini menjadi pendamping perangkat ajar Informatika Kelas X, XI, dan XII Tahun Pelajaran ${TAPEL}.</p>
-  <div class="jump"><a href="#alur">Alur pemakaian</a><a href="#prota">Program tahunan</a><a href="#ases">Rancangan asesmen</a><a href="#glos">Glosarium</a></div>
-  <h2 id="alur">Alur pemakaian di kelas</h2>
-  <div class="grid c3">
-    <div class="card"><h3 style="margin-top:0">1. Memahami</h3><p>Buka modul, tayangkan <b>Mulai presentasi</b> di layar kelas, gunakan pertanyaan pemantik pada salindia pertama.</p></div>
-    <div class="card"><h3 style="margin-top:0">2. Mengaplikasi</h3><p>Murid membuka simulasi terkait pada perangkat masing-masing atau berkelompok, lalu mengerjakan LKPD digital.</p></div>
-    <div class="card"><h3 style="margin-top:0">3. Merefleksi</h3><p>Gunakan menu Latihan untuk asesmen formatif cepat, lalu bahas pembahasan otomatisnya bersama murid.</p></div>
-  </div>
-  <div class="note" style="margin-top:1rem"><b>Tanpa internet:</b> setelah media dibuka sekali dan gambar tersimpan, seluruh materi, simulasi, latihan, dan LKPD tetap berjalan meski jaringan terputus. Periksa statusnya pada menu <a href="#/media">Penyimpanan Media</a>.</div>
-  <h2 id="prota">Program tahunan</h2>${prota('X')}${prota('XI')}${prota('XII')}
-  <h2 id="ases">Rancangan asesmen</h2>
-  <div class="tbl-wrap"><table><thead><tr><th>Jenis</th><th>Waktu</th><th>Teknik</th><th>Pemanfaatan hasil</th></tr></thead>
-   <tbody>${ASESMEN_INFO.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>
-  <p>Pembobotan nilai akhir: formatif 30%, sumatif lingkup materi 30%, dan sumatif akhir semester 40%. Kriteria ketercapaian tujuan pembelajaran 75.</p>
-  <h2 id="glos">Glosarium</h2>
-  <div class="tbl-wrap"><table><tbody>${GLOSARIUM.map(([a,b])=>`<tr><td style="width:26%"><b>${esc(a)}</b></td><td>${esc(b)}</td></tr>`).join('')}</tbody></table></div>`;
-}
-
-/* ---------------- Penyimpanan media ---------------- */
-function pageMedia(){
-  crumb('Penyimpanan Media');
+/* ---------------- pengaturan + Canva ---------------- */
+function pagePengaturan(){
+  crumb('Pengaturan & Canva');
   after(async()=>{
     async function refresh(){
       const keys=await IDB.keys();
-      const rows=Object.entries(IMAGES).map(([k,v])=>{
-        const ada=keys.includes(k);
-        return `<tr><td><b>${esc(k)}</b></td><td>${esc(v.cap)}</td>
-          <td>${ada?'<span class="badge b-xi">Tersimpan</span>':'<span class="badge b-gray">Belum</span>'}</td></tr>`;
-      }).join('');
-      $('#md-tbl').innerHTML=`<div class="tbl-wrap"><table><thead><tr><th>Kode</th><th>Keterangan gambar</th><th>Status</th></tr></thead><tbody>${rows}</tbody></table></div>`;
-      $('#md-sum').textContent=`${keys.length} dari ${Object.keys(IMAGES).length} gambar tersimpan di perangkat ini.`;
-      let est='';
-      if(navigator.storage&&navigator.storage.estimate){
-        try{const e=await navigator.storage.estimate();est=`Pemakaian penyimpanan peramban: ${(e.usage/1048576).toFixed(1)} MB.`}catch(e){}
-      }
-      let per='';
-      if(navigator.storage&&navigator.storage.persisted){
-        try{per=(await navigator.storage.persisted())?' Penyimpanan berstatus permanen (tidak akan dihapus otomatis oleh peramban).':' Penyimpanan belum berstatus permanen — tekan tombol di bawah untuk memintanya.'}catch(e){}
-      }
-      $('#md-est').textContent=est+per;
+      $('#st-sum').textContent=`${keys.length} dari ${Object.keys(IMAGES).length} gambar tersimpan di perangkat ini.`;
+      let txt='';
+      if(navigator.storage&&navigator.storage.estimate){try{const e=await navigator.storage.estimate();txt=`Pemakaian penyimpanan: ${(e.usage/1048576).toFixed(1)} MB. `}catch(e){}}
+      if(navigator.storage&&navigator.storage.persisted){try{txt+=(await navigator.storage.persisted())?'Status penyimpanan permanen aktif.':'Penyimpanan belum permanen — tekan tombol di bawah.'}catch(e){}}
+      $('#st-est').textContent=txt;
     }
-    $('#md-dl').onclick=async()=>{$('#md-dl').disabled=true;const r=await prefetchAll(false);$('#md-dl').disabled=false;
-      toast(r&&r.fail?`Selesai. ${r.fail} gambar gagal diambil, ilustrasi bawaan dipakai.`:'Seluruh gambar tersimpan.');refresh()};
-    $('#md-up').onclick=async()=>{$('#md-up').disabled=true;await prefetchAll(true);$('#md-up').disabled=false;toast('Gambar diperbarui');refresh()};
-    $('#md-cl').onclick=async()=>{if(!confirm('Hapus seluruh gambar yang tersimpan di perangkat ini?'))return;
-      await IDB.clear();Object.keys(objUrls).forEach(k=>{URL.revokeObjectURL(objUrls[k]);delete objUrls[k]});
-      store.set('mediaSiap',false);setCacheBar('Media belum tersimpan','');toast('Penyimpanan gambar dikosongkan');refresh()};
-    $('#md-pin').onclick=async()=>{
-      if(navigator.storage&&navigator.storage.persist){const ok=await navigator.storage.persist();
-        toast(ok?'Penyimpanan dijadikan permanen':'Peramban belum mengizinkan; media tetap tersimpan secara normal');refresh()}
-      else toast('Peramban ini tidak mendukung pengaturan tersebut');
-    };
+    $('#st-dl').onclick=async()=>{$('#st-dl').disabled=true;const r=await prefetchAll(false);$('#st-dl').disabled=false;
+      toast(r.fail?`Selesai, ${r.fail} gambar memakai ilustrasi bawaan`:'Seluruh gambar tersimpan');refresh()};
+    $('#st-cl').onclick=async()=>{if(!confirm('Hapus seluruh gambar tersimpan?'))return;await IDB.clear();
+      Object.keys(objUrls).forEach(k=>{URL.revokeObjectURL(objUrls[k]);delete objUrls[k]});toast('Penyimpanan dikosongkan');refresh()};
+    $('#st-pin').onclick=async()=>{if(navigator.storage&&navigator.storage.persist){const ok=await navigator.storage.persist();
+      toast(ok?'Penyimpanan dijadikan permanen':'Peramban belum mengizinkan');refresh()}else toast('Tidak didukung peramban ini')};
+    const cv=store.get('canva',{});
+    $$('.cv-in').forEach(el=>{el.value=cv[el.dataset.id]||'';
+      el.oninput=()=>{const o=store.get('canva',{});const v=el.value.trim();
+        if(v)o[el.dataset.id]=v;else delete o[el.dataset.id];store.set('canva',o);
+        $('#cv-info').textContent='Tersimpan. Buka kembali pertemuannya untuk melihat slide Canva.'}});
+    $('#cv-clear').onclick=()=>{store.set('canva',{});$$('.cv-in').forEach(e=>e.value='');toast('Semua tautan Canva dihapus')};
     refresh();
   });
-  return `<h1>Penyimpanan Media di Perangkat</h1>
-  <p class="muted" style="max-width:78ch">Saat media ini dibuka pertama kali, gambar pendukung diambil dari Wikimedia Commons lalu disimpan ke penyimpanan internal peramban (IndexedDB). Setelah tersimpan, gambar tidak pernah diunduh ulang sehingga media dapat dibuka tanpa internet dan tanpa menghabiskan kuota.</p>
-  <div class="card"><h3 style="margin-top:0">Status</h3>
-   <p id="md-sum">Memeriksa…</p><p class="muted" id="md-est"></p>
-   <div class="row"><button class="btn primary" id="md-dl">Unduh gambar yang belum tersimpan</button>
-   <button class="btn" id="md-up">Perbarui semua gambar</button>
-   <button class="btn" id="md-pin">Jadikan penyimpanan permanen</button>
-   <button class="btn" id="md-cl">Kosongkan penyimpanan</button></div>
-   <div class="note warn" style="margin-top:.9rem">Bila gambar daring tidak dapat diambil (misalnya tanpa internet saat pertama dibuka), media tetap berjalan menggunakan ilustrasi SVG bawaan yang tertanam di dalam berkas ini.</div>
+  const baris=MODULES.map(m=>`<tr><td><span class="badge b-${m.kelas.toLowerCase()}">${m.kelas}</span> ${esc(m.kode)}</td>
+    <td>${esc(m.judul)}</td><td><input class="cv-in" data-id="${m.id}" type="text" placeholder="https://www.canva.com/design/…/view?embed"></td></tr>`).join('');
+  return `<h1>Pengaturan &amp; Integrasi Canva</h1>
+  <div class="card"><h3 style="margin-top:0">🎨 Tempelkan slide Canva ke dalam pertemuan</h3>
+   <p>Bila Ibu sudah membuat desain di Canva, salin tautan sematnya lalu tempelkan di baris pertemuan yang sesuai. Slide Canva akan muncul sebagai salindia tambahan di awal dek pertemuan tersebut.</p>
+   <ol><li>Buka desain di Canva → tombol <b>Bagikan</b> → <b>Lainnya</b> → <b>Sematkan</b>.</li>
+   <li>Salin tautan yang diawali <code>https://www.canva.com/design/…/view?embed</code>.</li>
+   <li>Tempelkan pada kolom di bawah; tersimpan otomatis di perangkat ini.</li></ol>
+   <div class="tbl-wrap"><table><thead><tr><th style="width:16%">Pertemuan</th><th style="width:34%">Judul</th><th>Tautan semat Canva</th></tr></thead><tbody>${baris}</tbody></table></div>
+   <div class="row" style="margin-top:.7rem"><button class="btn" id="cv-clear">Hapus semua tautan</button><span class="muted" id="cv-info"></span></div>
+   <div class="note warn" style="margin-top:.8rem">Slide Canva memerlukan internet saat ditayangkan. Slide bawaan aplikasi tetap berjalan tanpa internet.</div>
   </div>
-  <div id="md-tbl"></div>
-  <div class="card"><h3 style="margin-top:0">Catatan hak cipta</h3>
-   <p style="margin:0">Gambar diambil dari Wikimedia Commons yang berlisensi bebas. Nama pembuat dan lisensinya ditampilkan otomatis pada keterangan tiap gambar. Ilustrasi SVG bawaan dibuat khusus untuk media ini.</p></div>`;
+  <div class="card"><h3 style="margin-top:0">⬇ Unduh dek slide</h3>
+   <p>Seluruh slide tersedia sebagai berkas PowerPoint. Unggah ketiga berkas ini ke repositori bersama <code>index.html</code> agar tombol unduh berfungsi, lalu <b>impor berkas tersebut ke Canva</b> (Canva → Buat desain → Unggah → pilih berkas .pptx) bila ingin mempercantik desainnya.</p>
+   <div class="row">${KELAS.map(k=>`<a class="btn" href="${encodeURI('Slide Informatika Kelas '+k+' - SMAN 11 Pinrang.pptx')}" download>Kelas ${k} (.pptx)</a>`).join('')}</div>
+   <p class="muted" style="margin-bottom:0">Dek per pertemuan juga dapat disimpan sebagai PDF melalui tombol <b>Unduh slide (PDF)</b> di halaman pertemuan.</p>
+  </div>
+  <div class="card"><h3 style="margin-top:0">💾 Gambar tersimpan di perangkat</h3>
+   <p id="st-sum">Memeriksa…</p><p class="muted" id="st-est"></p>
+   <div class="row"><button class="btn primary" id="st-dl">Unduh gambar yang belum tersimpan</button>
+   <button class="btn" id="st-pin">Jadikan penyimpanan permanen</button>
+   <button class="btn" id="st-cl">Kosongkan penyimpanan</button></div>
+   <p class="muted" style="margin-bottom:0">Gambar diambil sekali dari Wikimedia Commons (lisensi bebas) lalu disimpan di IndexedDB. Bila gagal, aplikasi memakai ilustrasi SVG bawaan.</p>
+  </div>
+  <div class="card"><h3 style="margin-top:0">ℹ️ Tentang</h3>
+   <div class="tbl-wrap"><table><tbody>
+    <tr><td style="width:30%">Penyusun</td><td>${esc(GURU)} — NIP ${esc(NIP)}</td></tr>
+    <tr><td>Satuan pendidikan</td><td>${esc(SEKOLAH)}</td></tr>
+    <tr><td>Acuan</td><td>Capaian Pembelajaran BSKAP 046/H/KR/2025 · Pembelajaran Mendalam</td></tr>
+    <tr><td>Isi</td><td>${MODULES.length} pertemuan, ${MODULES.reduce((a,m)=>a+m.slides.length+2,0)} salindia, ${SIM_LIST.length} simulasi</td></tr>
+   </tbody></table></div></div>`;
 }
 
-function pageTentang(){
-  crumb('Tentang');
-  return `<h1>Tentang Media Ini</h1>
-  <div class="card"><h3 style="margin-top:0">Identitas</h3>
-  <div class="tbl-wrap"><table><tbody>
-   <tr><td style="width:30%">Nama media</td><td><b>Media Pembelajaran Informatika Interaktif</b></td></tr>
-   <tr><td>Satuan pendidikan</td><td>${esc(SEKOLAH)}</td></tr>
-   <tr><td>Penyusun</td><td>${esc(GURU)}</td></tr>
-   <tr><td>NIP</td><td>${esc(NIP)}</td></tr>
-   <tr><td>Mata pelajaran</td><td>Informatika — Kelas X (Fase E), XI dan XII (Fase F)</td></tr>
-   <tr><td>Tahun pelajaran</td><td>${TAPEL}</td></tr>
-   <tr><td>Acuan kurikulum</td><td>Keputusan Kepala BSKAP Nomor 046/H/KR/2025 tentang Capaian Pembelajaran; Permendikdasmen Nomor 10, 12, dan 13 Tahun 2025</td></tr>
-  </tbody></table></div></div>
-  <div class="card"><h3 style="margin-top:0">Isi media</h3>
-  <ul><li>${MODULES.length} modul materi dengan ${MODULES.reduce((a,m)=>a+m.slides.length,0)} salindia presentasi siap tayang.</li>
-  <li>${SIM_LIST.length} simulasi interaktif yang berjalan luring.</li>
-  <li>3 paket latihan soal dengan penilaian otomatis dan pembahasan.</li>
-  <li>3 LKPD digital yang dapat diisi, disimpan, dan dicetak.</li>
-  <li>Panduan guru berisi program tahunan dan rancangan asesmen.</li></ul></div>
-  <div class="card"><h3 style="margin-top:0">Catatan teknis</h3>
-  <ul><li>Seluruh media berada dalam satu berkas <code>index.html</code> sehingga dapat langsung diunggah ke GitHub Pages.</li>
-  <li>Data kemajuan belajar, jawaban LKPD, dan nilai latihan disimpan di peramban masing-masing pengguna, tidak dikirim ke server mana pun.</li>
-  <li>Gambar daring disimpan permanen di IndexedDB saat pertama kali dibuka.</li>
-  <li>Pintasan papan ketik saat presentasi: <kbd>←</kbd> <kbd>→</kbd> berpindah salindia, <kbd>F</kbd> layar penuh, <kbd>Esc</kbd> menutup.</li></ul></div>
-  <div class="card"><h3 style="margin-top:0">Cara menerbitkan di GitHub Pages</h3>
-  <ol><li>Buat repositori baru di GitHub, misalnya <code>informatika-sman11pinrang</code>.</li>
-  <li>Unggah berkas <code>index.html</code> ke repositori tersebut.</li>
-  <li>Buka <b>Settings → Pages</b>, bagian <i>Source</i> pilih <b>Deploy from a branch</b>, cabang <code>main</code> dan folder <code>/ (root)</code>, lalu simpan.</li>
-  <li>Tunggu satu sampai dua menit, lalu buka tautan yang muncul, misalnya <code>https://namapengguna.github.io/informatika-sman11pinrang/</code>.</li></ol></div>`;
-}
-
-/* ---------------- Inisialisasi ---------------- */
+/* ---------------- init ---------------- */
 route('/',pageBeranda);
-route('/landasan',pageLandasan);
 route('/kelas/:kelas',pageKelas);
 route('/modul/:id',pageModul);
 route('/simulasi',pageSimIndex);
 route('/simulasi/:id',pageSim);
-route('/latihan',pageLatihanIndex);
-route('/latihan/:kelas',pageLatihan);
-route('/lkpd',pageLkpdIndex);
-route('/lkpd/:id',pageLkpd);
-route('/guru',pageGuru);
-route('/media',pageMedia);
-route('/tentang',pageTentang);
-
+route('/pengaturan',pagePengaturan);
 buildNav();
 window.addEventListener('hashchange',go);
-
-$('#themeBtn').onclick=()=>{
-  const n=document.documentElement.dataset.theme==='dark'?'light':'dark';
-  document.documentElement.dataset.theme=n; store.set('tema',n);
-};
+$('#themeBtn').onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.dataset.theme=n;store.set('tema',n)};
 $('#burger').onclick=()=>{$('#sidebar').classList.toggle('on');$('#scrim').classList.toggle('on')};
 $('#scrim').onclick=()=>{$('#sidebar').classList.remove('on');$('#scrim').classList.remove('on')};
-$('#deckClose').onclick=closeDeck;
-$('#deckPrev').onclick=()=>deckMove(-1);
-$('#deckNext').onclick=()=>deckMove(1);
-$('#deckFull').onclick=()=>{const e=$('#deck');if(!document.fullscreenElement){e.requestFullscreen&&e.requestFullscreen()}else{document.exitFullscreen()}};
-document.addEventListener('keydown',e=>{
-  if(!$('#deck').classList.contains('on'))return;
-  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();deckMove(1)}
-  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();deckMove(-1)}
-  else if(e.key==='Escape'){closeDeck()}
-  else if(e.key.toLowerCase()==='f'){$('#deckFull').click()}
-});
-$('#cacheBar').onclick=()=>{location.hash='#/media'};
-
-(async function init(){
+$('#cacheBar').onclick=()=>location.hash='#/pengaturan';
+document.addEventListener('keydown',e=>{if(window.__deckKeys&&location.hash.indexOf('#/modul/')===0)window.__deckKeys(e)});
+(async function(){
   go();
   const keys=await IDB.keys();
-  if(keys.length) setCacheBar(`Media tersimpan ${keys.length}/${Object.keys(IMAGES).length}`,'ok');
-  else setCacheBar('Menyiapkan media…','load');
-  if(navigator.storage&&navigator.storage.persist){ try{await navigator.storage.persist()}catch(e){} }
-  if(keys.length<Object.keys(IMAGES).length && navigator.onLine!==false){
-    setTimeout(()=>prefetchAll(false),900);
-  }
+  setCacheBar(keys.length?`Media ${keys.length}/${Object.keys(IMAGES).length}`:'Menyiapkan media…',keys.length?'ok':'load');
+  if(navigator.storage&&navigator.storage.persist){try{await navigator.storage.persist()}catch(e){}}
+  if(keys.length<Object.keys(IMAGES).length&&navigator.onLine!==false) setTimeout(()=>prefetchAll(false),900);
 })();
 </script>
 </body>
